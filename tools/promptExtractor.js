@@ -494,6 +494,144 @@ const CURATED_IDENTIFIER_MAPS = {
       },
     },
   ],
+  // CC 2.1.284 moved /loop's status-update timing into shared helpers
+  // (chunk-4expsfkw.js `Nln`, the loop skill's `O()` steps34/rearmUpdate) and
+  // added PR Steward gates, inserting slots ahead of existing ones in the seven
+  // prompts below. The by-index carry bound valid names to the wrong vars.
+  // Every map is resolved from the module's definitions and the identifiers
+  // arrays were reproduced from the templates' distinct vars.
+  'system-prompt-monitor-fallback-heartbeat-guidance': [
+    {
+      // Autonomous-tick module chunk-s3c3fm9y.js `d()`: Tl ("Monitor"),
+      // Dw ("TaskList"), n (local "Immediately before/After re-arming, …"
+      // sentence), Nln (status-update visibility fn), Cl ("ScheduleWakeup"),
+      // ug ("TaskStop"). Slot 4 keeps the upstream label TASK_STOP_TOOL_NAME
+      // for ScheduleWakeup (the `call … with stop: true` tool) and slot 5 keeps
+      // STOP_MONITOR_TOOL_NAME for TaskStop, so existing overrides still bind.
+      identifiers: [0, 1, 0, 2, 3, 4, 5, 1],
+      identifierMap: {
+        0: 'MONITOR_TOOL_NAME',
+        1: 'TASK_LIST_TOOL_NAME',
+        2: 'REARM_STATUS_UPDATE_TIMING',
+        3: 'STATUS_UPDATE_VISIBILITY_GUIDANCE_FN',
+        4: 'TASK_STOP_TOOL_NAME',
+        5: 'STOP_MONITOR_TOOL_NAME',
+      },
+    },
+  ],
+  'skill-loop-slash-command-dynamic-mode': [
+    {
+      // Loop skill chunk-b82ys6y1.js `C()`: s (PR Steward label-check block or
+      // ""), R (cloud-first offer fn), x (cron table), e_ ("CronCreate"), Phe
+      // (recurringMaxAgeMs in days), iA ("CronDelete"), M (confirmation
+      // suffix fn), h (dynamic-mode instructions), e (user input).
+      identifiers: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      identifierMap: {
+        0: 'PR_STEWARD_LABEL_CHECK_BLOCK',
+        1: 'ADDITIONAL_PARSING_NOTES_FN',
+        2: 'CRON_CONVERSION_RULES',
+        3: 'CRON_CREATE_TOOL_NAME',
+        4: 'CANCEL_TIMEFRAME_DAYS',
+        5: 'CRON_DELETE_TOOL_NAME',
+        6: 'LOOP_CONFIRMATION_SUFFIX_FN',
+        7: 'DYNAMIC_MODE_INSTRUCTIONS',
+        8: 'USER_INPUT',
+      },
+    },
+  ],
+  'agent-prompt-agent-hook': [
+    {
+      // Hook agent XOt(): Et (task intro), Y (transcript path), F
+      // (`h.remoteCall!==void 0`, the new served-for-another-machine branch),
+      // bi ("StructuredOutput", chunk-1pns8tdv.js).
+      identifiers: [0, 1, 1, 2, 3],
+      identifierMap: {
+        0: 'HOOK_EVALUATION_TASK_PROMPT',
+        1: 'TRANSCRIPT_PATH',
+        2: 'IS_REMOTE_HOOK_CALL',
+        3: 'STRUCTURED_OUTPUT_TOOL_NAME',
+      },
+    },
+  ],
+  'agent-prompt-pr-follow-up-cron': [
+    {
+      // /autofix-pr Xe(u,t,o,h): Ie ("Babysit PR "), u (PR ref owner/repo#N;
+      // upstream's label kept), o (PR number), t (owner/repo), D (gTn():
+      // tengu_federated_flask PR Steward gate, adds `,labels`), iA
+      // ("CronDelete"), M (PR Steward label-handling note or ""), h (custom
+      // autofix-instructions note).
+      identifiers: [0, 1, 2, 3, 4, 3, 2, 5, 6, 7],
+      identifierMap: {
+        0: 'PR_INSTRUCTIONS_PREFIX',
+        1: 'PR_GENERATED_WITH_CLAUDE_CODE',
+        2: 'PR_NUMBER',
+        3: 'GITHUB_REPOSITORY',
+        4: 'IS_PR_STEWARD_ENABLED',
+        5: 'CRON_DELETE_TOOL_NAME',
+        6: 'PR_STEWARD_LABEL_HANDLING_NOTE',
+        7: 'PR_COMMON_OPERATIONS_NOTE',
+      },
+    },
+  ],
+  'skill-dynamic-pacing-loop-execution': [
+    {
+      // Loop skill chunk-b82ys6y1.js `g()` dynamic branch: h (task label), Tl
+      // ("Monitor"), v (arming fn), Cl ("ScheduleWakeup"), b (re-arm fn), E
+      // (O().steps34: confirm + decide steps 3-4), I (O().rearmUpdate fn), m
+      // (dynamic sentinel), ug ("TaskStop"), Dw ("TaskList"), k (loop-outcome
+      // report fn), w (away-user outcome fn).
+      identifiers: [0, 1, 2, 3, 4, 5, 6, 3, 7, 1, 3, 8, 1, 9, 10, 11],
+      identifierMap: {
+        0: 'TASK_RUN_LABEL',
+        1: 'MONITOR_TOOL_NAME',
+        2: 'MONITOR_ARMING_GUIDANCE_FN',
+        3: 'SCHEDULE_WAKEUP_TOOL_NAME',
+        4: 'MONITOR_REARM_GUIDANCE_FN',
+        5: 'LOOP_CONFIRM_AND_DECIDE_STEPS',
+        6: 'REARM_UPDATE_ORDER_FN',
+        7: 'DYNAMIC_MODE_SENTINEL',
+        8: 'TASK_STOP_TOOL_NAME',
+        9: 'TASK_LIST_TOOL_NAME',
+        10: 'LOOP_OUTCOME_REPORT_FN',
+        11: 'ADDITIONAL_INFO_FN',
+      },
+    },
+  ],
+  'skill-loop-self-pacing-mode': [
+    {
+      // Loop skill chunk-b82ys6y1.js `C()` `h`: Tl, v, Cl, b, r (O().steps34),
+      // n (O().rearmUpdate fn), ug, Dw, k, w — same roles as the dynamic
+      // pacing prompt above.
+      identifiers: [0, 1, 2, 3, 4, 5, 2, 0, 2, 6, 0, 7, 8, 9],
+      identifierMap: {
+        0: 'MONITOR_TOOL_NAME',
+        1: 'MONITOR_ARMING_GUIDANCE_FN',
+        2: 'SCHEDULE_WAKEUP_TOOL_NAME',
+        3: 'MONITOR_REARM_GUIDANCE_FN',
+        4: 'LOOP_CONFIRM_AND_DECIDE_STEPS',
+        5: 'REARM_UPDATE_ORDER_FN',
+        6: 'TASK_STOP_TOOL_NAME',
+        7: 'TASK_LIST_TOOL_NAME',
+        8: 'LOOP_OUTCOME_REPORT_FN',
+        9: 'ADDITIONAL_INFO_FN',
+      },
+    },
+  ],
+  'agent-prompt-security-monitor-for-autonomous-agent-actions': [
+    {
+      // g$e(e=ah): AZe (host-context line guidance), n (`_Ho[e]`, the
+      // baseline/candidate wording object read as .boundBullet,
+      // .classifierBypassTail, …), g (`XP()?` ${mkt}`:""`), r and s (both "").
+      identifiers: [0, 1, 2, 3, 4, 1, 1, 1, 1],
+      identifierMap: {
+        0: 'HOST_CONTEXT_LINE_GUIDANCE',
+        1: 'CLASSIFIER_WORDING_VARIANT',
+        2: 'PASTED_CONTENT_TRUST_RULE_BLOCK',
+        3: 'EMPTY_STRING',
+        4: 'EMPTY_SESSION_RULE_SLOT',
+      },
+    },
+  ],
 };
 
 const NEW_PROMPT_ASSIGNMENTS = [

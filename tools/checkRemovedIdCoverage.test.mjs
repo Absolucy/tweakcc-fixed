@@ -33,10 +33,14 @@ const write = (name, value) => {
 
 // TWEAKCC_CLASSIFY_DIR points the sidecar scan at an empty directory: reading
 // the real /tmp would let whatever bump is in flight decide the answer.
-const run = (cli, prev, cur) => {
+const run = (cli, prev, cur, allowlist) => {
   const opts = {
     encoding: 'utf8',
-    env: { ...process.env, TWEAKCC_CLASSIFY_DIR: path.join(dir, 'empty') },
+    env: {
+      ...process.env,
+      TWEAKCC_CLASSIFY_DIR: path.join(dir, 'empty'),
+      ...(allowlist && { TWEAKCC_REMOVED_ID_ALLOWLIST: allowlist }),
+    },
   };
   try {
     return execFileSync(process.execPath, [TOOL, cli, prev, cur], opts);
@@ -146,6 +150,29 @@ describe('checkRemovedIdCoverage: prompts with little literal text', () => {
     expect(out).toMatch(/NO PROBE SURFACE[\s\S]*tool-result-slotless/);
     expect(out).not.toMatch(
       /truly removed, no recorded verdict:[\s\S]*tool-result-slotless/
+    );
+  });
+
+  it('settles a no-probe id once an archived verdict records the hand review', () => {
+    const slotless = {
+      id: 'tool-result-fixture-slotless-archived',
+      version: '2.1.259',
+      pieces: ['${', '}${', '}'],
+      identifiers: [0, 1],
+      identifierMap: { 0: 'A', 1: 'B' },
+    };
+    const allow = write('allow-np.json', {
+      'tool-result-fixture-slotless-archived': { verdict: 'archived' },
+    });
+    const out = run(
+      write('cli-np2.js', 'function q(){return "x"}'),
+      write('prev-np2.json', { prompts: [slotless] }),
+      write('cur-np2.json', { prompts: [] }),
+      allow
+    );
+    expect(out).toMatch(/0 no probe surface/);
+    expect(out).toMatch(
+      /resolved by hand \(archived\): tool-result-fixture-slotless-archived/
     );
   });
 });

@@ -81,6 +81,24 @@ function literalFragments(node, lookup, depth = 0) {
   return null;
 }
 
+// CC 2.1.284 builds the settings shape as a lazy field map (`key:()=>schema`,
+// resolved on first use), so a property's schema is what its thunk returns.
+function thunkResult(node) {
+  if (
+    !node ||
+    (node.type !== 'ArrowFunctionExpression' &&
+      node.type !== 'FunctionExpression') ||
+    node.params.length > 0
+  ) {
+    return node;
+  }
+  if (node.body.type !== 'BlockStatement') return node.body;
+  const [only, ...rest] = node.body.body;
+  return only && !rest.length && only.type === 'ReturnStatement'
+    ? only.argument
+    : node;
+}
+
 const escapeRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 const UNKNOWN = Symbol('unknown');
@@ -487,7 +505,7 @@ function createFinder(code) {
   // The description a property value carries at its outermost `.describe()`
   // (what JSON-schema generation puts on that property).
   function propertyDescription(value) {
-    let n = value;
+    let n = thunkResult(value);
     while (
       n &&
       n.type === 'CallExpression' &&

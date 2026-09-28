@@ -390,7 +390,12 @@ const patchPickerEffortRow = (
   const unsupported =
     /([$\w]+)\(([$\w]+),\{color:"subtle",children:\[[$\w]+\([$\w]+,\{effort:void 0\}\)," Effort not supported"/;
   const commits = [
-    // CC >= 2.1.281: effort state is read through getters inside the commit,
+    // CC >= 2.1.284: ultracode left the effort scale for its own session flag,
+    // so the commit no longer guards the level against it.
+    //   function ir(es){let ss=wy(es),Cs=nn(),ws=Yo(),Is=ss&&Cs!==void 0?
+    //   zV(Cs,ss):Cs;i("tengu_model_command_menu_effort",…
+    /(function ([$\w]+)\(([$\w]+)\)\{)(let ([$\w]+)=[$\w]+\(\3\),(?:[$\w]+=[$\w]+\(\),)*[$\w]+=\5&&([$\w]+)!==void 0\?[$\w]+\(\6,\5\):\6;[$\w]+\("tengu_model_command_menu_effort")/,
+    // CC 2.1.281 - 2.1.283: effort state is read through getters inside the commit,
     // and the analytics call is a bare statement.
     //   function Dr(cs){let Ts=vy(cs),Hs=Pn(),_i=qo(),fi=Ts&&Hs!==void 0&&
     //   Hs!=="ultracode"?yG(Hs,Ts):Hs;i("tengu_model_command_menu_effort",…

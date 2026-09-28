@@ -53,8 +53,16 @@ const patchEffortControls = (file: string): string | null => {
     'picker effort display'
   );
   if (result === null) return null;
+  const commits = [
+    // CC >= 2.1.284: ultracode is a session flag, no longer an effort level the
+    // commit has to guard against.
+    /(function ([$\w]+)\(([$\w]+)\)\{)((?:if\(\3==="fableplan"\)\{[$\w]+\(\3,void 0\);return\})?let ([$\w]+)=[$\w]+\(\3\),(?:[$\w]+=[$\w]+\(\),)*[$\w]+=\5&&([$\w]+)!==void 0\?[$\w]+\(\6,\5\):\6;[$\w]+\("tengu_model_command_menu_effort")/,
+    // CC 2.1.281 - 2.1.283.
+    /(function ([$\w]+)\(([$\w]+)\)\{)((?:if\(\3==="fableplan"\)\{[$\w]+\(\3,void 0\);return\})?let ([$\w]+)=[$\w]+\(\3\),(?:[$\w]+=[$\w]+\(\),)*[$\w]+=\5&&([$\w]+)!==void 0&&\6!=="ultracode"\?[$\w]+\(\6,\5\):\6;[$\w]+\("tengu_model_command_menu_effort")/,
+  ];
   const commit =
-    /(function ([$\w]+)\(([$\w]+)\)\{)((?:if\(\3==="fableplan"\)\{[$\w]+\(\3,void 0\);return\})?let ([$\w]+)=[$\w]+\(\3\),(?:[$\w]+=[$\w]+\(\),)*[$\w]+=\5&&([$\w]+)!==void 0&&\6!=="ultracode"\?[$\w]+\(\6,\5\):\6;[$\w]+\("tengu_model_command_menu_effort")/;
+    commits.find(pattern => pattern.test(result!)) ??
+    commits[commits.length - 1];
   return replace(
     result,
     commit,

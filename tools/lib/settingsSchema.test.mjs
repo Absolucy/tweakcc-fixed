@@ -151,3 +151,40 @@ function build(){return u({${ROOT_KEYS}market:Me})}`;
     expect(texts).not.toContain('Stored-file arm');
   });
 });
+
+describe('findSettingsDescriptions — lazy field thunks', () => {
+  // CC 2.1.284 hands the settings shape to a lazy field map: every property
+  // is a thunk (`key:()=>schema`) resolved on first use, so the @internal
+  // test must look through the thunk to the schema it returns.
+  const thunkRoot = ROOT_KEYS.replace(/:(?=[oA]\()/g, ':()=>');
+  const mod = `var o=()=>({describe(){return this},optional(){return this}}),A=o,u=(x)=>x;
+function build(e){return{${thunkRoot}
+  visible:()=>u({on:o().describe("Visible child")}).optional().describe("Visible parent"),
+  quiet:()=>u({enabled:o().optional().describe("Quiet child"),start:o().describe("Quiet start")}).optional().describe("@internal Quiet hours"),
+  flag:()=>o().optional().describe("@internal Hidden flag"),
+  block:()=>{return o().describe("@internal Block-bodied thunk")},
+  blockKid:()=>{return u({x:o().describe("Block child")}).describe("@internal Block parent")}}}`;
+  const { root, descriptions } = findSettingsDescriptions(bundle([mod]));
+  const texts = descriptions.map(d => d.joined);
+
+  it('finds the root and keys paths through thunks', () => {
+    expect(root).not.toBeNull();
+    const d = descriptions.find(x => x.joined === 'Visible child');
+    expect(d.keyPath).toBe('visible.on');
+    expect(texts).toContain('Visible parent');
+  });
+
+  it('drops an @internal thunk property together with its subtree', () => {
+    for (const t of [
+      '@internal Quiet hours',
+      'Quiet child',
+      'Quiet start',
+      '@internal Hidden flag',
+      '@internal Block-bodied thunk',
+      '@internal Block parent',
+      'Block child',
+    ]) {
+      expect(texts).not.toContain(t);
+    }
+  });
+});

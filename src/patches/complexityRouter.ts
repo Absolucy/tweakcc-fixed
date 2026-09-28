@@ -85,10 +85,10 @@
 // isolate their resolution from the parent router state.
 //
 // -- Interaction: ultracode --
-// CC's "ultracode" mode is gated on the RESOLVED effort being exactly "xhigh".
-// The default tiers map to low/medium/high/max (never xhigh), so while the router
-// drives, ultracode-gated behavior goes inactive for an xhigh-baseline user. To
-// keep ultracode reachable, map a tier's effort to "xhigh" (a valid RouterEffort).
+// Since CC 2.1.284 "ultracode" is a session setting (`/effort ultracode on|off`,
+// the `ultracode` settings key), independent of effort, so routed effort levels
+// no longer switch it off. Earlier builds (checked on 2.1.283) gate it on the
+// RESOLVED effort being exactly "xhigh"; there, map a tier's effort to "xhigh".
 //
 // -- Behavior --
 // pinPerTask (default true): a monotonic floor - the routed level never drops

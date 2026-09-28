@@ -238,5 +238,70 @@
     "verdict": "not-model-facing",
     "version": "2.1.282",
     "why": "Pushed with statusOnly into the settings errors, split into statusNotices that reach only /status and the claude doctor terminal lines; filtered out of every model-facing settings error path."
+  },
+  "data-sdk-set-max-thinking-tokens-request-schema": {
+    "verdict": "not-model-facing",
+    "version": "2.1.284",
+    "why": "SDK control-protocol set_max_thinking_tokens request schema .describe(); control messages from a host, never sent to the model (cache verdict internal)."
+  },
+  "data-self-hosted-runner-git-ssl-no-verify-lifecycle-hook-exception": {
+    "verdict": "not-model-facing",
+    "version": "2.1.284",
+    "why": "Self-hosted runner [runner:warn] governed-git warning; pushed to the array oo() returns and written to the runner process log via w(fe), never into a model request."
+  },
+  "data-self-hosted-runner-client-certificate-relay-warning": {
+    "verdict": "not-model-facing",
+    "version": "2.1.284",
+    "why": "Self-hosted runner [runner:warn] line written to the runner log (oo() -> w(fe)); not model-facing."
+  },
+  "data-self-hosted-runner-git-ssl-no-verify-session-relocation-note": {
+    "verdict": "not-model-facing",
+    "version": "2.1.284",
+    "why": "Self-hosted runner [runner:warn] line written to the runner log (oo() -> w(fe)); not model-facing."
+  },
+  "data-self-hosted-runner-git-askpass-governed-hosts-warning": {
+    "verdict": "not-model-facing",
+    "version": "2.1.284",
+    "why": "Self-hosted runner [runner:warn] line written to the runner log (oo() -> w(fe)); not model-facing."
+  },
+  "data-self-hosted-runner-anthropic-git-proxy-credential-warning": {
+    "verdict": "not-model-facing",
+    "version": "2.1.284",
+    "why": "Self-hosted runner [runner:warn] line written to the runner log; not model-facing."
+  },
+  "data-self-hosted-runner-git-ssl-cainfo-trust-bundle-warning": {
+    "verdict": "not-model-facing",
+    "version": "2.1.284",
+    "why": "Self-hosted runner [runner:warn] line written to the runner log (oo() -> w(fe)); not model-facing."
+  },
+  "tool-description-schedulewakeup-delay-and-reason-guidance": {
+    "verdict": "covered-reworded",
+    "version": "2.1.284",
+    "why": "2.1.283 reference composite; on 2.1.284 its text is catalogued under our split ids (system-prompt-loop-noop-flag-guidance, tool-description-schedulewakeup-reason-field, tool-parameter-schedulewakeup-delay-seconds-{general,5m-ttl,1h-ttl}-guidance). Goes stale once the reference catches up."
+  },
+  "system-reminder-directory-sync-full-environment-restore": {
+    "verdict": "covered-reworded",
+    "version": "2.1.284",
+    "why": "2.1.283 reference wording; 2.1.284 composes it from the rc phrase table and we catalogue it as system-reminder-directory-sync-environment-replaced-work-restored + rc entries. Every run absent from ours is absent from the 2.1.284 bundle too."
+  },
+  "system-reminder-directory-sync-partial-environment-restore": {
+    "verdict": "covered-reworded",
+    "version": "2.1.284",
+    "why": "2.1.283 reference wording; catalogued on 2.1.284 as system-reminder-dir-sync-environment-replaced-partial-restore + rc phrase entries. Missing runs are absent from the bundle."
+  },
+  "tool-description-artifact-responsive-page-contract": {
+    "verdict": "covered-reworded",
+    "version": "2.1.284",
+    "why": "Catalogued as tool-description-artifact-responsive; the run the gate misses was reworded in 2.1.284 and is absent from the bundle."
+  },
+  "tool-description-artifact-database-version-pinning-guidance": {
+    "verdict": "covered-reworded",
+    "version": "2.1.284",
+    "why": "Catalogued as tool-description-artifact-database-if-version; the missing run was reworded in 2.1.284 and is absent from the bundle."
+  },
+  "tool-parameter-artifact-url-guidance": {
+    "verdict": "covered-reworded",
+    "version": "2.1.284",
+    "why": "Catalogued as tool-parameter-artifact-existing-url; the missing runs were reworded in 2.1.284 and are absent from the bundle."
   }
 }
