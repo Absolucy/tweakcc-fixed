@@ -409,5 +409,40 @@
     "verdict": "glue",
     "note": "settings key name interpolated as the subject of the empty-allowlist validation message; the message template and its consequence clause are catalogued",
     "text": "httpHookAllowedEnvVars"
+  },
+  "aa0bc91caa83eebb": {
+    "builder": "R",
+    "param": "e",
+    "text": "image block has no source object",
+    "verdict": "glue",
+    "reason": "failure reason clause interpolated into a catalogued message; no instruction"
+  },
+  "7b8d6d3a531fe3f9": {
+    "builder": "R",
+    "param": "e",
+    "text": "image block source must be an object",
+    "verdict": "glue",
+    "reason": "failure reason clause interpolated into a catalogued message; no instruction"
+  },
+  "0877d85b1a1b8e19": {
+    "builder": "R",
+    "param": "e",
+    "text": "base64 image media_type must be a string",
+    "verdict": "glue",
+    "reason": "failure reason clause interpolated into a catalogued message; no instruction"
+  },
+  "79513efa08184ce1": {
+    "builder": "sa",
+    "param": "n",
+    "text": "the index could not be put in place",
+    "verdict": "glue",
+    "reason": "failure reason clause interpolated into a catalogued message; no instruction"
+  },
+  "040dfd4be4a76c69": {
+    "builder": "sa",
+    "param": "n",
+    "text": "HEAD could not be read after the branch moved",
+    "verdict": "glue",
+    "reason": "failure reason clause interpolated into a catalogued message; no instruction"
   }
 }

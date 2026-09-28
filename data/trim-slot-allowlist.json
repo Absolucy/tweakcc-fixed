@@ -396,5 +396,16 @@
       "TOOL_RESULT_ACCOUNT_SKILLS_SEND_COMPLETE_SKILL_VAR_0": "Suppressed per the wipe-merge verdict: system-prompt-saving-skills-via-file-delivery is injected by the same send_file selector and names the same file-delivery tool through its own SEND_USER_FILE_TOOL_NAME slot.",
       "TOOL_RESULT_ACCOUNT_SKILLS_SEND_COMPLETE_SKILL_VAR_1": "Renders the same constant save-option sentence that system-prompt-saving-skills-via-file-delivery interpolates as its VAR_1, so it still reaches the model once on the send_file arm."
     }
+  },
+  "agent-prompt-security-monitor-for-autonomous-agent-actions": {
+    "bodyHash": "3620c31330bd",
+    "reviewed": "2026-09-28 (CC 2.1.284)",
+    "tokens": {
+      "CLASSIFIER_WORDING_VARIANT.boundBullet": "The standing LCC trim deletes the whole Evaluation Rules section and the User Intent 'Bound' bullet; CC 2.1.284 moved those sections' wording into this A/B wording object. Realigned ccVersion-only rather than regrowing the deleted section; the new candidate rules therefore do not render under this override. Flagged to skrabe as a decision.",
+      "CLASSIFIER_WORDING_VARIANT.classifierBypassTail": "The standing LCC trim deletes the whole Evaluation Rules section and the User Intent 'Bound' bullet; CC 2.1.284 moved those sections' wording into this A/B wording object. Realigned ccVersion-only rather than regrowing the deleted section; the new candidate rules therefore do not render under this override. Flagged to skrabe as a decision.",
+      "CLASSIFIER_WORDING_VARIANT.unseenToolResultsTail": "The standing LCC trim deletes the whole Evaluation Rules section and the User Intent 'Bound' bullet; CC 2.1.284 moved those sections' wording into this A/B wording object. Realigned ccVersion-only rather than regrowing the deleted section; the new candidate rules therefore do not render under this override. Flagged to skrabe as a decision.",
+      "CLASSIFIER_WORDING_VARIANT.insertedEvaluationRules": "The standing LCC trim deletes the whole Evaluation Rules section and the User Intent 'Bound' bullet; CC 2.1.284 moved those sections' wording into this A/B wording object. Realigned ccVersion-only rather than regrowing the deleted section; the new candidate rules therefore do not render under this override. Flagged to skrabe as a decision.",
+      "CLASSIFIER_WORDING_VARIANT.persistentConfiguration": "The standing LCC trim deletes the whole Evaluation Rules section and the User Intent 'Bound' bullet; CC 2.1.284 moved those sections' wording into this A/B wording object. Realigned ccVersion-only rather than regrowing the deleted section; the new candidate rules therefore do not render under this override. Flagged to skrabe as a decision."
+    }
   }
 }

@@ -1471,5 +1471,100 @@
     "verdict": "archived",
     "version": "2.1.282",
     "why": "REPL variant of the MCP-wait connected result removed in 2.1.282"
+  },
+  "agent-prompt-narration-digest-how-started": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "client-side narration status-line agent removed in 2.1.284 (narration now arrives as server-tagged thinking blocks)"
+  },
+  "agent-prompt-narration-digest-just-now": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "client-side narration status-line agent removed in 2.1.284 (narration now arrives as server-tagged thinking blocks)"
+  },
+  "agent-prompt-narration-digest-previous-reply": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "client-side narration status-line agent removed in 2.1.284 (narration now arrives as server-tagged thinking blocks)"
+  },
+  "agent-prompt-narration-digest-user-request": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "client-side narration status-line agent removed in 2.1.284 (narration now arrives as server-tagged thinking blocks)"
+  },
+  "agent-prompt-narration-status-line-examples": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "client-side narration status-line agent removed in 2.1.284 (narration now arrives as server-tagged thinking blocks)"
+  },
+  "agent-prompt-narration-status-line-one-line": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "client-side narration status-line agent removed in 2.1.284 (narration now arrives as server-tagged thinking blocks)"
+  },
+  "agent-prompt-narration-status-line-previous-line": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "client-side narration status-line agent removed in 2.1.284 (narration now arrives as server-tagged thinking blocks)"
+  },
+  "agent-prompt-narration-status-line-system": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "client-side narration status-line agent removed in 2.1.284 (narration now arrives as server-tagged thinking blocks)"
+  },
+  "agent-prompt-narration-status-line-voice": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "client-side narration status-line agent removed in 2.1.284 (narration now arrives as server-tagged thinking blocks)"
+  },
+  "agent-prompt-narration-previous-line": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "client-side narration status-line agent removed in 2.1.284 (narration now arrives as server-tagged thinking blocks)"
+  },
+  "slash-command-effort-ultracode-level": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "/effort and /model effort strings rewritten in 2.1.284 when ultracode became a session setting"
+  },
+  "slash-command-effort-usage-header": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "/effort and /model effort strings rewritten in 2.1.284 when ultracode became a session setting"
+  },
+  "slash-command-model-effort-env-override-suffix": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "/effort and /model effort strings rewritten in 2.1.284 when ultracode became a session setting"
+  },
+  "slash-command-model-effort-session-only-suffix": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "/effort and /model effort strings rewritten in 2.1.284 when ultracode became a session setting"
+  },
+  "slash-command-model-ultracode-session-only-suffix": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "/effort and /model effort strings rewritten in 2.1.284 when ultracode became a session setting"
+  },
+  "skill-design-description": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "design skill description removed in 2.1.284"
+  },
+  "tool-result-artifact-db-write-committed": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "artifact db single-write committed result removed in 2.1.284"
+  },
+  "tool-result-artifact-live-doc-shim-published": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "slot-only live-doc shim publish result removed in 2.1.284"
+  },
+  "tool-result-skill-permission-rule-covers-old-name": {
+    "verdict": "archived",
+    "version": "2.1.284",
+    "why": "skill permission-rule old-name note removed in 2.1.284"
   }
 }

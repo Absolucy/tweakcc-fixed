@@ -18326,9 +18326,9 @@
     "why": "Batch-entry validateInput. Unique ${} needs prefix plus the 1-15-segment grammar. Cannot wipe: emptying this result hides which entry failed and the grammar at the only moment it is needed."
   },
   "tool-result-artifact-db-batch-committed": {
-    "verdict": "trim",
-    "version": "2.1.246",
-    "why": "Delete the frozen-but-redundant viewer sentence outright. Keep batch identity, write-count pluralization, results join, and every identifierMap slot. [stage-3 verified]"
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The earlier trim cut the redundant 'every viewer sees these changes' sentence; 2.1.284 replaced it with a slot naming who can read the written entries (private data/users vs access rules), which is new information, so the realigned override equals pristine."
   },
   "tool-result-artifact-db-batch-composed-path-too-long": {
     "verdict": "pristine-keep",
@@ -45831,5 +45831,2345 @@
     "verdict": "pristine-keep",
     "version": "2.1.282",
     "why": "Unique security consequence slot value. It is minimal as written."
+  },
+  "agent-prompt-security-monitor-inserted-evaluation-rules": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every sentence trips the freeze tripwire (restrictive quantifiers: 'never', 'do not', 'no'; enumerations of ≥2 items throughout; specific tool/flag names). Two of its CAPS labels are externally cited by sibling security-monitor prompts, so cutting or rewording them would silently break those cross-references. No slop, no coverage elsewhere."
+  },
+  "slash-command-auto-mode-setup-not-logged-in": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen mechanic (ordering word 'then', two literal command names). The overlapping sibling is an alternate branch of the same dispatch, not a co-rendering carrier, per the alternative-arm rule."
+  },
+  "slash-command-rate-limit-options-description": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal UI-listing string with no redundancy and no overlap elsewhere; needed verbatim for the command palette the model reads."
+  },
+  "system-prompt-auto-mode-classifier-external-system-writes-scope-baseline": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The near-identical sibling is the other arm of a wording experiment, not a co-rendering carrier, so it provides no coverage per the alternative-arm rule. The retained text carries an enumeration and a scope-limiting clause that must stay verbatim."
+  },
+  "system-reminder-dir-sync-file-store-full-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique mechanic fact the model needs to explain why dir-sync isn't happening; nothing else in the corpus covers this specific cause (store full, as opposed to withheld-by-policy reminders)."
+  },
+  "system-reminder-dir-sync-withheld-summary-tracked-only": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen interpolation template needed for its own distinct withholding scenario (tracked-only, no current-contents withheld). The longer sibling is an alternate-scenario render, not coverage."
+  },
+  "tool-result-device-tools-sandbox-failed-to-start-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Mechanic error text with a specific remediation path (/sandbox) and an explicit ordering constraint ('retrying before that will keep failing') — frozen, no overlap found."
+  },
+  "tool-result-dir-sync-ref-moved-head-mismatch": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen mechanic detail explaining a specific git-consistency-check failure mode; nothing elsewhere states this reason."
+  },
+  "tool-result-loop-brief-mode-plain-text-unread": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Low raw overlap and different host tool/call site; the two are parallel tool-specific instances of the same mechanic rather than one covering the other, and each carries its own frozen literal ('proactive')."
+  },
+  "tool-result-remote-tool-approval-evicted-too-many-waiting": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique mechanic fact about a specific approval-queue eviction cause; nothing else in the corpus states it."
+  },
+  "tool-result-remote-tool-policy-notes-local-parity": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every sentence is a distinct, tripwire-frozen operational constraint (enumeration 'rules, hooks and sandbox settings'; restrictive quantifiers 'never', 'No'); no slop, no coverage elsewhere."
+  },
+  "slash-command-autofix-pr-cloud-session-archived": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, unique, necessary fact for the hand-off message; no restrictive-quantifier/enum content but also nothing to trim off a single clause."
+  },
+  "slash-command-autofix-pr-servers-report-pr-steward-watching": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique fact (server-detected watcher, no explicit labels known) not stated anywhere else in the corpus."
+  },
+  "system-reminder-dir-sync-agent-files-created-before-arrival-trashed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "opensWithSlot is false but the fragment is clearly meant to be concatenated after a lead-in clause (per the 2.1.284 'directory-sync reminders composed from a per-cause phrase table' feature named in FOCUS). Text is frozen: it states an exact disposition (replaced, moved to trash, Claude notified) that nothing else in the corpus covers."
+  },
+  "system-reminder-dir-sync-environment-recreated-happened": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Each phrase-table entry states a distinct, mutually-exclusive cause; low overlap score reflects shared template scaffolding ('this session's cloud environment was ___'), not duplicated content. CAPS 'REPLACED' is the distinguishing enum-like marker between causes and is frozen."
+  },
+  "system-reminder-directory-sync-switched-back-on-by-anthropic": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique event notification (resume-of-sync semantics, dependency on the user's machine resuming, one-time telling instruction) not covered elsewhere; both served models under-narrate per FOCUS/LCC policy, so the explicit 'tell the user this once' instruction is load-bearing, not removable narration-suppression."
+  },
+  "system-reminder-plugin-did-not-load-count-summary": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct fallback used precisely when the named-plugin variant's precondition doesn't hold; content (count arithmetic, 'tell the user ... not that the skill is not installed') is frozen instruction with restrictive framing ('not that')."
+  },
+  "tool-result-dir-sync-config-location-relative-path-remedy": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Each of the three dir-sync relative-path/attribute-source messages fires for a different specific setting/cause and states its own remedy; none subsumes another's full mechanic (this one uniquely states 'restart Claude Code and start a new cloud session')."
+  },
+  "tool-result-remote-host-approval-ended-ask-withdrawn-clause": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Per its own description this is the fragment appended by XZr() specifically to the 'ended ask, withdrawn' case; the shared closing boilerplate across the family is deliberate reuse of a stock ending, not evidence this particular clause is redundant with a co-rendering sibling."
+  },
+  "tool-result-remote-tool-block-omitted-generic": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct fallback for block types the specific placeholders don't cover; content is minimal and non-reducible."
+  },
+  "tool-result-remote-tool-call-arrived-after-told-missing": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique scenario (call arrives after the session was already told it never arrived) with a restrictive 'only after ... that it never arrived' clause and a UTC-timestamped mechanic; frozen."
+  },
+  "tool-result-remote-tool-image-omitted-referenced-by-url": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Specific, load-bearing placeholder for the image-budget-exceeded case; distinct from the generic block placeholder."
+  },
+  "tool-result-remote-tool-served-via-forwarder-only": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique refusal message with a 'must be called through' restrictive mechanic; nothing else in the corpus states this forwarder requirement."
+  },
+  "data-settings-denied-models-ambiguous-name-ignored": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, fully mechanical error message naming a real setting key and a frozen example model name. Nothing to trim."
+  },
+  "slash-command-autofix-pr-steward-active-race": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen by ordering words (\"again\") and a backtick-quoted external label token `${}` that a GitHub label literal depends on — must stay verbatim."
+  },
+  "system-reminder-directory-sync-checkout-recreated-from-user-files": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Enumeration of 2+ exclusions, restrictive quantifiers ('already include', 'don't recreate'), and an ordering/scope contract ('check the files you last touched') make this frozen mechanics end-to-end. No slop to cut."
+  },
+  "system-reminder-directory-sync-checkout-rolled-back-setup-gone": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short enumeration fragment (tools/caches/background processes) is frozen by the 2+-item list rule regardless; the near-identical sibling is a different cause branch, not true duplication."
+  },
+  "system-reminder-directory-sync-switched-off-for-now-empty-start": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique cause (platform-side sync outage) plus a mechanic (per-turn recheck) absent from both similarity-flagged siblings; nothing here is coverable elsewhere."
+  },
+  "tool-description-gettask": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "This is exactly the mechanic the user's own established policy flags (never foreground-poll work the harness already notifies about) plus a security-relevant non-consent clarification found nowhere else in the corpus. Every sentence is frozen by 'never', enumerated status values, or a JSON shape literal. Keep in full."
+  },
+  "tool-description-mcp-renamed-parameter-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal mechanical clause naming the tool's own parameter var; nothing to cut or merge."
+  },
+  "tool-result-bash-dollar-brace-transform-expansion-too-complex": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Security/parse-failure explanation naming exact bash expansion syntax; frozen verbatim by the path/tool-syntax rule."
+  },
+  "tool-result-cloud-session-file-sync-off-before-files-reached": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct pre-arrival vs post-arrival cause with its own mechanic ('checks once'); sibling covers the other, non-co-rendering branch."
+  },
+  "tool-result-remote-tool-approval-different-channel-than-request": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Same pending-request boilerplate wraps two different, mutually exclusive causes; each must state its own cause verbatim (both contain the `.targetName` slot path, frozen)."
+  },
+  "tool-result-remote-tool-call-too-large-for-target": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen by the `.policy.limits.max_request_bytes` slot path and the byte-limit mechanic; unique in the corpus."
+  },
+  "tool-result-remote-tool-stale-leg-clock-undatable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique clock-skew/staleness mechanic for the remote-tool approval pipeline; no other prompt states this."
+  },
+  "tool-result-subagent-launch-refused-no-directory-in-cwd-scope": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, load-bearing refusal message with an explicit fallback instruction ('Do the task without a subagent'); nothing to trim."
+  },
+  "skill-loop-confirm-body-self-pacing": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, already-trimmed mechanical fragment naming exactly what the /loop confirmation must contain (self-pacing state, wake-signal var, that the task ran now, fallback delay). No slop to cut, and its only lead is a mutually exclusive sibling mode, so nothing covers it."
+  },
+  "slash-command-effort-remote-transport-local-only-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal appended clause explaining why an /effort change only applied locally over this transport; nothing else in the corpus states this."
+  },
+  "slash-command-pause-memory-paused-this-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Sole /pause-memory status message in the corpus; 'will not write or read new memories' and 'previously-loaded memory content should not be referenced' are load-bearing behavioral constraints (never/do-not guarding a runtime state), frozen."
+  },
+  "slash-command-plugin-install-records-format-unrecognized": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique explanation of an installed_plugins.json version mismatch; the filename, `claude update` command, and version-field reference are all frozen (path/filename + command literal), and the remedy instructions are load-bearing."
+  },
+  "system-reminder-directory-sync-switched-off-for-now": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Precise status statement for one specific sync state (off, nothing the user did, checks resume each turn, tell once); every clause is mechanic/ordering content that must stay verbatim."
+  },
+  "tool-description-bash-pr-steward-labels-guidance": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Sole definition of PR Steward and its labels in the corpus, plus the only general (non-/autofix-pr-gated) Bash-level safety gate against racing it; the more specific /autofix-pr and /loop prompts are narrower pointers that presuppose this content rather than duplicate it."
+  },
+  "tool-description-remote-served-tool-bound-cloud-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, unique description text feeding a served tool's `description` field for bound cloud sessions; nothing else states this."
+  },
+  "tool-parameter-gettask-taskid": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Sole description of GetTask's taskId parameter, referencing the exact result shape it comes from — a frozen literal (field name/tag), must stay verbatim."
+  },
+  "tool-result-artifact-publish-workshop-decisions-unreadable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct unreadable-block condition with its own enumerated causes and its own directive; the shared trailing phrase with a sibling is convergent wording for a similar but non-co-rendering situation, not duplication."
+  },
+  "tool-result-cloud-session-file-sync-off-paused-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "One specific branch of the file-sync-off state machine (session was mid-flight and is now paused); the once-per-message check-back behavior is a frozen ordering/mechanic detail."
+  },
+  "tool-result-remote-tool-approval-answers-different-request": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Precise, single-cause remote-approval failure message with its own remedy instruction; its near-neighbor covers a different failure cause and never co-renders with it."
+  },
+  "tool-result-remote-tool-approval-no-answer-in-time": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Sole statement of the approval-timeout outcome ('withdrawn and nothing ran'); unique among the remote-tool-approval family."
+  },
+  "tool-result-remote-tool-host-stopped-during-ask": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct, load-bearing outcome message ('Claude Code on X stopped while the permission request was open') among a family of mutually exclusive host-unavailable-during-ask outcomes; high textual overlap with its siblings is expected and not duplication since only one ever renders."
+  },
+  "data-bash-mode-command-failed-message": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, fully mechanical data-injection template; the tag name and label text are almost certainly matched/parsed downstream (structural marker), and there is no narrative content to trim."
+  },
+  "data-task-notification-plugin-dev-mods-load-failed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct condition and distinct actionable remedy (retry is viable here, unlike the -unbound sibling where it explicitly is not); losing this loses the 'retry works' signal."
+  },
+  "system-reminder-dir-sync-device-upload-gone-resend-asked": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, unique, purely informational reminder with no redundant material to cut."
+  },
+  "task-notification-mod-hot-reload-unanswered": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every clause blocks a specific wrong model behavior (claiming declined, suggesting --plugin-dir/restart) that would otherwise plausibly be said given the ambiguous state; none is generic scaffolding."
+  },
+  "tool-description-artifact-database-guidance-skill-call-wording": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "This is the live, detailed 'how the six ops work' paragraph with no fuller duplicate found anywhere in the corpus; the two flagged siblings describe a superseded API shape (inline action param, different capability set) rather than restating this one."
+  },
+  "tool-description-directory-sync-device-sync-files": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique mechanical tool description with a load-bearing invocation-model note ('not directly')."
+  },
+  "tool-description-gettask-short": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal short-form tool description; nothing to trim."
+  },
+  "tool-parameter-attached-machine-name": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every sentence adds a distinct, non-overlapping piece of guidance a model needs to use this parameter correctly (default, restriction, feedback location, selection criterion)."
+  },
+  "tool-result-artifact-url-chat-artifact-not-readable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique error+remedy message; both remedies are distinct and neither subsumes the other."
+  },
+  "tool-result-git-bundle-attribute-source-relative-path-unfollowable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct diagnostic condition (relative path specifically) with its own correct remedy (make absolute); the flagged siblings address different settings or different fixes."
+  },
+  "tool-result-mcp-passthrough-server-needs-consent": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Each MCP-passthrough message names a distinct precondition and a distinct remedy path; this one specifically tells the model where the fix must happen (on that machine, in a browser)."
+  },
+  "tool-result-remote-tool-failed-before-result-debug-log": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, unique diagnostic pointer."
+  },
+  "tool-result-remote-tool-plumbing-not-served-dir-sync-hold": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Terse fallback fragment with unique mechanic (dir-sync holds, doesn't error) not stated anywhere else."
+  },
+  "data-settings-denied-models-invalid-list-ignored": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, unique settings-validation message naming the frozen setting key 'deniedModels'; fully mechanical, already minimal."
+  },
+  "system-reminder-dir-sync-halt-line-set-aside-failed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique failure-reason fragment in the directory-sync halt-line phrase table; contains the frozen path-interpolation mechanic (${VAR0(VAR1.path)})."
+  },
+  "system-reminder-dir-sync-kept-in-cloud-only-list": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen by the tripwire: enumeration of 2+ items plus a runtime array/filter/join expression that other code depends on. Fully mechanical, unique."
+  },
+  "system-reminder-directory-sync-checkout-rolled-back": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen by the externalRefs quotedElsewhere signal — the 'ROLLED BACK' label is depended on by another prompt's composition. Keep verbatim."
+  },
+  "tool-description-artifact-supporting-files-multifile-limits": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every sentence is frozen by the tripwire (enumeration, path/file mechanics, `null` sentinel, numeric limit slots, ordering 'On an update'). Unique mechanic not covered by the skeleton prompt or any other sibling."
+  },
+  "tool-result-artifact-db-query-order-by-drop-suggestion": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen by the tripwire: parameter names + enumeration of two remedies. Fully mechanical."
+  },
+  "tool-result-cloud-session-not-finished-starting": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen by the tripwire: ordering ('before this call's time ran out'), conditional instruction ('If it is refused this way again'). Unique cause (hooks/settings not finished loading)."
+  },
+  "tool-result-device-tool-serve-refused-too-many-concurrent": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "opensWithSlot=true confirmed handled correctly (starts with ${VAR0}); contains a frozen numeric limit and retry instruction."
+  },
+  "tool-result-gettask-repeated-call-not-answered-again": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen by tripwire: numeric count, status enum value, and the mechanic 'the same call repeated within one response is not answered again'."
+  },
+  "tool-result-remote-tool-approval-not-verified-as-persons-own": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct approval-failure cause message in the remote-tool family; no sibling fully covers this specific cause."
+  },
+  "tool-result-remote-tool-call-status-joined-forgotten-dedupe": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen by tripwire: timestamp interpolation + ordering ('already under way ... since forgotten'). Unique dedupe-status mechanic."
+  },
+  "tool-result-remote-tool-stopped-shutting-down-before-start": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique cause/phase combination in the remote-tool termination-reason table; frozen by ordering ('before the command started — nothing ran')."
+  },
+  "agent-prompt-pr-steward-remove-label-cloud-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Dense, single-purpose mechanics prompt (command + ordering + two hard restrictions) with no filler and no genuine corpus duplicate."
+  },
+  "data-dir-sync-restore-reason-not-stored": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal reason-table entry describing one specific failure mode; nothing to trim and no overlap."
+  },
+  "data-haiku-model-picker-description": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal UI-facing description text with no bloat and no corpus overlap."
+  },
+  "data-plugin-name-kebab-loaded-by-path-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Each clause fires for a mutually exclusive condition (loaded via --plugin-dir vs. not); the shorter sibling is the other branch of the same ternary and per rule is never coverage for this one."
+  },
+  "data-settings-available-models-exact-name-only-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, fully load-bearing note about exact-name matching semantics for availableModels."
+  },
+  "skill-doctor-prompt-audit-configuration-scope": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "This is the default-argument payload for /doctor prompt-audit's scoping; the length is the exhaustive path enumeration itself, which is the load-bearing content, not padding."
+  },
+  "system-prompt-auto-mode-classifier-remote-service-tool-scope-candidate": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "New, distinct clarification of tool-name-vs-server-prefix scoping for the auto-mode classifier; no existing corpus text states this rule."
+  },
+  "tool-result-artifact-publish-source-network-share": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, load-bearing refusal text with a specific remediation instruction."
+  },
+  "tool-result-bash-interim-output-file-path-hint": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal mechanical hint embedded in a status object; nothing to cut."
+  },
+  "tool-result-dir-sync-branch-could-not-be-put-back": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Specific mechanics for one restore-failure reason with its own remediation command; no overlap found."
+  },
+  "tool-result-remote-tool-daemon-exec-ingest-write-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Family-pattern refusal template guarding a resource (daemon-exec path) not covered by any sibling's specific wording; the shared frame is boilerplate, not duplicate content."
+  },
+  "tool-result-remote-tool-personal-credential-access-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct enumerated scope (SSH keys, cloud-provider credentials, developer-tool logins) not textually present in any sibling refusal template; each sibling guards a narrower, different named resource."
+  },
+  "tool-result-remote-tool-served-for-another-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, load-bearing refusal explaining a specific routing-mismatch failure; nothing to cut."
+  },
+  "agent-prompt-security-monitor-bound-rule-basic": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique, frozen, mechanics-only text for the default/basic classifier config; its only lead is a mutually exclusive alternate config variant, not a co-rendering duplicate."
+  },
+  "slash-command-autofix-pr-steward-may-be-working": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "New, low-overlap, distinct-state fragment for the new PR-Steward feature; no real duplicate."
+  },
+  "slash-command-plugin-marketplace-add-source-changed-named": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Alternate-branch overlap only; unique when its own branch fires."
+  },
+  "system-reminder-device-mcp-serving-state-unreadable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, unique notice with no coverage elsewhere."
+  },
+  "system-reminder-dir-sync-earlier-work-not-restored-told": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct cause-cell in the per-cause dir-sync phrase table; no sibling renders the same cause in the same request."
+  },
+  "system-reminder-remote-machine-only-resources-routing": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen mechanics text (tool routing, path patterns, live conditional for install location) with its only real sibling being the opposite-state alternate arm."
+  },
+  "tool-result-artifact-db-write-committed-shared-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Wording overlap with a template for a different, mutually exclusive tool call shape; not real coverage."
+  },
+  "tool-result-device-tool-serve-refused-unbound-device": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct refusal cause with its own remedy instruction; no coverage found."
+  },
+  "tool-result-native-tool-elsewhere-result-unreadable-effect": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Its only close lead is the mutually-exclusive read-only-tool branch; the lower-overlap lead is a different failure mode at a different site and drops the 'check effect' instruction this prompt uniquely carries."
+  },
+  "tool-result-remote-tool-call-status-restart-outcome-unknown": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique cause fragment, no coverage."
+  },
+  "tool-result-remote-tool-cancelled-during-file-sync-before-start": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "High textual overlap is the phrase-table's inherent shared scaffold across mutually exclusive causes, not duplicate coverage of this specific cause."
+  },
+  "tool-result-remote-tool-host-unbound-during-ask": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Shared scaffold across a mutually-exclusive per-cause table, not real duplication."
+  },
+  "tool-result-settings-deny-glob-trailing-separator": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique validation-error text with a load-bearing literal (\"**\") that other prompts may depend on matching; no coverage found."
+  },
+  "agent-prompt-pr-steward-remove-label-local-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, unique, behavior-defining text with no overlap from anything that actually co-renders with it."
+  },
+  "data-settings-denied-models-empty-entry-ignored": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct, minimal, load-bearing error message; no duplicate anywhere in the corpus."
+  },
+  "system-reminder-dir-sync-device-upload-refused-fresh-snapshot": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, unique mechanic, no slop."
+  },
+  "system-reminder-dir-sync-oversize-turn-version-stays-cloud": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique mechanic including an edge case ('nothing, if the file is new'), no slop."
+  },
+  "system-reminder-directory-sync-disabled-set-aside-failed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique, minimal, load-bearing."
+  },
+  "system-reminder-served-hook-error-home-directory-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains a load-bearing, non-obvious mechanic (env var name, stdin field) that a guard author needs; no slop, no duplicate."
+  },
+  "tool-description-enable-claude-browser": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Templated-but-tool-specific contract text; each sibling is independently load-bearing."
+  },
+  "tool-description-poll-idle-behavior": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique tool-result-shape contract (a literal sentinel string a caller must match on) — frozen mechanics, no duplicate."
+  },
+  "tool-parameter-enable-computer-use-task": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Templated but tool-specific input_schema text; not a real duplicate."
+  },
+  "tool-parameter-schedulewakeup-delay-seconds-5m-ttl-guidance": {
+    "verdict": "trim",
+    "version": "2.1.284",
+    "why": "Partial bloat over a load-bearing core: the numeric thresholds, the CI-run/deploy/queue example, the 300s-vs-270s pitfall, the 1200-1800s idle default, the worked ~8min-CI/~270s-twice example, and the [60,3600] clamp are all frozen (contain numbers/thresholds/enumerations) and must stay verbatim; the 'why the TTL matters' preamble sentence, the redundant 270s/1200s+ restatement clause and 'think in cache windows' mnemonic in the 300s-pitfall sentence, the 'loop checks back / 12x per hour' rationale clause, and the vague 'think about what you're actually waiting for' framing sentence are unnecessary restatement/hedging on top of the frozen sentences and should be cut whole (never rewritten/compressed). [stage-3 verified]"
+  },
+  "tool-result-device-mcp-passthrough-consent-withdrawn": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct trigger condition (global consent withdrawal) from every sibling; the shared tail phrase is corpus-wide boilerplate, not coverage."
+  },
+  "tool-result-dir-sync-attributes-file-relative-remedy": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The extra 'or set it in ~/.gitconfig to an absolute/~/ path' clause is a real third remedy not present in the near-duplicate sibling, and the git-bundle family is a different mechanism/render site — not coverage."
+  },
+  "tool-result-dir-sync-layout-changed-reflog-not-plain-file": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Different referenced git object than its near-textual-twin; genuinely separate trigger, not a duplicate."
+  },
+  "tool-result-remote-tool-destructive-command-ask": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, load-bearing, unique."
+  },
+  "data-settings-available-models-empty-entry-ignored": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal one-line data-validation notice with unique content; nothing to trim or merge."
+  },
+  "skill-keybindings-validation-fix-not-a-modifier": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short mechanics-only instruction (refers to a specific 'Keystroke Syntax list' table) with no slop or overlap."
+  },
+  "skill-plugin-authoring-folder-write-failed-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains frozen path/filename mechanics (`/plugin-types <dir>`, `claude-code.d.ts`) and a slot the caller depends on (folder path VAR_0); must stay verbatim."
+  },
+  "slash-command-plugin-marketplace-add-source-changed-generic": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "0.44 overlap is shared boilerplate structure between two alternate-arm messages, not real duplication; the generic variant is the only text shown when specific source names aren't available, so it is not covered by the named variant."
+  },
+  "slash-command-plugin-validate-marketplace-name-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Validation error with frozen mechanics: literal quoted marketplace name (truncated via `.name,64`), a slotted reason clause, and instruction to change the \"name\" field — all load-bearing."
+  },
+  "system-reminder-device-mcp-serving-consent-needed-brief": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "0.94 overlap is the brief text being a strict prefix of the detailed branch's shared opening clause, but per the ternary-branch rule an alternate arm is never coverage; only one of brief/detailed renders per request, so the brief variant is load-bearing on its own."
+  },
+  "tool-parameter-schedulewakeup-delay-seconds-general-guidance": {
+    "verdict": "trim",
+    "version": "2.1.284",
+    "why": "This is the split-out 'general/mixed-TTL' successor to the retired composite prompt whose 'Picking delaySeconds' section the user had already trimmed identically. Per FOCUS: keep every number/threshold/mechanic the new pristine states (never-schedule-extra-wakeups rule, CI/deploy/remote-queue example, 1200s-1800s idle default, the 5-minute-TTL refinements with 300s/270s/1200s+ numbers, and the [60,3600] clamp — quoted verbatim elsewhere per externalRefs.quotedElsewhere so must not be reworded) but cut the billing-mechanism/TTL-explainer paragraph that is not decision-relevant, matching the user's own precedent exactly. [stage-3 verified]"
+  },
+  "tool-result-artifact-db-batch-committed-private-readers-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Low overlap (0.27) reflects only shared boilerplate wording ('by default ... readable only ... whose data/users subtree'); the batch-specific note is a separate, necessary fragment tied to its own tool result and contains the frozen path 'data/users'."
+  },
+  "tool-result-dir-sync-attr-source-env-config-remedy": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Templated remedy reused for multiple root causes (structural boilerplate), but this instance's specific cause (env/config-derived setting) and remedy verb ('remove') plus the ordered restart sequence ('restart Claude Code and start a new cloud session') are unique mechanics not restated verbatim by either sibling."
+  },
+  "tool-result-dir-sync-layout-changed-refs-dir-changed-not-restored": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The high overlap with branch-not-put-back-index-old is because that sibling is the generic parameterized suffix this id's specific 'refs dir changed' reason feeds into at the source level — but that generic prompt cannot itself supply the reason text, and no independent carrier renders this exact reason+remedy combination in the same request. A carrier must be a genuinely separate id whose OWN deployed text already contains the cut content; the generic template's deployed body only contains a bare '${VAR_0}' placeholder, not this reason literally, so it does not qualify as coveredBy. The reason clause and full remedy chain are unique, necessary content for this specific dir-sync failure scenario."
+  },
+  "tool-result-memory-file-harness-tag-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, load-bearing refusal-list clause with a frozen slot (the offending tag text) and a hard rule ('must not carry')."
+  },
+  "tool-result-remote-tool-approval-needed-elicitation": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Mechanics-dense: names the specific tool/target fields and an approval-reason slot; opensWithSlot flagged true, so the leading template call is depended on by the render pipeline."
+  },
+  "tool-result-remote-tool-call-no-time-left-before-deadline": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Shared boilerplate clause ('admission took longer than the caller allowed — nothing ran') is reused across two distinct timeout scenarios; each instance's specific deadline computation (`.max(1000, VAR)`) and target/outcome differ and must stay verbatim."
+  },
+  "tool-result-remote-tool-credential-read-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "All overlaps are well under the range that would indicate a true duplicate (max 0.53); each is the only text shown for its specific credential-read refusal scenario and carries frozen slots (VAR_0 gate name, VAR_1 connection name) plus the exact refusal wording 'Nothing was read.'"
+  },
+  "data-artifact-file-current-until-publish-refused-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen mechanics: enumerates two conditions (own file vs any other file), has ordering word 'before', and a restrictive scope ('any other file you will change'). Already minimal — no padding to trim."
+  },
+  "data-plugin-name-kebab-marketplace-install-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen fragment (proper noun 'Claude Code', specific refusal reason); this is a mid-sentence interpolation slot (opens/ends without terminal punctuation), so wiping would blank part of a rendered sentence elsewhere. Keep verbatim."
+  },
+  "data-settings-denied-models-non-string-entry-ignored": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: contains the literal setting key \"deniedModels\" (parameter name) and a conditional type-report mechanic (${===null?...:typeof}). Mechanics/error-message content, already minimal."
+  },
+  "data-settings-validation-fail-closed-fallback-source-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: opensWithSlot (conditional case-variable slot), enumerates the fail-closed rule ('the most restrictive value of each such key applies') which is a load-bearing security/validation-gate mechanic — a never/must-type restrictive semantic that must stay verbatim if retained at all."
+  },
+  "slash-command-autofix-pr-still-polling-stop-hint": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: contains the literal slash-command name/argument '/autofix-pr stop', which is a command-name tripwire item. Already minimal."
+  },
+  "system-reminder-dir-sync-trash-files-not-moved-back-clause": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: contains literal path/name pieces (the '.trash' folder reference) and enumerates a specific failure state (files moved to trash, could not be moved back) that the agent needs verbatim to know where its files actually are — this is a path/state fact, not narration."
+  },
+  "system-reminder-unreachable-attached-machines": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every sentence trips the tripwire independently: restrictive quantifiers ('Do not', 'only'), an enumeration (asleep, offline, or Claude Code not running there), a threshold (10 seconds), and ordering words (then, until). Both models under-narrate per the run's stated bias, and this text is specifically anti-narration-suppression (it forces telling the user what's waiting) — removing any of it would be a functional regression, not a slop cut."
+  },
+  "tool-result-artifact-read-overlong-lines-list": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "opensWithSlot:true, entirely template mechanics (join separator, pluralization, count-more clause) — every token is functional, nothing to trim."
+  },
+  "tool-result-bash-dangerous-op-cmd-workspace-directory": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: 'no command may remove that path' is a restrictive/never-type security gate message that must stay verbatim if kept at all."
+  },
+  "tool-result-git-bundle-windows-exe-directory-clause": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: enumerates the two skipped wrapper filenames (git.cmd, git.bat) and the required filename (git.exe) — a tool/filename enumeration, a strict tripwire hit. Keep verbatim."
+  },
+  "tool-result-loop-end-turn-last-action": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Ordering-word clause ('then') giving the exact sequencing contract for the non-immediate-end-turn model branch; already minimal, mechanics-only."
+  },
+  "tool-result-remote-tool-approval-cannot-change-call": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The recovery instruction ('Send the changed call as a new one') is unique, actionable mechanics not present in any sibling — full text is load-bearing."
+  },
+  "tool-result-remote-tool-approval-during-file-sync-still-pending": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the specific cause (approval arrived while file sync was still writing newer files into the checkout) — distinct condition from every sibling, no slop to cut."
+  },
+  "tool-result-tool-wrapper-not-run-permission-check-incomplete": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "opensWithSlot:true, minimal mechanics-only deny message naming the exact failure reason; nothing to trim."
+  },
+  "data-settings-allow-managed-permission-rules-only-description-part-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every restrictive quantifier (only, no managed setting, nothing an entry names, only when), the multi-item enumeration of admin-backed channels, and the literal setting/parameter names (allowed-tools, --plugin-dir, extraKnownMarketplaces, strictKnownMarketplaces, enabledPlugins, owner/*) make this FROZEN mechanics per the tripwire. It is one part of a multi-part settings description the model reads verbatim through /update-config; nothing here is padding."
+  },
+  "skill-keybindings-cmd-modifier": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Enumeration of aliases (command, super, win), a restrictive quantifier (not the same as meta; most terminals never send it), and named technical mechanisms (Kitty keyboard protocol, xterm modifyOtherKeys) are all FROZEN per the tripwire. This is unique keybinding-configuration guidance the Skill needs verbatim."
+  },
+  "system-reminder-dir-sync-environment-recreated-setup-gone": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "This is one leaf of the per-cause phrase table the 2.1.284 dir-sync reminders compose from (per the task's focus note); each cause needs its own accurate wording of what was lost, and 'environment recreated' vs 'checkout rolled back' are materially different situations for the user to understand."
+  },
+  "task-notification-mod-hot-reload-declined": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains restrictive quantifiers (NOT loaded, Do not say, only a mod that loaded at the start), a named slash command (/reload-plugins), and ordering (loads the next time this session starts) — FROZEN mechanics per the tripwire. The whole point of the notification is to prevent Claude from misreporting a written-but-unloaded change as live; every clause is load-bearing for that."
+  },
+  "tool-result-cross-machine-pdf-document-too-large-to-take": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "opensWithSlot is true and the slot math (Math.floor(data.length*3/4)) is a computed size estimate spliced into the message — mechanics the runtime depends on. The remediation clause ('read it by pages instead') is the actionable instruction and must stay verbatim."
+  },
+  "tool-result-dir-sync-layout-changed-refs-dir-changed-undone": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the specific path (refs/), the ordering (while git wrote the branch), and states a concrete outcome (the move was undone) that the next sentence in the composed reminder depends on to tell the user whether remediation is needed. FROZEN mechanics."
+  },
+  "tool-result-dir-sync-layout-changed-refs-dir-not-plain": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the path (refs/) and states the outcome with a restrictive quantifier (nothing was written) — FROZEN mechanics, and a third distinct cause in the dir-sync phrase table."
+  },
+  "tool-result-proposeskills-listed-skill-not-read-in-full": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short factual condition naming exactly why a ProposeSkills proposal for a listed skill is refused; no quantifiers/enumeration but it is a precise, non-padded mechanic string with no slop to trim."
+  },
+  "tool-result-remote-tool-answer-not-returned-generic": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "opensWithSlot true; this is the catch-all generic template (3 slots: who answered, why not returned, optional tail) used when no more specific reason-template applies — the specific 'too large' template exists precisely because this generic one needs a plugged-in reason for the general case. Both must remain."
+  },
+  "tool-result-remote-tool-cancelled-before-start-hook-or-approval-pending": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a specific, non-obvious mechanic (cancellation happened before the command ran because a hook/approval was pending, so nothing ran) that the model needs to correctly report the outcome. FROZEN — no quantifier-string to trim without losing the causal claim."
+  },
+  "tool-result-remote-tool-permission-request-no-longer-pending": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The 'nothing ran and nothing will' clause is the load-bearing distinction from the sibling's retry guidance — collapsing them would give the model wrong next-step guidance (suggesting a retry that will not help) in the decline-names-stale-request case."
+  },
+  "tool-result-remote-tool-timeout-held-to-allowed-max": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a clamping mechanic (requested timeout > allowed max, held to the max) with three distinct slots (requested value, allowed value/label, target descriptor) — this is exactly the kind of number/threshold mechanic the tripwire freezes."
+  },
+  "tool-result-snooze-status-update-then-end-turn": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tells the model to send any owed status update this tick before ending the turn — directly relevant to the under-narration failure mode both served models exhibit; removing it would make the model more likely to silently end the turn without an owed update."
+  },
+  "tool-result-unknown-tool-name-deferred-successor": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains the literal query-format string 'select:' that ToolSearch actually parses (a mechanic another system component depends on, per the tripwire's 'a literal the bundle matches' clause) plus an ordering instruction (load it first, if not loaded yet) — FROZEN."
+  },
+  "data-settings-available-models-hyphen-version-suggestion": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, mechanically necessary error-remediation text with no overlap that survives inspection of the actual sibling bodies."
+  },
+  "slash-command-plugin-uninstall-records-unreadable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Load-bearing, distinct-per-verb error message; nothing to cut."
+  },
+  "slash-command-plugin-update-command-source-skipped-background": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique mechanics about a specific update-skip condition and its two fixes; fully load-bearing."
+  },
+  "system-reminder-device-mcp-serving-not-offered-list": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, mechanical, unique."
+  },
+  "tool-parameter-permission-ask-elicitation-feedback": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Already minimal, unique field description."
+  },
+  "tool-parameter-schedulewakeup-delay-seconds-1h-ttl-guidance": {
+    "verdict": "trim",
+    "version": "2.1.284",
+    "why": "Not a full-coverage case (wipe-merge) and not slop-free (pristine-keep): genuine tutorial padding sits alongside genuinely new, TTL-specific mechanics (the usage-overage-drops-to-5-minute-TTL behavior) that the FOCUS instructions require keeping verbatim as a new mechanic/threshold. Match the established curated-cut style — action-oriented bullets plus the never-extra-wakeups line plus the bare clamp sentence — while retaining every number/threshold this NEW pristine states that the old unconditional prompt didn't have. [stage-3 verified after main-loop repair: mid-sentence splice restored verbatim]"
+  },
+  "tool-result-artifact-db-ordered-query-one-page-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique, mechanical pagination-contract text."
+  },
+  "tool-result-device-mcp-passthrough-server-turned-off": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct, necessary denial-cause message; no real overlap with either lead once bodies are read."
+  },
+  "tool-result-remote-tool-answer-refused-by-relay": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, unique fragment feeding a shared tool_result composer."
+  },
+  "tool-result-remote-tool-caller-cancelled-before-ran": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, unique."
+  },
+  "tool-result-remote-tool-deadline-reached-during-file-sync": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct cause within a family of near-template but semantically different failure messages; each is individually load-bearing."
+  },
+  "tool-result-remote-tool-decline-named-different-call": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique, mechanical."
+  },
+  "tool-result-remote-tool-stale-leg-arrived-late": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique, mechanical, explains a genuinely distinct race condition."
+  },
+  "tool-result-snooze-send-status-update-via-brief": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Near-duplicate content but distinct render site and referent ('it' = Snooze's owed update) without a provable same-request carrier; conservative per-instruction to require typed coveredBy with exact quotes, which isn't obtainable here."
+  },
+  "skill-dynamic-pacing-loop-confirm-and-decide-steps": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique, load-bearing mechanics for the dynamic-pacing loop's re-arm decision (sentinel prompt string, noop collapsing, delay heuristic) not restated correctly anywhere else; alternative-arm sibling doesn't count as coverage per rule."
+  },
+  "slash-command-plugin-install-invalid-id-charset-rule": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen character-set validator rule, unique/necessary wherever this generic-cause branch fires; sibling reason-branch texts are mutually exclusive alternatives, not carriers."
+  },
+  "slash-command-plugin-marketplace-add-undo-remove-extra-known": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Load-bearing undo mechanic naming the specific settings key and file to edit; alternative-arm sibling is not coverage."
+  },
+  "system-prompt-auto-mode-classifier-blocked-actions-list-candidate": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Security-relevant classifier blocklist; each enumerated action category is a distinct real-world action class the auto-mode classifier must catch — no overlap or redundancy found anywhere in the corpus."
+  },
+  "system-prompt-auto-mode-classifier-bypass-signal-tool-args-text": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct, security-critical anti-bypass rule for the auto-mode/permission classifier with no restatement elsewhere in the corpus."
+  },
+  "system-reminder-started-new-instead-of-resuming-search-or-read-hint": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tiny load-bearing connector clause for the resume-vs-new-session hint; too small and structurally embedded to trim, and no duplicate exists anywhere in the corpus."
+  },
+  "tool-result-account-memory-server-hook-answer-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Literal, behavior-defining tool_result string with a unique cause (plugin hook impersonating the account memory server); nothing else in the corpus covers this specific denial reason."
+  },
+  "tool-result-artifact-read-looks-like-artifact-id-pass-full-link": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique tool_result guidance for the Artifact read handler's id-vs-link disambiguation, including a literal code fragment that must stay verbatim."
+  },
+  "tool-result-device-bridge-host-unreachable-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct, currently-live anti-retry-loop tool_result for the device-bridge-unreachable case; the similarly-worded siblings are either an older/different message or a separate generic template site, not same-request coverage."
+  },
+  "tool-result-device-tool-serve-refused-sandbox-injects-credentials": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique specific-cause refusal (credential injection into sandboxed requests) among a per-cause family of device-tool refusal messages; siblings are alternate causes, not coverage."
+  },
+  "tool-result-dir-sync-attributes-file-not-full-path": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Live, mechanically necessary remedy for the dir-sync-specific attributes-file validation path; the similarly-worded git-bundle sibling belongs to a different feature and does not co-render with dir-sync's own validation."
+  },
+  "tool-result-dir-sync-layout-changed-session-ref-log-not-plain": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct per-cause phrase-table entry naming a specific failed object (session ref, not checkout reflog); the sibling is an alternate cause, not coverage."
+  },
+  "tool-result-remote-tool-declined-in-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, behavior-defining default tool_result text for a session decline with no feedback text; unique in the corpus."
+  },
+  "tool-result-remote-tool-session-mode-unknown-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct per-cause note for the 'mode unknown' condition specifically; the sibling covers a different, mutually exclusive cause."
+  },
+  "data-settings-denied-models-family-typo-suggestion": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, load-bearing template (interpolated family name + exact quoted string to write). Nothing to trim without breaking the output contract."
+  },
+  "data-task-notification-mod-hot-reload-enabled-loaded": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct runtime state from its 'held' sibling; states the load/reload-by-itself mechanic and the failure-naming guarantee, both load-bearing."
+  },
+  "skill-keybindings-validation-cause-not-a-modifier": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire: enumeration of two example causes plus backtick literal placeholders (X, Y, Z, ctl, ctrl) freezes the sentence verbatim."
+  },
+  "skill-loop-confirm-body-dynamic-pacing": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Fragment is mode-specific (drops 'that you're self-pacing' / 'that you ran the task now' which don't apply to dynamic-pacing mode); nothing padding to trim."
+  },
+  "skill-loop-self-pacing-confirm-and-decide-steps": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire: numeric thresholds (1200-1800s), backtick parameter/tag names (delaySeconds, reason, prompt, noop, /loop), and 'verbatim' freeze this content; no unique-mechanics loss risk from trimming since nothing here is redundant."
+  },
+  "slash-command-plugin-validate-marketplace-name-desktop-charset": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire: exact charset enumeration (letters, digits, '.', '_', '-') plus a numeric cap (128 chars) freezes the body verbatim; the varying noun (Marketplace vs Plugin) is the only difference and is required for the user to know which entity failed."
+  },
+  "system-prompt-auto-mode-classifier-external-system-writes-scope-candidate": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire: enumeration of 3+ resource types ('mail, calendar, drive') is a restrictive scope definition for a safety/classification rule (External System Writes) — load-bearing, kept verbatim."
+  },
+  "tool-result-artifact-db-read-saved-tilde-escaped-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire: exact literal characters ('~', '@') in a filename-mapping rule are frozen mechanics; deleting or paraphrasing would silently break the reader's ability to find the saved file."
+  },
+  "tool-result-artifact-publish-total-content-exceeds-mb-one-publish": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire: computed numeric thresholds (three separate MB figures) are frozen; the recovery sentence is mechanics the user needs to act correctly, not filler."
+  },
+  "tool-result-device-identify-probe-description": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire: enumeration of 4 returned fields (platform, architecture, CC version, time) freezes the body; the refusal-clarification sentence prevents the model from wrongly blocking a harmless probe, which is load-bearing behavior guidance, not narration."
+  },
+  "tool-result-git-bundle-attribute-source-ignore-case-include-unfollowable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire: the ordering word 'before' ('a file git changes before storing it') and the two-option enumerated fix ('Move... into the git configuration of each project... or into your own git configuration file') freeze the sentence; the fix instructions differ meaningfully across the sibling family and would mislead the user if collapsed into one generic message."
+  },
+  "tool-result-permission-ask-unresolved-shell-write": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Specific safety-relevant claim (cannot rule out a settings-file write) that must remain accurate and verbatim; nothing to trim."
+  },
+  "tool-result-remote-tool-no-longer-offered": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Already minimal; states the outcome (nothing ran) the model needs to correctly report to the user."
+  },
+  "tool-result-remote-tool-stopped-mid-run-shutting-down": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The cause (shutting down) and the partial-run consequence are both facts the model must relay accurately; distinguishing before-start/mid-run and shutdown/cancelled is load-bearing, not redundant."
+  },
+  "data-settings-validation-invalid-not-treated-as-ignored": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique mechanic (explicitly rules out a restrictive-fallback interpretation) not present in the sibling; siblings are alternate branches, not co-rendering duplicates."
+  },
+  "slash-command-plugin-install-version-too-complex": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique error string for a specific plugin-install failure mode; mechanic (states the remedy and echoes the offending ranges) is load-bearing."
+  },
+  "system-reminder-dir-sync-withheld-summary-current-and-tracked": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Covers a distinct withheld-file combination (current + tracked) the sibling does not; branches don't co-render so no coverage claim can be made."
+  },
+  "system-reminder-no-attached-machine-request-guidance": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every sentence is a distinct, non-redundant operational rule (ordering, tool names, offline/did_not_answer handling, scope) required for correct cloud-session behavior; nothing here is narration or padding to cut."
+  },
+  "tool-result-artifact-db-as-level-confirmed-not-found-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct branch (server-confirmed vs uncertain) from its duplication lead; not coverage."
+  },
+  "tool-result-artifact-db-read-me-id-resolved-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique, load-bearing mechanic (shows what a special path token resolved to)."
+  },
+  "tool-result-artifact-publish-havent-viewed-latest-lead": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique refusal-reason lead sentence for a specific tool_result path; mechanic (states the version being served) is load-bearing."
+  },
+  "tool-result-cloud-session-file-sync-back-on-catching-up": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique status string for one specific file-sync state transition."
+  },
+  "tool-result-cloud-session-file-sync-compliance-policy-blocked": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique remedy string with a frozen exact command; mechanic must stay verbatim."
+  },
+  "tool-result-cloud-session-file-sync-off-anthropic-side-continues": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique status string for a distinct file-sync state."
+  },
+  "tool-result-remote-tool-answer-completed-not-returned": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Generic reason-agnostic template distinct from both the attached-machine-specific and too-large-specific siblings; no full coverage found."
+  },
+  "tool-result-remote-tool-pdf-not-returned-read-by-pages": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique remedy instruction for a specific artifact type (PDF) not covered by the generic remote-answer-not-returned template."
+  },
+  "tool-result-snooze-status-update-plain-text-branch": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Trivial branch instruction, already minimal; nothing to trim."
+  },
+  "slash-command-autofix-pr-take-over-remove-watching-label": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, dense, frozen procedural clause ('if the PR has the X label, remove it') with no slop and no coverage elsewhere."
+  },
+  "slash-command-doctor-prompt-audit-skill-unavailable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "This is the only prompt carrying the specific remediation path (three named ways the skill can be off) for this specific slash-command failure mode; no sibling covers it."
+  },
+  "slash-command-plugin-marketplace-add-plugins-update-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, load-bearing status line with nothing to trim."
+  },
+  "slash-command-plugin-validate-json-path-is-directory": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen error text with a path/field-name/validation contract; must stay verbatim."
+  },
+  "tool-description-bash-attached-machines": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every sentence contains a restrictive quantifier or enumeration (set X per call; never call one the note lists as not reachable; never sleep, poll or schedule a wait) — frozen mechanics for a brand-new capability, verbatim-required throughout."
+  },
+  "tool-description-enable-claude-in-chrome": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The shared template phrasing is necessary boilerplate for correct tool-choice behavior per distinct tool; no single sibling's text substitutes for this one when this specific tool is the one offered."
+  },
+  "tool-result-bash-background-result-goes-to-starting-agent": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a load-bearing agent-routing fact (background result → starting agent, not the caller) with nothing to cut."
+  },
+  "tool-result-remote-command-output-spilled-file-unreachable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen guidance (specific tool enumeration head/tail/grep, conditional on safety) unique to this failure mode."
+  },
+  "tool-result-remote-tool-answer-too-large-narrower-command-hint": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen enumeration is exactly the kind of content the tripwire protects (two-or-more-item list of parameter/technique names)."
+  },
+  "tool-result-remote-tool-deadline-exceeded-may-have-partially-run": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Carries a unique safety directive (never blindly retry non-idempotent commands after a partial run) not present in either sibling."
+  },
+  "tool-result-remote-tool-host-left-during-ask": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Alternate-cause branch text; per the coverage rule an alternate arm that never co-renders cannot be treated as duplicating this one."
+  },
+  "tool-result-remote-tool-result-too-large-not-returned": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen size-limit error fragment (number/threshold content) with no overlap elsewhere."
+  },
+  "tool-result-remote-tool-served-tool-internal-error": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal error-tag text, nothing to trim or merge."
+  },
+  "tool-result-remote-tool-session-environment-clause": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Fragment-level mechanics text used as a building block elsewhere; must stay intact."
+  },
+  "agent-prompt-security-monitor-unseen-tool-results-tail": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen security mechanics: enumerates the forward/send/share/copy-by-id action set, states the block condition ('block when it goes to anyone other than the user'), and the never-checkable-claim caveat — all load-bearing, no filler to trim."
+  },
+  "data-artifact-publish-refused-follow-instruction": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short, load-bearing behavioral instruction with no established co-rendering carrier; the similar longer sentences live inside a different variant of the tool description that is a separate arm, not a same-request carrier, so no verified coveredBy pair exists."
+  },
+  "data-dir-sync-restore-reason-device-has-work-agent": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct branch of the Lp.reason enum stating a specific fact (device already holds newer work) with its own downstream behavior implication (files return with it); nothing here is generic padding."
+  },
+  "slash-command-autofix-pr-steward-conflict-options": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "New gated feature (PR Steward, behind a feature flag) — costs zero when off, so feature-disuse is not a wipe reason. Contains an ordering contract ('pull the branch first, and wait while X is on the PR') and an enumerated 3-item option list, both frozen under the tripwire."
+  },
+  "system-reminder-directory-sync-upload-began-before-turn-newer-changes": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct sync-state reminder with its own semantics (files-as-last-synced vs starting-files) needed for a scenario the old reminder cannot express; the shared trailing sentence ('say they have not arrived here yet') is itself a necessary behavioral instruction, not filler."
+  },
+  "tool-parameter-computer-batch-action-summary-exceptions": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains a restrictive quantifier ('every') and an exceptions clause naming specific action types — mechanics the model needs to know when action_summary is or isn't required, frozen and non-redundant against the single-action sibling."
+  },
+  "tool-result-artifact-db-batch-shared-collections-access-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Required standalone access-rules note for the batch db_write code path; despite textual closeness to the single-write sibling, no same-request carrier exists to merge it into."
+  },
+  "tool-result-artifact-db-write-committed-private-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a security-relevant default (private-collection read access) plus an override escape hatch not present anywhere else in the corpus for this code path — mechanics, not filler."
+  },
+  "tool-result-bash-linux-sandbox-nul-byte-in-profile-path": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Standalone, technically precise error surface (bwrap argument-list vs args-file limitation) with no redundant carrier anywhere in the corpus."
+  },
+  "tool-result-remote-tool-approval-no-time-left-still-pending": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct, mechanically necessary member of a remote-tool approval error taxonomy (cause: admission ran out of time) with its own precise wording ('admission took longer than the caller allowed'); no sibling supplies this specific cause."
+  },
+  "tool-result-remote-tool-auto-mode-refused-here-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct cause-specific note in the same permission-decision annotation family; the shared fallback clause is required scaffolding common to both causes, not removable filler."
+  },
+  "tool-result-remote-tool-call-no-record-since-restart": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a specific, mechanically distinct cause (host restarted / call never arrived) within the remote-tool error taxonomy; no other prompt covers this cause."
+  },
+  "tool-result-remote-tool-envelope-protocol-mismatch": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names a specific mechanic (protocol version number, example failure modes: call id or expiry out of range) unique to the envelope-protocol-mismatch cause; not restated anywhere else in the corpus."
+  },
+  "agent-prompt-security-monitor-unrequested-commit-connected-app-rule": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Security-gate mechanics: restrictive quantifiers (only, must, unless), an enumeration of qualifying commit types, and the frozen 'TOOL EFFECT' label another prompt quotes verbatim. This is a load-bearing block-rule for the auto-mode security monitor; deleting or compressing it would remove a distinct blocking condition with no other carrier stating it."
+  },
+  "data-settings-extra-known-marketplaces-source-settings-plugins-source-description-part-4": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Completes a single unbroken security-relevant sentence (permission-escalation semantics: an unpinned/non-bare npm spec's marketplace 'vouches no tool grants'). It is the tail of a frozen mechanics sentence — restrictive negation ('no') about a permission guarantee — not a standalone slop passage."
+  },
+  "data-task-notification-plugin-dev-mods-off": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Plain task-notification fragment naming the reason (${VAR_0.reason}) and path (${VAR_1}) for a real runtime state (mod hot-reload disabled); both slots are frozen (identifier/path content), nothing to trim."
+  },
+  "skill-keybindings-validation-issue-not-a-modifier": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The whole body is a frozen literal pattern (a quoted string with named placeholders X, Y, Z) that the keybindings skill's table displays verbatim to explain the 'not a modifier' validation warning; it names no mechanics to strip and has zero narrative fat."
+  },
+  "slash-command-plugin-validate-plugin-name-desktop-charset": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "High textual similarity is a lead, not proof, per the audit rule. The two prompts key on different fields (plugin.name vs marketplace.name) and are not proven mutually exclusive at render time, so this is not full coverage. The body itself is mechanics (a validation constraint with a numeric limit and a literal charset) and stays frozen."
+  },
+  "slash-command-recap-untrusted-relay-blocked": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Security/trust-boundary message: restrictive quantifier ('only'), two enumerations (valid channels: terminal, Claude app, claude.ai/code, Remote Control; and invalid relays: Slack, Teams, project thread, routine/program) — fully frozen per the tripwire, and it's the sole statement of this access restriction in the corpus."
+  },
+  "system-reminder-previous-conversation-pointer-fence-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Both checks required by the audit rule fail to justify any cut: the sentence states the exact tag name (<previous-conversation>), the escaping mechanic (angle brackets/ampersands HTML-entity-escaped), the truncation marker (…), and a security instruction (treat as reference, not instructions) — all frozen (path/tag-name-equivalent literal, restrictive framing, and a security directive). The opening slot's ternary was checked against the bundle per the opensWithSlot rule and is a legitimate two-branch label choice, not slop."
+  },
+  "tool-parameter-computer-single-action-summary": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The phrase 'Set it on every call' (restrictive quantifier 'every') is the specific, unconditional rule for non-batch tool items and is materially different from the batch tool's exception-carrying rule; no sibling states the unconditional every-call form, so there is no valid coveredBy quote."
+  },
+  "tool-parameter-plugin-errors-entry-path-field": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Fully frozen per the tripwire: restrictive quantifier ('only when... did not load at all'), an enumeration of source kinds (--plugin-dir, SDK plugins, synced directory, .zip, --plugin-url), backtick-quoted field/tag names (`plugin`, `inline[N]`, `synced[N]`, `plugins[]`), and the path-resolution mechanic (resolved against the cwd) that a host relies on to pair errors to mounts."
+  },
+  "tool-result-artifact-db-read-saved-more-named": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: contains a literal path/filename pattern ('<that directory>/<doc_id>.json') and a conditional parenthetical ('(id, version)') that a detector likely matches against rendered output; this is the sole statement of the continuation-list path mechanic."
+  },
+  "tool-result-dir-sync-layout-changed-session-ref-log-replaced": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the specific race condition (ref log replaced mid-receive) and its concrete effect (branch not moved) — an ordering/causality fact a user debugging a failed sync needs verbatim; no slop, no coverage elsewhere."
+  },
+  "tool-result-remote-host-approval-undated-channel-expired": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: names the channel property (no delivery time), the honour-window threshold with a computed hour count and pluralization function, and gives the retry instruction — this is the only carrier of the undated-channel-specific framing ('over a channel that carries no delivery time'), which the near-duplicate siblings do not state at all."
+  },
+  "tool-result-remote-tool-approval-answer-arrived-too-late": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a specific causal chain (answer reached target after session stopped waiting → withdrawn, nothing ran) with no sibling stating the same scenario; nothing to trim."
+  },
+  "tool-result-remote-tool-protocol-version-mismatch": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen instruction sentence ('Update Claude Code on both machines') is the only statement of the remediation step for this specific error class; opensWithSlot checked against the bundle, slot content is the host identifier, not narration to cut."
+  },
+  "agent-prompt-security-monitor-attached-machine-call-results": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen mechanics: quoted literal tags (\"_host\":\"<name>\", result_from), restrictive quantifiers (never has a result_from, is not exfiltration on its own), and an ordering/definitional contract the security-monitor judgment depends on. No slop, no duplicate coverage."
+  },
+  "data-task-notification-mod-hot-reload-enabled-held": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Path slot, the literal command '/reload-plugins', and the mechanic reason ('the load would rewrite the prompt cache') are frozen (path/command + restrictive fact). Feature-conditional prompt costs zero when off, so low usage isn't a wipe reason. Distinct from its siblings in both trigger condition and content."
+  },
+  "slash-command-autofix-pr-cloud-session-archive-failed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Carries a functional stop link (${(.id,void 0,{from:\"cli\"})}) and a distinct warning ('may still work on the PR') that the success-case sibling doesn't have — this is the only carrier of the failure-path remedy."
+  },
+  "slash-command-autofix-pr-steward-watching-with-labels": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "New PR Steward feature (2.1.284, behind a feature flag per FOCUS) — feature-gated prompt costs zero when unused. Enumeration/pluralization logic is mechanics and must stay verbatim."
+  },
+  "system-reminder-dir-sync-nested-git-repos-left-in-cloud": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "New dir-sync reminder (2.1.284, composed from the per-cause phrase table per FOCUS). Contains an enumeration/formatting contract (slice, join, pluralize singular/plural 'repository'/'repositories') that is load-bearing mechanics and must remain verbatim."
+  },
+  "system-reminder-tool-hosts-pasted-content-read-here": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short but functionally distinct branch output (source=pasted vs source=unknown) of a single conditional; the two never render in the same tool-hosts reminder instance. No slop to trim."
+  },
+  "tool-parameter-form-input-action-summary": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tool-parameter schema description, required per-tool; the example format matches the established action_summary pattern. Not a duplicate of the computer-tool variant despite shared phrasing — each is the sole description for its own tool's field."
+  },
+  "tool-result-artifact-workshop-source-not-handed-over": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Sole carrier for the 'source not handed over' (non-conflict, non-stale) case. Contains frozen mechanics: the literal schema string \"workshop-decisions\", the ordering word 'then', and the restrictive 'do not resend your previous content unchanged' directive plus the workshop-skill forbids-clause — all load-bearing and must stay verbatim."
+  },
+  "tool-result-remote-tool-call-status-still-admitting": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a call-status fact (received N seconds ago, still being admitted, nothing started) that only this prompt conveys; interpolated name/elapsed-time slots are mechanics."
+  },
+  "tool-result-remote-tool-classifier-ask-default-reason": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Fallback default reason text appended when no more specific reason exists — sole carrier, no overlap found."
+  },
+  "tool-result-remote-tool-host-superseded-during-ask": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct cause (superseded by a newer CC instance) not covered by any sibling; each variant is load-bearing for its own trigger condition."
+  },
+  "tool-result-remote-tool-request-already-answered": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a distinct fact (request already answered elsewhere, nothing run for it) with its own interpolated detail clause; sole carrier."
+  },
+  "tool-result-remote-tool-settings-shell-write-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Only this id names the settings-file/settings-folder shell-write refusal AND gives the Edit/Write-tool remedy path ('held for the owner ... to review') — a remedy none of the sibling refusals state. opensWithSlot=true was checked against the bundle per instructions; no detector conflict found. Frozen: 'Nothing was run', the Edit/Write-tool alternative, and the review-gate mechanic."
+  },
+  "tool-result-schedulewakeup-continue-instruction-lead": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Ordering-critical instruction ('Then ... — and end the turn') is exactly the kind of directive both served models (Opus 5.5, Fable 5.1) under-narrate and stop early on per the LCC policy — removal would be a regression, not a cleanup. Frozen: 'end the turn' ordering word plus the per-mode phrasing call."
+  },
+  "data-available-models-match-setting": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every sentence is frozen mechanics: restrictive quantifiers (still, not, only), concrete model-id examples, named settings (deniedModels, allowManagedHooksOnly, Default). Unique single-site schema description with no overlap candidate."
+  },
+  "data-plugin-marketplace-desktop-sync-drop-entry": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short interpolated clause naming the exact config key (allowedPluginMarketplaces) and a specific consequence (drop this entry) distinct from its sibling's whole-marketplace-reject consequence. Load-bearing, not redundant."
+  },
+  "slash-command-plugin-update-records-unreadable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Update-specific error text tied to a specific failureCode ('install_records_unreadable' reported for the update path) with 4 distinct interpolation slots; mechanically necessary for the /plugin update flow, not a duplicate of the parallel install/uninstall messages."
+  },
+  "system-reminder-dir-sync-device-link-unusable-resend-current-files": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen mechanics: names the specific cause (an unusable upload link keyed by linkGeneration) and states the resolution behavior (machine resends current files next sync) — a distinct per-cause message, not covered elsewhere."
+  },
+  "system-reminder-dir-sync-device-upload-lacks-history-unchanged": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Cause-specific dir-sync reminder wording that differs materially from the generic template's reason-slot version; unique per-cause content."
+  },
+  "system-reminder-dir-sync-file-store-share-used-up": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Numbers/thresholds present (frozen tripwire) plus a distinct behavioral statement (changes stop syncing to this machine) not present in the counts-only sibling."
+  },
+  "system-reminder-dir-sync-file-store-share-used-up-counts": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Pure numeric/threshold data (frozen tripwire: numbers with units) with 5 interpolation slots; no textual bloat to trim."
+  },
+  "system-reminder-dir-sync-git-not-found-on-path": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Specific remediation instruction (install git / PATH / restart Claude Code) tied to a specific check name (checkoutFirstUpload per description); not covered by the git-bundle tool-result family which addresses a different trigger."
+  },
+  "system-reminder-dir-sync-not-uploaded-reason-compliance-restricted": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names a specific policy mechanism (org compliance policy blocking file sync) and the exact instruction to give the user; frozen, unique."
+  },
+  "tool-result-cloud-session-file-sync-off-holds-none-yet": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen mechanics: names the exact env var and invocation (CLAUDE_CODE_DIR_SYNC_ENGINE=none claude --cloud), the retry cadence ('each message checks once'), and the specific state (session holds none of the files yet) distinguishing it from other sync-off states. Unique."
+  },
+  "tool-result-dir-sync-seed-anchor-not-opened": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Ordering word ('then') plus enumerated checks makes this frozen tripwire text; unique single-site reason detail."
+  },
+  "tool-result-remote-tool-credential-manager-files-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the Windows-specific 'Credential Manager' resource distinctly from the macOS 'keychain' sibling and the broader personal-credential sibling; each is load-bearing for its own platform/tool path."
+  },
+  "tool-result-remote-tool-nested-input-uninspectable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, specific deny-rule placeholder text unique to the MCP nested-input-inspection-budget case."
+  },
+  "tool-result-remote-tool-serve-call-internal-error": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct internal-error message for the Pe() call-serving exception path; not covered by the unrelated approval-ended sibling."
+  },
+  "data-plugin-dev-mods-off-reason-hooks-disabled-in-settings": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the literal settings key 'disableAllHooks' — frozen per tripwire (config key name). Deployed body already matches pristine exactly, no cuts made yet, nothing to trim."
+  },
+  "data-settings-available-models-model-id-version-suggestion": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains a literal 'for example \"claude-...\"' format template — frozen (e.g., contains parameter/version placeholders). opensWithSlot=true; the leading ${} slot is a separate lead-in fragment already rendered inline, not narration to strip."
+  },
+  "data-settings-sandbox-network-denied-resolved-addresses-description": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Config key names (deniedResolvedAddresses, deniedDomains, allowedDomains, parentProxy, mitmProxy, HTTP_PROXY, HTTPS_PROXY), a README section citation in quotes, and conditional/ordering logic ('is refused instead of dialed', 'may resolve to a denied address only if...', 'Not evaluated for connections routed through...') are all frozen mechanics."
+  },
+  "system-prompt-auto-mode-classifier-external-system-writes-bullet-candidate": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Enumeration of ≥2 destructive verbs (Deleting, archiving, resolving, closing, mass-modifying) plus a named tool example (Jira) inside a classifier rule — frozen enumeration/example, must stay verbatim if kept."
+  },
+  "system-prompt-permission-classifier-claude-tag-rule-names-baseline": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Enumeration of ≥2 rule names cited by a permission classifier ('User Intent Rule', 'scope escalation', 'External System Writes') that other prompts and the classifier logic reference by these exact names — frozen enumeration of proper-noun rule identifiers."
+  },
+  "system-reminder-dir-sync-files-refused-write-summary": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains a literal sentinel fallback string ('could not be written here and stayed as they were') that is a specific enum-like value keyed by [r] — frozen per the sentinel/enum clause. opensWithSlot=true but the slot is a genuine leading interpolation, not stripped narration."
+  },
+  "system-reminder-directory-sync-checkout-rolled-back-local-state-gone": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Enumeration of ≥2 items (local branches, stashes and repository settings) is frozen."
+  },
+  "system-reminder-directory-sync-disabled-device-key-unreadable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a specific causal chain and an actionable next step ('start a new cloud session from this folder once the key can be read') — ordering-bearing instructive text tied to a specific failure mode; mechanics, not narration."
+  },
+  "tool-result-device-mcp-passthrough-declined-since-announce": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Specific denial-reason message naming the exact condition (declined since the server was announced to the cloud session) with a stable trailing convention ('the call did not run') shared by the whole passthrough-denial family by design, not duplication."
+  },
+  "tool-result-gettask-no-background-command-with-task-id": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains a literal JSON shape ({\"resultType\":\"task\", …}) and a scope/lifetime contract ('remembered for this session only') — both frozen (sentinel/tag-like literal, restrictive scope statement)."
+  },
+  "tool-result-remote-tool-call-status-still-running": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, load-bearing status text with numeric interpolation (elapsed seconds) — nothing to cut."
+  },
+  "tool-result-remote-tool-session-capacity-limit-reached": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "'Do not retry in a loop.' is a never/do-not guarding runtime looping behavior — mechanics per the tripwire, must stay verbatim. The numeric capacity and pluralization interpolation are also frozen."
+  },
+  "tool-result-remote-tool-stopped-at-deadline-hook-or-approval-pending": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Ordering word 'before' plus an enumerated cause clause '(a hook or an approval was still pending)' are frozen; this is a distinct terminal-state message from its cancelled sibling and must stay separately verbatim."
+  },
+  "data-sdk-system-init-plugin-errors-field": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen by tripwire on multiple axes: enumeration of error-type categories (path-not-found, generic-error, manifest-validation-error, dependency-unsatisfied, hook-load-failed), backtick field/path names (plugins[], plugin, type, message, inline[N], synced[N]), the literal CI predicate `(plugin_errors?.length ?? 0) > 0`, and 'always omits' as a restrictive quantifier. Each sentence states a distinct, non-redundant mechanic; nothing to trim."
+  },
+  "slash-command-plugin-marketplace-add-undo-add-previous-source": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Already minimal; the two undo-hint variants are alternate branches, not duplicates of each other."
+  },
+  "system-reminder-directory-sync-checkout-reset-partial-restore-commits-missing": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: 'NOT' plus the ordering-bearing structure (what happened / what's missing / what's being done) is mechanics the user must see verbatim to avoid believing a restore is complete when it isn't. Unique composite, no bloat."
+  },
+  "tool-description-computer-batch-action-summary-required-actions": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: literal enumeration of six action names (left_click, right_click, double_click, triple_click, left_click_drag, key, type) plus form_input, which are tool/parameter identifiers the bundle depends on for correct batch-call construction. Deleting any would silently under-specify which actions require action_summary."
+  },
+  "tool-result-artifact-publish-typed-artifact-file-cannot-be-published": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "This is the actual tool_result text delivered when a single-file publish to a type-created Artifact is refused; the closest sibling is advance guidance in a different rendering context (system-prompt-level warning vs. live tool_result), not a duplicate of the result itself. Already minimal, nothing to trim."
+  },
+  "tool-result-artifact-read-overlong-line-detail": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: this is the literal rendering logic (line number, char count, verdict-conditioned suffix) the harness depends on; rewriting would change the output format other code parses/displays."
+  },
+  "tool-result-attached-machine-answer-not-returned": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Same semantic shape ('answer X, so it was not returned') recurs across unrelated tool families by design, not by duplication; each is the tool_result for its own distinct mechanism and none is dead weight."
+  },
+  "tool-result-device-mcp-passthrough-temporarily-unavailable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Each sibling names a specific, non-overlapping failure cause the model needs to distinguish (e.g. 'turned off' vs. 'temporarily unavailable due to unreadable consent snapshot' have different remediation implications); none subsumes this one."
+  },
+  "tool-result-dir-sync-ignore-case-included-file": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: literal paths .git/config and ~/.gitconfig are exact filenames the user must edit; this is the only place that tells the model where the setting can legally live."
+  },
+  "tool-result-git-bundle-admin-dir-worktree-config-clause": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: literal filename config.worktree naming the mechanic being described; short, load-bearing, and confirmed (per its own description) reused at the tail of two different error branches -- reason to keep it exact, not a reason to cut it."
+  },
+  "tool-result-git-bundle-git-within-reach": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: enumeration of three exclusion zones (outside this project directory, outside their temporary directories, outside your home directory when git tracks it or a folder above it) plus ordering ('make sure ... and restart Claude Code') -- these are the exact steps needed for the fix to actually work; compressing the enumeration would risk the model omitting one of the three required exclusions."
+  },
+  "tool-result-loop-visible-response-required": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Both served models under-narrate and stop early per the model digests; this text actively counters that failure mode (forces a visible update rather than only internal reasoning), so it is load-bearing for both Opus 5.5 and Fable 5.1 and should not be cut."
+  },
+  "tool-result-remote-host-unknown-lead": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Same 'No machine named X' opening sentence recurs by design across two call sites (lead vs. fallback); each is the sentence its own site actually emits, so neither is dead weight relative to the other."
+  },
+  "tool-result-remote-tool-keychain-query-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "opensWithSlot is true (per externalRefs) and this is one of a deliberately enumerated family of narrow, mechanically distinct cloud-session refusal messages; each message tells the model exactly which action/resource was blocked, which the model needs to relay accurately to the user -- collapsing them would lose that specificity."
+  },
+  "data-command-upgrade-already-highest-plan": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Data output shown verbatim in /upgrade stdout; nothing to cut without losing the message itself."
+  },
+  "skill-keybindings-meta-modifier": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Concrete mapping fact (meta=alt, Option key on macOS) the model can't infer; zero padding to trim."
+  },
+  "skill-loop-steps-confirm-then-decide": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire-frozen ordering directive ('as the last action of this turn') plus the confirm-then-decide sequencing is unique mechanics for the pre-armed-wakeup branch."
+  },
+  "slash-command-effort-ultracode-on-this-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Output text confirming ultracode toggled on for this session only while effort is unchanged; a UI-facing confirmation string, not steering prose."
+  },
+  "system-prompt-permission-classifier-claude-tag-rule-names-candidate": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Enumeration of 2+ named classifier rules (User Intent Rule, scope escalation, External System Writes, Unrequested Commit in a Connected App) is tripwire-frozen; must be kept verbatim or deleted, never trimmed/reordered, and baseline doesn't fully state it."
+  },
+  "system-reminder-attached-machine-untrusted-attachments-refusal": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct refusal cause (attachments not yet marked trusted vs. trust declined) with unique conditional remediation paths the sibling doesn't state."
+  },
+  "system-reminder-cold-resume-new-conversation-with-pointer": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "This is the only carrier of the excerpt-quoting mechanic (quoting up to 60 chars of the prior conversation) — unique content not present in the no-pointer fallback."
+  },
+  "system-reminder-dir-sync-cloud-branch-name-collides-rename": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the specific cause (branch-name collision) and the specific required action ('Claude was asked to rename or delete that branch in the cloud checkout, after which sync resumes') with an ordering word ('after which') — tripwire-frozen and not stated by the generic sibling."
+  },
+  "tool-result-device-tool-serve-refused-sandbox-unavailable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Config key `\"sandbox\": {\"enabled\": true}` and the distinct cause (sandbox off entirely vs. on-but-unconfined) are tripwire-frozen path/config-name content unique to this branch."
+  },
+  "tool-result-loop-outcome-brief-mode-notify": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire-frozen mechanic: specific tool reference, literal parameter value `status: 'proactive'`, and the 'plain text is treated as unread' behavioral fact are load-bearing and the two occurrences don't reliably co-render, so neither is confidently proven coverage for the other."
+  },
+  "tool-result-permission-ask-classifier-undecided": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, load-bearing statement of why approval is being asked; nothing to cut."
+  },
+  "tool-result-remote-tool-cancelled-mid-run": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct specific cause in a per-cause remote-tool-result table; the cause itself (cancellation) is the unique signal and isn't restated by the other cause-specific siblings."
+  },
+  "tool-result-remote-tool-completed-result-too-large": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Enumeration 'a narrower command instead (head or tail, a filter, or write to a file and read part of it)' is tripwire-frozen (2+ items) and is the unique load-bearing content the sibling doesn't carry."
+  },
+  "tool-result-remote-tool-host-unresponsive-liveness-checked": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a distinct confirmed-alive-but-no-reply state with its own enumeration of remediation options (tripwire-frozen, 2+ items including 'a smaller image') not present in either sibling."
+  },
+  "data-settings-denied-models-hyphen-version-suggestion": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: quoted example format `\"${}\"` and the imperative 'To block a version, write it with a hyphen' name an exact required action; nothing to cut."
+  },
+  "data-settings-denied-models-model-id-version-suggestion": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: the exact interpolation shape 'claude-${}-${}-${}' is mechanics (a literal template Claude must reproduce), not padding."
+  },
+  "slash-command-autofix-pr-pr-steward-conflict": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains an ordering contract ('Once it has, remove ... too ... and run /autofix-pr again') and a path-like literal (the label variable) — frozen mechanics guarding a retry sequence."
+  },
+  "slash-command-autofix-pr-remove-label-on-github-or-ask-claude": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal fragment spliced into a larger take-over message; no slop possible at this length and no coverage found."
+  },
+  "slash-command-plugin-install-name-hidden-character": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "siteCount 2 (appears twice in the binary, same text both sites) but that's one prompt id reused, not corpus duplication. Short, factual, no slop."
+  },
+  "system-reminder-cold-resume-new-conversation-no-pointer": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "This is the no-pointer fallback itself; without it Claude gets no notice at all on that branch. Not slop, not covered."
+  },
+  "system-reminder-dir-sync-cloud-checkout-unready-not-sent": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Enumerates four named checkout conditions (unreadable/mid_operation/unborn/conflicted) each frozen (condition tags + specific phrasing) inside one compact ternary — no bloat to trim, each branch mutually exclusive and load-bearing."
+  },
+  "system-reminder-directory-sync-checkout-rolled-back-not-restored": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a specific, non-recoverable data-loss condition Claude must relay accurately; the CAPS phrase is a cross-referenced literal, not emphasis-for-emphasis's-sake."
+  },
+  "tool-result-artifact-read-html-line-length-summary": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names exact tool-call shape and API parameters (offset/limit) that must be reproduced verbatim; nothing to trim at fragment length."
+  },
+  "tool-result-device-tool-serve-refused-sandbox-weakened": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names exact setting keys (sandbox.allowAppleEvents, sandbox.enableWeakerNestedSandbox, sandbox.network.allowMachLookup) — frozen path/parameter-name literals — plus a do-not-retry instruction guarding runtime behavior."
+  },
+  "tool-result-remote-host-sandbox-blocked-network-or-writes": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the exact output field (sandbox_violations) and a causal contract ('running it again unchanged will fail the same way') that prevents Claude from retry-looping — frozen mechanics."
+  },
+  "tool-result-remote-tool-approval-superseded-by-retry": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a specific state-transition fact (superseded-by-retry) Claude needs to not re-request; nothing to cut, nothing else covers it."
+  },
+  "tool-result-remote-tool-call-could-not-be-read": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the exact target reference (.targetName) and the specific parse-before-admission failure mode; not duplicated by either lead."
+  },
+  "agent-prompt-autofix-pr-take-over-instructions-local": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Dense single-sentence mechanic gating a real destructive action (removing a PR label that stands down an agent) with an explicit confirmation gate and a 'never' clause restricting who may authorize it — all frozen, unique, and necessary."
+  },
+  "slash-command-auto-mode-setup-login-expired": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "User-facing recovery instruction distinguishing an expired-and-unrenewable login from a never-logged-in state, each guiding the user to the same /login remedy but for a materially different diagnosis."
+  },
+  "slash-command-effort-ultracode-unavailable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "New 2.1.284 ultracode-as-session-setting feature; this is the sole /effort command error path telling the model ultracode isn't available on the current host/model and listing valid alternatives — unique and necessary."
+  },
+  "slash-command-plugin-install-dependency-name-hidden-character": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinguishes which name (the plugin's own vs. its dependency's) held the unrenderable character — losing this distinction would misattribute the problem to the wrong plugin."
+  },
+  "slash-command-plugin-marketplace-add-diskless-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique refusal reason (session can't persist a claude.ai marketplace registration) for a specific plugin-marketplace code path."
+  },
+  "tool-result-bash-dangerous-op-cmd-critical-directory-reason": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Guards a real destructive-command denial (blocking cmd deletion of a drive root/folder-under-root/home) with the exact protected-path enumeration frozen — must remain intact."
+  },
+  "tool-result-bash-linux-sandbox-args-file-unavailable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Narrow error path: sandbox profile too long for the command line AND the args-file fallback also failed — a double-failure case with no other coverage in the corpus."
+  },
+  "tool-result-git-bundle-attribute-source-env-rules-unfollowable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Self-contained warning that an env-set git attribute-rule setting can cause a filtered file to be uploaded as-is, with its own remedy; overlapping siblings are alternate source-branches or unverified composition pieces, not proven same-request duplicates."
+  },
+  "tool-result-mcp-passthrough-server-returned-error": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique wrapped-error text for a passthrough MCP tool call, noting the call reached the server and may have had side effects — an important caveat with no other coverage."
+  },
+  "tool-result-permission-check-needs-working-directory-denied": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Deny-decision tool_result telling the model both why the call was denied and that retrying is futile — prevents a retry loop on a session with no working directory."
+  },
+  "tool-result-remote-control-request-not-actioned-retry-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tells the model a control-request sent to a remote target was not actioned and that retrying will not help — prevents a wasted retry loop; the shared phrasing with the trust-refusal message is a template convention across the corpus, not a literal duplicate."
+  },
+  "tool-result-remote-tool-approval-record-evicted": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tells the model the remote target no longer holds a record of the permission request, so nothing ran under it — a distinct eviction-vs-not-actioned failure mode with no other coverage."
+  },
+  "system-prompt-permission-classifier-account-standing-rule-changes": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire-frozen: enumeration + 'must name' + no-other-model coverage. This is the classifier's sole definition of this category; nothing else in the corpus states which account/standing-rule changes require naming the setting. Keep verbatim."
+  },
+  "system-reminder-directory-sync-user-files-now-in-place-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "High textual overlap with a sibling is a branch-alternative, not a true corpus duplicate — the two render under different conditions and only this one carries the trash-folder path mechanic (frozen: contains path/filename slots). Keep verbatim; do not merge into the non-'-2' sibling."
+  },
+  "tool-result-artifact-publish-files-plus-index-exceeds-entries": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct validation error (entries-count cap) from its low-overlap lead (content-size cap); both numeric thresholds and the remediation clause are frozen mechanics. Keep verbatim."
+  },
+  "tool-result-artifact-publish-mcp-dynamic-must-be-boolean": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire-frozen enumeration + quantifier + behavioral consequence unique to this validation case. Keep verbatim."
+  },
+  "tool-result-bash-brace-ambiguous-group-or-argument-too-complex": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, load-bearing error-reason fragment naming a specific parse ambiguity; no overlap with sibling reason fragments. Keep verbatim."
+  },
+  "tool-result-bash-linux-sandbox-args-file-would-still-exceed-limit": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Numeric-threshold error fragment unique to the 'even an args-file wouldn't help' Linux-sandbox case. Keep verbatim."
+  },
+  "tool-result-dir-sync-anchor-not-opened-reading": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire-frozen enumeration of causes for a specific failure mode (anchor folder unreadable). Keep verbatim."
+  },
+  "tool-result-mcp-passthrough-server-recent-failure-skip": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal mechanical fragment, already at floor length. Keep verbatim."
+  },
+  "tool-result-permission-ask-served-mcp-untrusted-path": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Tripwire-frozen enumeration plus a security-relevant imperative (verify no reach to Claude credentials) not present in its low-overlap sibling. Keep verbatim."
+  },
+  "tool-result-remote-host-refusal-recorded": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, unique terminal-state fragment for the refusal case specifically. Keep verbatim."
+  },
+  "tool-result-remote-tool-call-status-timed-out-or-cancelled": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique terminal-status fragment carrying a specific uncertainty caveat (possible partial run) not present in sibling status fragments. Keep verbatim."
+  },
+  "tool-result-remote-tool-no-result-hook-deferred": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique terminal-status fragment for the hook-deferred/no-result case, not restated elsewhere. Keep verbatim."
+  },
+  "tool-result-remote-tool-read-further-offset-limit-hint": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique operational guidance with real behavioral content (machine-argument-gated search scoping) — not narration filler, not duplicated. Keep verbatim."
+  },
+  "data-settings-denied-models-context-size-tag-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen mechanics: bracketed literal marker '[1m]' and restrictive quantifier 'every' (blocks at every context size) — states a non-obvious behavior (the tag is stripped/ignored, not honored) that nothing else in the corpus documents."
+  },
+  "skill-loop-stop-no-next-tick-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Short mechanic note explaining why a confirmation must precede a loop-stop tool call; carries the tool-call slot ${VAR0({briefMode:VAR1()})} which is load-bearing composition, not prose padding."
+  },
+  "slash-command-plugin-validate-name-not-kebab-case": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: contains an e.g.-flagged enumeration (lowercase letters, digits, hyphens) and a quoted example literal (\"my-plugin\") the validator's rule depends on. Must stay verbatim."
+  },
+  "system-reminder-directory-sync-file-store-exhausted": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: 'NOTHING' + 'from now on' ordering + two mutually-exclusive branches each stating a distinct, consequential runtime fact (files intact locally, sync one-directional break, stale command results) that the model must relay to the user. Directs plain disclosure per the new directory-sync phrase-table feature in 2.1.284."
+  },
+  "tool-result-artifact-db-query-limit-increase-suggestion": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: literal parameter names \\`query.limit\\`, \\`query.order_by\\`, \\`query.cursor\\` (backtick-quoted, tool-matched identifiers) plus a live numeric cap via ${VAR0}. Actionable guidance triggered only when the returned page was capped below the server limit."
+  },
+  "tool-result-artifact-preview-referenced-files-not-loaded": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: backtick-quoted parameter name \\`files\\` the publish flow matches against, plus the pluralization/count mechanics (…, … N more). opensWithSlot=true was checked against the bundle; no detector conflict found."
+  },
+  "tool-result-artifact-read-overlong-lines-diff-count": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: this is the count/diff clause of a larger rendered sentence (spliced via Wkt()), stating a specific overlong-line mismatch fact with count and enumeration mechanics (\\`, of which N lines X … differ\\`). Not independently wipeable without breaking the parent sentence."
+  },
+  "tool-result-bash-background-terminates-with-turn": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: 'and nothing can follow that' plus the new session-type branch is genuinely new mechanics (2.1.284) not present in the older sibling. Ends with a required composed clause ${VAR1()}."
+  },
+  "tool-result-device-tool-serve-refused-sandbox-unconfined": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: literal JSON settings path \"sandbox\": {\"enabled\": true, \"filesystem\": {\"disabled\": false}}, the named mode 'subprocess-env-scrub', and a 'do not retry until' ordering directive. All are exact strings the user/settings must match."
+  },
+  "tool-result-dir-sync-attribute-rule-setting-cannot-follow": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Generic (var-free) statement of a specific limitation ('file sync cannot follow' attribute-rule changes) used as a cause clause distinct from the remedy-table entries; no sibling states this exact generic cause without requiring the setting/source vars."
+  },
+  "tool-result-loop-prearm-send-before-tool-call": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: BEFORE ordering word plus a hard behavioral fact ('the turn ends as soon as that tool returns') that is unique to this specific model-turn-ending mechanic; tool-name slot ${VAR1} is load-bearing."
+  },
+  "tool-result-mcp-passthrough-server-no-usable-result": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: enumerated failure causes (timeout, lost connection, protocol-level error) and the load-bearing caveat 'it may have run and had effects' — a correctness-critical warning not stated elsewhere."
+  },
+  "tool-result-program-execution-diskless-session-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "High lexical overlap is template reuse across sibling refusal messages for different tools, not redundant content — each states a distinct tool's own unavailability fact and 'the command was not run' is a load-bearing state guarantee."
+  },
+  "tool-result-remote-tool-approval-ended-unrecognized-reason": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a distinct failure stage (permission-request termination, pre-execution) not covered by the outcome-unrecognized or internal-error siblings, both of which imply the call was actually served/attempted."
+  },
+  "agent-prompt-autofix-pr-steward-active-handback-guidance": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Mechanics-dense (enumeration of 3 choices, ordering 'pull first, and wait while', restrictive quantifiers 'do not', 'only', 'even if'), gates a new 2.1.284 feature (PR Steward) with cron-specific behavior (/autofix-pr stop) not present in any sibling. No sibling supplies an exact-quote match long enough to ground a coveredBy claim, so wipe/trim is unsupported despite conceptual overlap."
+  },
+  "data-settings-denied-models-exact-name-only-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique fact about deniedModels matching semantics (exact-name-only, other spellings not blocked); the pristine quantifier 'only' makes it frozen mechanics, and no sibling restates it."
+  },
+  "data-settings-extra-known-marketplaces-source-settings-plugins-source-description-part-3": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "This id is connective tissue of a single templated sentence split across 4 catalogued pieces at one render site; wiping or trimming a middle fragment in isolation breaks the concatenation for its own neighboring parts. Not slop, not a genuine standalone duplicate."
+  },
+  "slash-command-plugin-install-version-unsatisfied": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Load-bearing error message with an embedded conditional command suggestion; the only similar text is a genuinely alternate, non-co-rendering error branch."
+  },
+  "tool-description-computer-batch-action-summary-effect-only-rule": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "It is the canonical shared source string itself, not a copy of something else; removing it would blank the field description at all 4 tool schemas that reference it."
+  },
+  "tool-result-artifact-publish-typed-artifact-tell-user-refused-too": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "No exact-quote overlap with any reactive error text found; the narration instruction ('tell the user so') is independently valuable per the under-narration caveat."
+  },
+  "tool-result-bash-linux-sandbox-profile-too-long-for-cli": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Numeric threshold/mechanics (byte counts, fallback-to-file behavior) unique to the Linux sandbox bwrap command-line path."
+  },
+  "tool-result-dir-sync-branch-not-put-back-index-old": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Remediation mechanics (command call, HEAD/index conditional) are load-bearing; the only near-duplicate is a genuinely alternate, non-co-rendering error cause."
+  },
+  "tool-result-mcp-passthrough-server-reconnected-retry": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, unique, already as compressed as it can be."
+  },
+  "tool-result-native-tool-cloud-only-unavailable-locally": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique error text with a unique, mechanics-critical no-retry instruction."
+  },
+  "tool-result-remote-tool-container-unreachable-retry-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "No sibling offers an exact-quote duplicate long enough to justify a cut; the closest general carrier (bash-attached-machines) paraphrases rather than restates, and the frozen 'only'-quantified sentence bars partial trimming."
+  },
+  "tool-result-remote-tool-image-omitted-too-large": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct scenario (single inline image dropped, not the whole result), minimal and non-overlapping with the size-limit siblings."
+  },
+  "tool-result-remote-tool-policy-notes-interim-floor": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Numeric threshold (45 s) and specific behavioral constraints (foreground only, no credential vars) unique to the interim_floor policy; the only sibling is a mutually exclusive alternate policy."
+  },
+  "tool-result-session-plumbing-unknown-tool": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal, unique internal error text."
+  },
+  "system-prompt-auto-mode-classifier-external-system-writes-bullet-baseline": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Fragment enumerates specific destructive verbs (deleting, resolving, closing, mass-modifying) and names a specific tool (Jira) — an enumeration of 2+ items plus a named product, both tripwire triggers. It's the load-bearing half of a bracketed sentence continuation (opens with ']:'), so trimming or deleting it breaks the sentence it splices into. Deployed body already matches pristine verbatim."
+  },
+  "tool-description-listpeers-no-messaging-capability": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The unique, load-bearing clause — 'This session has no ${VAR} tool, so it cannot message them with it... use your host application's own messaging tool if it provides one — otherwise a reply from here is not possible, and if one is needed, tell your user' — has no counterpart anywhere else in the corpus and is exactly the behavioral instruction this conditional branch exists to deliver."
+  },
+  "tool-result-artifact-db-as-level-view-write-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Stage 1 proposed wipe-merge citing the as_level parameter description; overruled in the main loop: this is the refusal tool_result for a write at view level, and emptying it hands the model an empty error on the exact call that violated the rule."
+  },
+  "tool-result-artifact-publish-html-no-doctype-warning": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Enumerates specific required elements (doctype, charset, viewport meta) and the literal tag `<!doctype html>` — enumeration + named literal, both tripwire triggers — plus a ternary-driven singular/plural branch (${VAR1?...}) that must stay intact to render grammatically for both one-file and multi-file cases."
+  },
+  "tool-result-bash-linux-sandbox-command-too-long-for-shell-arg": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a specific byte-count comparison (actual bytes vs. limit) via two number slots — a threshold/number tripwire, and unique mechanics (the shell-arg-length fallback failure) found nowhere else."
+  },
+  "tool-result-device-tool-serve-refused-sandbox-unix-sockets": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the specific config keys (sandbox.network.allowAllUnixSockets, allowUnixSockets) — path/setting-name tripwire — and carries a 'do not retry in a loop' instruction, which is a never/do-not guarding retry behavior and thus mechanics that must stay verbatim."
+  },
+  "tool-result-device-tools-sandbox-unsupported-platform-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the specific config key (enabledPlatforms policy) — setting-name tripwire — plus the same 'do not retry in a loop' do-not/mechanics clause."
+  },
+  "tool-result-git-bundle-windows-exe-only-clause": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names specific executable filenames (git.exe, git.cmd, git.bat) — filename tripwire — which is exactly the distinguishing mechanic (only the real exe counts, wrapper scripts are skipped)."
+  },
+  "tool-result-pretooluse-mcp-hook-could-not-run": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Names the specific hook type (PreToolUse mcp_tool) — tool/enum-name tripwire — and states the fail-closed behavior ('refusing rather than skipping that gate'), a security-relevant ordering/gate mechanic that must stay verbatim."
+  },
+  "tool-result-remote-tool-answer-too-large-for-relay": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Carries a byte-count number slot — threshold/number tripwire — and unique mechanics (relay size limit) present nowhere else."
+  },
+  "tool-result-remote-tool-call-no-record-here": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States the specific reason (never arrived vs. record dropped) and the current-state fact (nothing running now) — unique mechanics, no overlap with the restart-specific sibling's wording."
+  },
+  "tool-result-remote-tool-call-stale-retry-prompt": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Closing sentence of the stale-call tool_result; the idiom recurs across the family because each variant needs the same closing instruction, not because any one of them duplicates another in a single render. Short as written; no further trim available without losing the retry instruction."
+  },
+  "tool-result-remote-tool-call-stopped-before-answered": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a specific fact (call stopped before it was answered, so it did not run) with no redundant content."
+  },
+  "tool-result-remote-tool-output-withheld-posttooluse-hook-stopped": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains 'Do not re-run the command just to see the output unless it is safe to repeat' — a do-not clause guarding a safety-relevant action, which is mechanics and must remain verbatim if retained; also two timing-fact slots (completed-on, stopped-when) that are load-bearing."
+  },
+  "agent-prompt-security-monitor-bound-rule-connected-account": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen content: enumerates BLOCK-rule territory (destruction, exfiltration, shared-state writes, credentials, deploys, commits in a connected app or account) and gives the exact boundary-binding rule plus contrast examples — every clause is a restrictive-quantifier/enumeration sentence per the tripwire. No slop, no cross-render duplication."
+  },
+  "data-plugin-marketplace-desktop-sync-reject-whole": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains the frozen literal config key allowedPluginMarketplaces and states a specific, distinct consequence (rejects the WHOLE marketplace) that the sibling prompt does not state — this is the exact wording another part of the system depends on communicating correctly."
+  },
+  "data-sonnet-5-description-for-model": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "This is literal model-list data (descriptionForModel for the legacy Sonnet 5 entry) — mechanically required, not prose to edit."
+  },
+  "slash-command-autofix-pr-already-monitoring-cloud-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Functional slash-command output with a live link to the cloud session; every token is either literal UI text or a variable interpolation."
+  },
+  "slash-command-autofix-pr-earlier-session-still-running": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal mechanical fragment reporting session state via interpolated link; nothing to trim."
+  },
+  "system-reminder-device-mcp-serving-tools-changed-reapprove": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every clause carries a distinct conditional branch (singular vs plural server count, 'it'/'them' pronoun agreement, cloud-ask suffix) that other code paths depend on; nothing is redundant prose."
+  },
+  "system-reminder-dir-sync-cloud-changes-not-applied-turn-retry": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Generic-cause fallback in the directory-sync phrase table; retains the frozen cause-tag enum check (git_error/refused_here) and the 'sync retries at the next turn' mechanic other reminders in the table don't restate identically."
+  },
+  "system-reminder-dir-sync-environment-recreated-local-state-gone": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a specific, mechanically important fact (other local branches/stashes/repo settings are lost) tied to the environment-recreated cause specifically; needed verbatim for that cause's phrase-table slot."
+  },
+  "system-reminder-plugin-did-not-load-named-skill-owner": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Carries the exact instruction (tell the user the PLUGIN failed, not the skill) that prevents a specific user-facing misstatement; load-bearing and already minimal."
+  },
+  "tool-result-artifact-publish-cannot-be-changed-retry-no-help": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States the exact behavioral fact (nothing published, Artifact unchanged, retrying won't help) that determines whether Claude should retry — dropping or rewording it risks Claude retrying a call that cannot succeed."
+  },
+  "tool-result-bash-linux-sandbox-too-many-bwrap-arguments": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Contains frozen numeric/threshold mechanics (arg count, max accepted, per-path/per-env-var cost ratios) needed for Claude to actually narrow the sandbox config; every clause is load-bearing arithmetic guidance."
+  },
+  "tool-result-mcp-passthrough-server-generic-error": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Generic fallback that forwards the actual underlying server error message plus the 'call did not run' mechanic other passthrough messages phrase differently for their specific cause; needed as the catch-all."
+  },
+  "tool-result-memory-write-non-main-agent-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen enumeration (subagent, teammate, fork, backgrounded query) defining exactly who is restricted, plus the actionable fallback (say so in your reply) that keeps the capability from silently failing — both clauses are mechanically necessary."
+  },
+  "tool-result-remote-tool-call-status-awaiting-approval": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Reports call state (target, elapsed seconds, nothing run yet) that Claude needs to decide whether to wait or act; fully mechanical."
+  },
+  "skill-loop-steps-decide-then-confirm": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique mechanical branch content (not-yet-armed case) with ordering-word mechanics; its only near-neighbor is the opposite runtime branch, which cannot co-render."
+  },
+  "slash-command-plugin-install-invalid-id-multiple-at-reason": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen enumeration sentence plus a second sentence specific to the multi-@ diagnosis ('the id holds more than one \"@\"') that no sibling states; the shared prefix is unavoidable restatement across alternate branches, not real duplication."
+  },
+  "slash-command-plugin-update-command-source-disabled": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique mechanics: names the specific cause (disabled plugin skips its install command) and the required remedy order (enable, then explicitly update)."
+  },
+  "system-reminder-started-new-instead-of-resuming-inactive": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique mechanics naming session id and transcript file location — both are path/identifier-bearing and frozen; the directive not to ask the user to repeat themselves is the load-bearing behavioral contract."
+  },
+  "tool-parameter-computer-action-summary-standalone": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Both the illustrative example and the action-type enumeration are frozen by the tripwire; no candidate sibling states this prompt's full content, so nothing can be safely wiped or trimmed."
+  },
+  "tool-result-artifact-db-batch-mixed-collections-access-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique access-rules mechanic tied to a specific path prefix."
+  },
+  "tool-result-artifact-preview-no-runtime-capability-unavailable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique, load-bearing explanation of a specific runtime limitation with a named API call."
+  },
+  "tool-result-artifact-publish-files-total-content-exceeds-mb-at-path": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct validation error with its own threshold and remedy language."
+  },
+  "tool-result-device-bridge-keychain-files-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The named resource is distinguishing, frozen content; the shared refusal-template phrasing across resource types is unavoidable restatement across mutually exclusive resource/platform branches, not real duplication."
+  },
+  "tool-result-dir-sync-attr-tree-cannot-follow": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Different cause, mechanically different (and correctly shorter) remedy; the overlapping prefix is the shared phrase-table stem, not redundant content to merge."
+  },
+  "tool-result-mcp-passthrough-not-a-remote-call": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct failure condition (context-gating, not availability or answerability) not restated elsewhere."
+  },
+  "tool-result-native-tool-elsewhere-result-unreadable-safe-retry": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The retry-safety verdict itself ('safe' vs 'check effect') is the entire point of the sentence and differs by branch; nothing here is redundant with a co-rendering sibling."
+  },
+  "tool-result-permission-ask-served-mcp-cloud-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "States a distinct, specific ask-reason not covered by the sibling's unrelated (path-trust) justification."
+  },
+  "tool-result-remote-tool-target-not-accepting-cloud-session-calls": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique, minimal refusal message with no redundant content."
+  },
+  "data-artifact-dynamic-connector-declaration-warning": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique, load-bearing warning that gates what Claude must tell the user about unverified integrations; nothing else in the corpus states this dynamic-declaration behavior or the reporting obligation."
+  },
+  "data-dir-sync-restore-reason-rolled-back-no-basis-agent": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct reason string for a distinct runtime condition (Dp.no_basis, rolled-back case); the sibling handles a different condition and the two are mutually exclusive at render time, so this content is not duplicated anywhere it actually renders."
+  },
+  "data-settings-denied-models-family-list-suggestion": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Sole, load-bearing remedy instruction for an edge case (unrecognized model family in deniedModels); short enough that any trim would just be paraphrase, which the tripwire forbids for restrictive-quantifier text ('list its versioned IDs' is an imperative mechanic)."
+  },
+  "data-task-notification-plugin-dev-mods-unbound": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The distinguishing clause ('only a restart loads them') is unique mechanics found nowhere else and is the entire reason this notification variant exists; the shared opening is unavoidable house-style framing for a three-way branch, not redundant duplication within one render."
+  },
+  "slash-command-effort-usage-xhigh-level-description": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Minimal UI label with no redundant content; trimming would only shorten a fixed-width usage table entry with no gain."
+  },
+  "system-prompt-env-info-working-directory-changed-was-clause": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Trivial-length mechanic fragment; nothing to trim, nothing duplicative."
+  },
+  "tool-description-artifact-quickstart-dashboard-type-suggestion": {
+    "verdict": "trim",
+    "version": "2.1.284",
+    "why": "If confirmed to co-render, the repeated 'publish with a `title`, no files..., then follow the instructions that result carries' boilerplate is redundant with the general instruction that necessarily precedes it; the unique, load-bearing part is the Dashboard-specific triggers ('dashboard, metrics page, KPI tracker or scorecard') and the specific `type_url` value substitution, both of which are frozen (parameter names, enumeration) and must be kept verbatim if the prompt is trimmed. [stage-3 verified]"
+  },
+  "tool-parameter-enable-browser-task": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Necessary, tool-specific parameter description; removing it would leave the enable-browser tool's `task` field undocumented even though a similar sibling exists for a different tool."
+  },
+  "tool-result-device-hook-remote-machine-unavailable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Shared generic hook-unavailable message reused at 4 call sites by design; nothing to trim and nothing duplicative beyond its own intended reuse."
+  },
+  "tool-result-device-tool-serve-refused-sync-mode-withdrawn": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique refusal reason plus a load-bearing anti-loop instruction (frozen per the never/do-not-guarding-a-behavior rule) found nowhere else in the corpus."
+  },
+  "tool-result-memory-text-invisible-or-harness-tag": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct validation failure (text/content invisible chars or harness-tag shape) from the path-check sibling; the closing guarantee 'nothing was written' is state-critical mechanics repeated by house style across write-refusal messages, not evidence of redundancy within one render."
+  },
+  "tool-result-remote-host-approval-no-longer-pending": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Serves its own distinct remote-host approval pipeline (2 sites) with its own remedy phrasing ('Send the call again without an approval to ask afresh'); the remote-tool siblings are a separate mechanism, so removing this in favor of them would leave the remote-host flow without its required message."
+  },
+  "tool-result-schedulewakeup-only-tool-call-status-update-timing": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique, load-bearing ordering/mechanics for ScheduleWakeup specifically (turn-ending timing, BEFORE-ordering requirement, channel selection) not present in the shorter Snooze sibling, which serves a different tool and never co-renders with this one."
+  },
+  "agent-prompt-autofix-pr-take-over-instructions-remote": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Only copy of this mechanic (PR Steward ignores Claude-GitHub-App-authored removals; don't remove the label yourself in a cloud/remote session) reaching the autofix-pr cron agent when it is running remotely. Restrictive language ('don't remove it yourself', 'since') and a load-bearing exception (GitHub App identity) make it frozen mechanics with no in-request duplicate."
+  },
+  "data-dir-sync-restore-reason-no-basis-agent": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Ordering/mechanics claim (upload predates any of the user's files being taken in, therefore restore has no basis) unique to this specific cause in the reason table; each sibling reason string is load-bearing only for its own trigger condition."
+  },
+  "data-settings-validation-policy-helper-single-source-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen mechanics: names the exact behavior contract (managed settings source priority for policy-helper keys), the literal string \"merge\" (managedSourcesBehavior value), and a restrictive quantifier ('only', 'even with') — an admin-facing correctness claim the model can't infer and that a misread would misdirect the user's fix."
+  },
+  "skill-loop-pr-steward-scheduling-gate": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The overlapping clause ('until the user picks one of the choices above') is a restatement of the Bash-guidance outcome, but the prompt's actual payload — gate at scheduling time, and enumerate every PR the recurring prompt touches — is unique and load-bearing; without it a /loop could get armed against a PR-Steward-owned PR before ever reaching the Bash-tool check. Body is already terse with no cuttable slop."
+  },
+  "slash-command-effort-usage-max-level-description": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Verbatim UI text the model reads back to the user in /effort's usage listing (a local-command stdout the model repeats on request); each level's description is the only copy of that level's label and none is inferable from the others."
+  },
+  "system-reminder-tool-hosts-path-or-pasted-content-read-here": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Adds a case the sibling branch does not cover at all (a project-relative path), which is genuinely new mechanics (tells the model where to read from) with no in-request duplicate."
+  },
+  "system-reminder-tool-hosts-separate-copy-build-test-clause": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen ordering/mechanics: 'use the git route above first' (ordering) and 'say which copy ran' (a reporting requirement the model can't infer) guard against a real correctness trap (thinking a build in a separate copy validates this session's edits). No duplicate found anywhere."
+  },
+  "tool-description-enable-computer-use": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Per-tool contract text (when to call THIS tool, what already-available tools preempt it, what NOT to call it for) that the model cannot infer from the sibling tool descriptions, which describe different capabilities."
+  },
+  "tool-result-artifact-read-overlong-lines-remedy": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Mechanics with a restrictive 'never' guarding a correctness trap (the model's own in-context copy of an overlong line may be truncated/altered) plus an explicit remedy (Read with offset/limit from the saved file) the model can't otherwise infer."
+  },
+  "tool-result-bash-dangerous-op-cmd-named-protected-path": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Exact deny-message text with a restrictive quantifier ('which no command may remove') and interpolated path/reason placeholders — pure mechanics/error-tag content that must stay verbatim."
+  },
+  "tool-result-device-mcp-passthrough-tools-changed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Carries a unique, load-bearing fact not present in either sibling: '(claude --cloud asks at the next start)' — a specific CLI-flag-scoped recovery mechanic the model needs to relay accurately, plus the specific cause (tool list changed since approval)."
+  },
+  "tool-result-git-bundle-worktree-git-files-changed-while-read-main-project": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Path/location fact differs materially between the two arms (main-project .git vs linked-worktree .git) and each is the only copy of the retry guidance for its own topology."
+  },
+  "tool-result-proposeskills-name-matches-listed-skill": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Concrete validation-gate mechanics (a name collision on save, whose SKILL.md may be unread/stale, replace-entirely consequence, and the required remediation: re-read then resubmit complete, or rename) — restrictive ('entirely'), ordering ('then'), no inferable substitute."
+  },
+  "tool-result-remote-tool-answered-result-too-large": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "opensWithSlot body whose VAR1 substitution carries the size-limit-specific reason text; the generic sibling's extra tail clause is absent here, showing this is a distinct message for a distinct cause rather than a render-time duplicate."
+  },
+  "data-denied-models-setting": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Every sentence trips the freeze tripwire (quoted model-ID examples, 'even when', 'no minor version', enumerated ignored-alias list, 'will not start'). Unique mechanics, no coverage found anywhere in the corpus."
+  },
+  "data-settings-allow-managed-permission-rules-only-description-part-3": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: named flag (--disallowedTools), named mechanism (skill disallowed-tools), enumeration (deny and ask rules), and scope qualifier (command line or current session). Load-bearing settings-schema text."
+  },
+  "system-reminder-attached-repositories-declined-trust-refusal": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "This id's per-instruction tail ('ask the person to answer the trust question, and tell them what stays blocked until they do') is not present verbatim or in substance in either sibling. Kept whole per the tripwire (never/must-adjacent imperative instruction, no partial-bloat to trim)."
+  },
+  "system-reminder-device-mcp-serving-consent-needed-detailed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "The parenthetical is unique mechanics (the CLI invocation and the change-answer path) that the brief branch never renders. Alternate-arm exclusion applies, so no wipe/trim despite the high overlap score."
+  },
+  "system-reminder-directory-sync-disabled-trash-unavailable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen path literal (.git/claude-trash) and a causal 'because' clause naming the specific failure this cause covers. As one entry of a mutually-exclusive per-cause phrase table, no sibling entry ever co-renders it, so there is nothing to merge into."
+  },
+  "tool-description-computer-batch-action-summary-example": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Each tool's parameter schema must be self-contained for the model reading that tool's definition; the batch variant deliberately omits the standalone-only 'Set it on every ... action' enumeration (which doesn't apply to per-action batch entries). No proof of same-request co-rendering, so no coverage claim can be made."
+  },
+  "tool-result-account-memory-hook-rewrite-denied": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: names the specific tool (${VAR_1.name}), the hook type (${VAR_0}), and a restrictive rule ('not change it'). This string is also both the log line and the model-facing tool_result per the description's decisionReason note, so it must stay whole."
+  },
+  "tool-result-artifact-publish-typed-artifact-nothing-can-be-published": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: 'index.html', 'nothing can be published', 'not available' — the strict-superset denial case with no overlap in mechanics with the partial-availability siblings."
+  },
+  "tool-result-mcp-passthrough-tool-needs-browser-consent": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Distinct blocking condition (per-tool consent vs per-server consent) from its only dup lead; no coverage."
+  },
+  "tool-result-memory-path-invisible-control-characters": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Frozen: 'nothing was written' state guarantee and the specific instruction to rename-and-rewrite, which the sibling (content-focused) does not state."
+  },
+  "tool-result-remote-tool-call-already-delivered": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Unique mechanics (idempotency/duplicate-suppression guarantee for remote tool calls), no sibling overlaps."
+  },
+  "tool-result-remote-tool-credential-write-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.284",
+    "why": "Family members are parallel, mutually distinct per-resource messages (not alternate arms of one message, not overlapping content) — each is its own load-bearing denial for a different resource type, so no coverage claim holds for any of them."
   }
 }

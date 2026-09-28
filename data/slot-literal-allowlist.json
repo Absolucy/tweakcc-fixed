@@ -1894,5 +1894,157 @@
     "text": " of an artifact whose ownership couldn't be confirmed",
     "verdict": "glue",
     "note": "noun qualifier naming what is being read in the no-consent-surface denial; no instruction of its own"
+  },
+  "169ad90fbff24b12": {
+    "promptId": "tool-description-websearch",
+    "label": "CURRENT_MONTH_YEAR",
+    "text": "(provided in the conversation below)",
+    "reason": "date placeholder for the month slot; no instruction",
+    "verdict": "glue"
+  },
+  "5b4234b440bfb21b": {
+    "promptId": "tool-result-memory-file-harness-tag-refused",
+    "label": "TOOL_RESULT_MEMORY_FILE_HARNESS_TAG_REFUSED_VAR_0",
+    "text": "for example <system-reminder>",
+    "reason": "example tag name inside the refusal sentence",
+    "verdict": "glue"
+  },
+  "1fda97ddde90bebc": {
+    "promptId": "data-self-hosted-runner-git-ssl-cainfo-trust-bundle-warning",
+    "label": "UNSET_ALTERNATIVE_LEAD",
+    "text": "Otherwise unset",
+    "reason": "connective lead before an env var name",
+    "verdict": "glue"
+  },
+  "ef9e8a6c4d035253": {
+    "promptId": "data-self-hosted-runner-git-ssl-cainfo-trust-bundle-warning",
+    "label": "UNSET_ALTERNATIVE_LEAD",
+    "text": "Otherwise add the public certificate authorities to the file, or unset",
+    "reason": "literal inside a self-hosted runner [runner:warn] line; the runner writes these to its own log, not to the model",
+    "verdict": "glue"
+  },
+  "93537c2e5b816884": {
+    "promptId": "data-self-hosted-runner-client-certificate-relay-warning",
+    "label": "CLIENT_CERTIFICATE_VARIABLES_SET",
+    "text": "GIT_SSL_CAINFO is set on this runner, a value the server delivers with the session (the variables configured on your self-hosted environment) replaces it inside",
+    "reason": "literal inside a self-hosted runner [runner:warn] line; the runner writes these to its own log, not to the model",
+    "verdict": "glue"
+  },
+  "fe769ab27844ee60": {
+    "promptId": "data-self-hosted-runner-client-certificate-relay-warning",
+    "label": "CLIENT_CERTIFICATE_VARIABLES_SET",
+    "text": "GIT_SSL_CAINFO is set for this session by a value the server delivers with it (the variables configured on your self-hosted environment), not on this runner,",
+    "reason": "literal inside a self-hosted runner [runner:warn] line; the runner writes these to its own log, not to the model",
+    "verdict": "glue"
+  },
+  "4a9bc3160b0fa18d": {
+    "promptId": "data-self-hosted-runner-client-certificate-relay-warning",
+    "label": "CLIENT_CERTIFICATE_VARIABLES_SET",
+    "text": "version not readable",
+    "reason": "placeholder for an unreadable version",
+    "verdict": "glue"
+  },
+  "6d3f2169c479f639": {
+    "promptId": "tool-result-snooze-status-update-then-end-turn",
+    "label": "TOOL_RESULT_SNOOZE_STATUS_UPDATE_THEN_END_TURN_VAR_0",
+    "text": "write it now as ordinary response text",
+    "id": "tool-result-snooze-status-update-plain-text-branch",
+    "name": "Tool Result: Snooze status update plain-text branch",
+    "desc": "Branch telling the agent to write the owed status update as ordinary response text when there is no brief tool.",
+    "reason": "instruction: how to deliver the status update",
+    "verdict": "catalogue"
+  },
+  "ab979d27af506104": {
+    "promptId": "slash-command-effort-ultracode-on-this-session",
+    "label": "SLASH_COMMAND_EFFORT_ULTRACODE_ON_THIS_SESSION_VAR_0",
+    "text": "dynamic workflows on every task",
+    "reason": "short label describing ultracode in /effort usage",
+    "verdict": "glue"
+  },
+  "bcf2a7664e8eac49": {
+    "promptId": "tool-description-remote-served-tool-bound-cloud-session",
+    "label": "TOOL_DESCRIPTION_REMOTE_SERVED_TOOL_BOUND_CLOUD_SESSION_VAR_0",
+    "text": "native binary",
+    "reason": "noun label for the install kind",
+    "verdict": "glue"
+  },
+  "cea5637354b52549": {
+    "promptId": "tool-result-remote-host-approval-undated-channel-expired",
+    "label": "TOOL_RESULT_REMOTE_HOST_APPROVAL_UNDATED_CHANNEL_EXPIRED_VAR_1",
+    "text": "more than a day",
+    "reason": "duration phrase",
+    "verdict": "glue"
+  },
+  "f716f3d280439f35": {
+    "promptId": "tool-result-remote-tool-read-further-offset-limit-hint",
+    "label": "TOOL_RESULT_REMOTE_TOOL_READ_FURTHER_OFFSET_LIMIT_HINT_VAR_1",
+    "text": ", else Select-String through ",
+    "reason": "platform command connective in the read-further hint",
+    "verdict": "glue"
+  },
+  "c429a55ccac45ff3": {
+    "promptId": "tool-result-remote-tool-read-further-offset-limit-hint",
+    "label": "TOOL_RESULT_REMOTE_TOOL_READ_FURTHER_OFFSET_LIMIT_HINT_VAR_1",
+    "text": ", else grep through ",
+    "reason": "platform command connective in the read-further hint",
+    "verdict": "glue"
+  },
+  "3ac80d0538ed91ee": {
+    "promptId": "tool-result-remote-tool-output-withheld-posttooluse-hook-stopped",
+    "label": "TOOL_RESULT_REMOTE_TOOL_OUTPUT_WITHHELD_POSTTOOLUSE_HOOK_STOPPED_VAR_1",
+    "text": "at the call's deadline",
+    "reason": "reason clause for why output was withheld",
+    "verdict": "glue"
+  },
+  "6f1b3550c361ac1f": {
+    "promptId": "tool-result-remote-tool-output-withheld-posttooluse-hook-stopped",
+    "label": "TOOL_RESULT_REMOTE_TOOL_OUTPUT_WITHHELD_POSTTOOLUSE_HOOK_STOPPED_VAR_1",
+    "text": "because Claude Code here is shutting down",
+    "reason": "reason clause for why output was withheld",
+    "verdict": "glue"
+  },
+  "b8ee6966fa3aa426": {
+    "promptId": "tool-result-remote-tool-output-withheld-posttooluse-hook-stopped",
+    "label": "TOOL_RESULT_REMOTE_TOOL_OUTPUT_WITHHELD_POSTTOOLUSE_HOOK_STOPPED_VAR_1",
+    "text": "when the call was cancelled",
+    "reason": "reason clause for why output was withheld",
+    "verdict": "glue"
+  },
+  "19c42f5585803587": {
+    "promptId": "system-reminder-started-new-instead-of-resuming-inactive",
+    "label": "SYSTEM_REMINDER_STARTED_NEW_INSTEAD_OF_RESUMING_INACTIVE_VAR_0",
+    "text": "by searching or reading that file",
+    "id": "system-reminder-started-new-instead-of-resuming-search-or-read-hint",
+    "name": "System Reminder: Started new instead of resuming search-or-read hint",
+    "desc": "Tells the agent it can recover the inactive session context by searching or reading its transcript file.",
+    "reason": "instruction: how to recover the prior context",
+    "verdict": "catalogue"
+  },
+  "644c5099974d5233": {
+    "promptId": "tool-result-artifact-db-batch-committed",
+    "label": "TOOL_RESULT_ARTIFACT_DB_BATCH_COMMITTED_VAR_1",
+    "text": "by default readable only by the one user whose data/users subtree they are in",
+    "id": "tool-result-artifact-db-batch-committed-private-readers-note",
+    "name": "Tool Result: Artifact db batch committed private readers note",
+    "desc": "States that entries written under data/users are by default readable only by the one user whose subtree they are in.",
+    "reason": "constraint on who can read the written entries",
+    "verdict": "catalogue"
+  },
+  "29eff7fa4c9d7ccd": {
+    "promptId": "tool-result-proposeskills-name-matches-listed-skill",
+    "label": "TOOL_RESULT_PROPOSESKILLS_NAME_MATCHES_LISTED_SKILL_VAR_2",
+    "text": "has not been read in full yet",
+    "id": "tool-result-proposeskills-listed-skill-not-read-in-full",
+    "name": "Tool Result: ProposeSkills listed skill not read in full",
+    "desc": "Condition naming why a proposal is refused: the listed skill SKILL.md has not been read in full yet.",
+    "reason": "the condition the refusal tells the model to fix",
+    "verdict": "catalogue"
+  },
+  "a5b229e1c7830f15": {
+    "promptId": "slash-command-plugin-validate-name-not-kebab-case",
+    "label": "SLASH_COMMAND_PLUGIN_VALIDATE_NAME_NOT_KEBAB_CASE_VAR_1",
+    "text": "Claude Code accepts it, but the",
+    "reason": "connective fragment of the kebab-case warning",
+    "verdict": "glue"
   }
 }
