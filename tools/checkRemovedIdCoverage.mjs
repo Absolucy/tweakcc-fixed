@@ -71,12 +71,14 @@ const WINDOW = 25;
 const STRIDE = 5;
 const BUNDLE_PROBE_MIN = 32;
 const BUNDLE_PROBE_COUNT = 8;
-const ALLOWLIST = path.join(
-  path.dirname(new URL(import.meta.url).pathname),
-  '..',
-  'data',
-  'removed-id-allowlist.json'
-);
+const ALLOWLIST =
+  process.env.TWEAKCC_REMOVED_ID_ALLOWLIST ||
+  path.join(
+    path.dirname(new URL(import.meta.url).pathname),
+    '..',
+    'data',
+    'removed-id-allowlist.json'
+  );
 
 const [cliPath, prevPath, curPath, ...flags] = process.argv.slice(2);
 const updateAllowlist = flags.includes('--update-allowlist');
@@ -322,6 +324,15 @@ for (const id of [...prevById.keys()].filter(i => !curIds.has(i)).sort()) {
   buckets[bucket].push(id);
   if (to) renamedTo[id] = to;
 }
+// A no-probe id can only be settled by reading its emission site by hand, so an
+// `archived` verdict recorded after that read is the resolution. Without this
+// the gate had no way to record one and failed every run after the review.
+const probeResolved = buckets['no-probe-surface'].filter(
+  id => allowlist[id]?.verdict === 'archived'
+);
+buckets['no-probe-surface'] = buckets['no-probe-surface'].filter(
+  id => allowlist[id]?.verdict !== 'archived'
+);
 // The rename map is what an operator has to act on — an override keyed by the
 // old id has to be re-mapped by CONTENT to the successor, and every set that
 // has the file has to move with it.
@@ -347,6 +358,11 @@ console.log(
     `${buckets.gone.length} truly removed (${removed} need a decision)`
 );
 
+if (probeResolved.length) {
+  console.log(
+    `\nno probe surface, resolved by hand (archived): ${probeResolved.join(', ')}`
+  );
+}
 if (buckets['no-probe-surface'].length) {
   console.log(
     '\nNO PROBE SURFACE — too few literal characters to test either way:'
