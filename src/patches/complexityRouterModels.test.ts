@@ -19,7 +19,10 @@ const fixture = [
   'function commit(value){let model=resolve(value),level=getLevel(),stored=getStored(),picked=model&&level!==void 0&&level!=="ultracode"?clamp(level,model):level;event("tengu_model_command_menu_effort",{});if(value===DEFAULT){apply(null,picked);return}apply(value,picked)}',
 ].join('');
 
-function harness() {
+// CC 2.1.284 dropped the ultracode guard: ultracode became a session flag.
+const fixture284 = fixture.replace('&&level!=="ultracode"', '');
+
+function harness(source = fixture) {
   const context = vm.createContext({
     available: [] as { value: string; disabled?: boolean }[],
     selection: 'opus',
@@ -37,7 +40,7 @@ function harness() {
     el: (_tag: unknown, props: unknown) => props,
     DEFAULT: 'default',
   });
-  const result = writeComplexityRouterModels(fixture);
+  const result = writeComplexityRouterModels(source);
   expect(result).not.toBeNull();
   vm.runInContext(
     'function valid(x){return aliases.includes(x)}function current(){return selection}function identity(x){return x}function fallback(){return "opus"}' +
@@ -138,6 +141,19 @@ describe('effort router model aliases', () => {
     );
     await Promise.resolve();
     expect(context.synchronizations).toBe(3);
+  });
+
+  it('clears the effort on the CC 2.1.284 commit without the ultracode guard', () => {
+    expect(fixture284).not.toContain('ultracode');
+    const { context, result } = harness(fixture284);
+    expect(result).toContain(
+      'function commit(value){if((value==="opusrouter"||value==="fablerouter")){apply(value,void 0);return}let model=resolve(value)'
+    );
+    vm.runInContext('commit("opusrouter")', context);
+    expect(context.applied).toEqual(['opusrouter', undefined]);
+    vm.runInContext('commit("opus")', context);
+    expect(context.applied).toEqual(['opus', 'max']);
+    expect(writeComplexityRouterModels(result)).toBe(result);
   });
 
   it('does not confuse runtime getter comparisons with alias installation', () => {
