@@ -56,14 +56,26 @@ export const writeComplexityRouterTurnStatus = (
       /\{message:([$\w]+),addMargin:[$\w]+,verb:[$\w]+\}/g
     ),
   ].at(-1)?.[1];
-  if (!query || query[2] !== request[5] || !message) {
+  const escapeId = (id: string) => id.replace(/\$/g, '\\$');
+  // 2.1.285+: the generator aliases its options param to a local
+  // (`D=b===h.fallbackModel?h:{...h,fallbackModel:b}`) and the request site
+  // reads that alias. The alias is the options object for the record call.
+  const optionsAlias =
+    !!query &&
+    (query[2] === request[5] ||
+      new RegExp(
+        `[,{]${escapeId(request[5])}=[$\\w]+===${escapeId(query[2])}\\.fallbackModel\\?${escapeId(query[2])}:\\{\\.\\.\\.${escapeId(query[2])},`
+      ).test(oldFile.slice(query.index, request.index)));
+  if (!query || !optionsAlias || !message) {
     console.error('patch: complexityRouter: failed to find turn status scopes');
     return null;
   }
+  // The message-list arg is a bare identifier, or (2.1.285+) a snapshot getter
+  // expression like `H.transcript.getSnapshot()`.
   const calls = [
     ...oldFile.matchAll(
       new RegExp(
-        `${factory[1].replace(/\$/g, '\\$')}\\(([$\\w]+(?:\\.durationMs)?),([$\\w]+),([$\\w]+)\\(([$\\w]+),([$\\w]+)\\)(,[$\\w]+\\.pendingBackgroundAgentCount,[$\\w]+\\.pendingWorkflowCount)?\\)`,
+        `${factory[1].replace(/\$/g, '\\$')}\\(([$\\w]+(?:\\.durationMs)?),([$\\w]+),([$\\w]+)\\(((?:[$\\w]+(?:\\([^()]*\\))?)(?:\\.[$\\w]+(?:\\([^()]*\\))?)*),([$\\w]+)\\)(,[$\\w]+\\.pendingBackgroundAgentCount,[$\\w]+\\.pendingWorkflowCount)?\\)`,
         'g'
       )
     ),

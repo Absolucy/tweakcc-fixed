@@ -143,6 +143,7 @@ interface ClassifierHelpers {
   kmIndex?: number;
   gBSource: string;
   gBOptions: string;
+  gBPatched: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -671,13 +672,36 @@ const injectRestoreReset = (file: string): string => {
 // unique to gB: it pins `model:<fn>(),enablePromptCaching:` (Vpt has no `model:`).
 // km is `function NAME(){return{agentType:"main",agentId:<fn>()}}`.
 const findClassifierHelpers = (file: string): ClassifierHelpers | null => {
-  const gb = file.match(
-    /async function ([$\w]+)\(\{systemPrompt:[$\w]+=[$\w]+\(\[\]\),userPrompt:[$\w]+,outputFormat:[$\w]+,signal:[$\w]+,options:([$\w]+)\}\)\{return\(await [$\w]+\([\s\S]{0,500}?,model:[$\w]+\(\),enablePromptCaching:/
-  );
   const km = file.match(
     /function ([$\w]+)\(\)\{return\{agentType:"main",agentId:[$\w]+\(\)\}\}/
   );
-  if (gb && km)
+  if (!km) return null;
+  // Method 1 (2.1.285+): gB is a thin wrapper that resolves the small-fast
+  // model itself (`let n=fn(fn2()),...`) and forwards the whole options object
+  // plus model/fallback to the inner side-call: `return await Inner(e,g[h],g[h+1])`.
+  const gbNew = file.match(
+    /async function ([$\w]+)\(([$\w]+)\)\{(let ([$\w]+)=)([$\w]+\([$\w]+\(\)\)),[\s\S]{0,600}?return await [$\w]+\(\2,[$\w]+\[[$\w]+\],[$\w]+\[[$\w]+\+1\]\)/
+  );
+  if (gbNew) {
+    const [full, name, param, letPrefix, , modelExpr] = gbNew;
+    const head = `async function ${name}(${param}){${letPrefix}${modelExpr},`;
+    return {
+      gB: name,
+      km: km[1],
+      gBIndex: gbNew.index,
+      kmIndex: km.index,
+      gBSource: full,
+      gBOptions: `${param}.options`,
+      gBPatched:
+        `async function ${name}(${param}){${letPrefix}${param}.options.querySource==="route_complexity"?"claude-haiku-4-5":${modelExpr},` +
+        full.slice(head.length),
+    };
+  }
+  // Method 2: gB itself pins `model:<fn>(),enablePromptCaching:`.
+  const gb = file.match(
+    /async function ([$\w]+)\(\{systemPrompt:[$\w]+=[$\w]+\(\[\]\),userPrompt:[$\w]+,outputFormat:[$\w]+,signal:[$\w]+,options:([$\w]+)\}\)\{return\(await [$\w]+\([\s\S]{0,500}?,model:[$\w]+\(\),enablePromptCaching:/
+  );
+  if (gb)
     return {
       gB: gb[1],
       km: km[1],
@@ -685,6 +709,10 @@ const findClassifierHelpers = (file: string): ClassifierHelpers | null => {
       kmIndex: km.index,
       gBSource: gb[0],
       gBOptions: gb[2],
+      gBPatched: gb[0].replace(
+        /model:([$\w]+)\(\),enablePromptCaching:$/,
+        `model:${gb[2]}.querySource==="route_complexity"?"claude-haiku-4-5":$1(),enablePromptCaching:`
+      ),
     };
   return null;
 };
@@ -728,13 +756,7 @@ export const writeComplexityRouter = (
 
   const bound = bindRouterModules(oldFile, helpers);
   if (!bound) return null;
-  bound.file = bound.file.replace(
-    helpers.gBSource,
-    helpers.gBSource.replace(
-      /model:([$\w]+)\(\),enablePromptCaching:$/,
-      `model:${helpers.gBOptions}.querySource==="route_complexity"?"claude-haiku-4-5":$1(),enablePromptCaching:`
-    )
-  );
+  bound.file = bound.file.replace(helpers.gBSource, () => helpers.gBPatched);
   const afterResolver = wrapEffortResolver(
     bound.file,
     config,
