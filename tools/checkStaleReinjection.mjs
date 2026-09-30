@@ -191,9 +191,7 @@ for (const set of sets) {
       let lastSeen = pastIdx.get(id)?.get(s) ?? null;
       if (!lastSeen || lastSeen === version) continue;
       const key = `${id}::${sha1(s)}`;
-      if (allow[key]) { allowed++; continue; }
-      findings++;
-      rows.push({ label, id, lastSeen, key, s, i });
+      rows.push({ label, id, lastSeen, key, s, i, allowed: Boolean(allow[key]) });
     }
   }
 }
@@ -215,8 +213,17 @@ for (const r of rows.sort((a, b) => a.id.localeCompare(b.id) || a.label.localeCo
   if (last && last.id === r.id && last.label === r.label && r.i - last.iEnd <= 1) {
     last.iEnd = r.i;
     last.s += ' ' + r.s.split(' ').slice(-1)[0];
+    last.allowed ||= r.allowed;
   } else runs.push({ ...r, iEnd: r.i });
 }
+// The allowlist silences a whole run, not one window. Applied per window before
+// collapsing, an allowlisted first window only promoted the next overlapping
+// window to be the run's key, so a reviewed passage re-reported under a fresh
+// key on every run (CC 2.1.285: three keys for one deliberate cut).
+for (let k = runs.length - 1; k >= 0; k--) {
+  if (runs[k].allowed) { allowed++; runs.splice(k, 1); }
+}
+findings = runs.length;
 const keys = [...new Set(runs.map(r => r.key))].sort();
 if (!fs.existsSync(BASE)) {
   fs.writeFileSync(BASE, JSON.stringify(keys, null, 1));
