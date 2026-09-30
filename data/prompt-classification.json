@@ -15506,6 +15506,12 @@
     "name": "Slash Command: /vim and /output-style moved into /config",
     "desc": "Tells the model the invoked command no longer exists on its own and names the /config tab that replaced it, which is what it must relay to the user."
   },
+  "68e6d296706982487c01ff64f6ae6b6d2e3ce8e7": {
+    "facing": "model",
+    "id": "slash-command-moved-to-config-redirect",
+    "name": "Slash Command: /vim and /output-style moved into /config",
+    "desc": "Tells the model the invoked command no longer exists on its own and names the /config tab that replaced it, which is what it must relay to the user."
+  },
   "5e85f4c203ded52997e2dfeefa557d291faa9938": {
     "facing": "model",
     "id": "agent-prompt-eval-authoring-interview-eval-dir-note",
@@ -49788,6 +49794,12 @@
     "name": "Data: Sandbox Install Partial Result",
     "desc": "Partial-completion message from /sandbox install on Windows describing which of the sandbox user, credential, and network filters landed; onDone emits it as <local-command-stdout> in a role:user message."
   },
+  "7177e698802949977c8cd0b2680c733776d930da": {
+    "facing": "model",
+    "id": "data-sandbox-install-partial-status",
+    "name": "Data: Sandbox Install Partial Result",
+    "desc": "Partial-completion message from /sandbox install on Windows describing which of the sandbox user, credential, and network filters landed; onDone emits it as <local-command-stdout> in a role:user message."
+  },
   "4ab6e9a684d856134be98c2b33cb96b37feebcca": { "facing": "ui" },
   "9e3d9c00313e4c36bba1febcd7aff72881ed69a8": { "facing": "ui" },
   "603bfb51161324517d80fc36e0fdb09902836b78": { "facing": "ui" },
@@ -52170,6 +52182,12 @@
     "name": "Artifact Db Read Not Saved Line",
     "desc": "Tool-result line listing returned artifact-db documents that were not written to out_dir, with the reason and ids."
   },
+  "2ecc7b6d19b19b4e27904f19d1932a915ffd4d43": {
+    "facing": "model",
+    "id": "tool-result-artifact-db-read-not-saved-line",
+    "name": "Artifact Db Read Not Saved Line",
+    "desc": "Tool-result line listing returned artifact-db documents that were not written to out_dir, with the reason and ids."
+  },
   "44125376a6c1dc9bce6390a445ccbbfab96e927a": {
     "facing": "model",
     "id": "tool-result-artifact-preview-browser-message-too-large",
@@ -53278,6 +53296,12 @@
   "4e2a59c0ba83da39b1f95b9306c93f29d64a3ffd": { "facing": "ui" },
   "82ee6cf15839ab6823850351eb81decd18cfdcde": { "facing": "ui" },
   "2d10ad63e6ef63a4599445ab46cfe328ae7615e5": {
+    "facing": "model",
+    "id": "system-reminder-cloud-session-hook-not-run",
+    "name": "System Reminder: Cloud session hook not run",
+    "desc": "Tells the model a machine hook was skipped for a cloud-served call and that hook's output is not part of this result."
+  },
+  "2ddee5bed7397eb6e85e497f22a4dfb85b350b00": {
     "facing": "model",
     "id": "system-reminder-cloud-session-hook-not-run",
     "name": "System Reminder: Cloud session hook not run",
@@ -69262,6 +69286,12 @@
     "name": "Tool Result: Read Symlink Resolution Changed After Permission",
     "desc": "Read tool error thrown when symlink resolution changed after permission was checked."
   },
+  "6db811737c65a4d6893e418ce66e2270294a916b": {
+    "facing": "model",
+    "id": "tool-result-read-symlink-resolution-changed-after-permission",
+    "name": "Tool Result: Read Symlink Resolution Changed After Permission",
+    "desc": "Read tool error thrown when symlink resolution changed after permission was checked."
+  },
   "826bc3bb8a49235e7a03ccb914399b04041e4ae2": { "facing": "internal" },
   "eb3d7953e106beecbbd943e74f8e5ab34733730b": { "facing": "internal" },
   "9843ef61faaeb5f7105aa09bb008ef419ca9cfa8": { "facing": "internal" },
@@ -69542,6 +69572,12 @@
     "name": "Worktree Guard Operand: Cannot Tell Which Operand Is The Program",
     "desc": "Wc() worktree-isolation refusal when a computed or flag-shaped argument appears before the program can be identified, next to other runtime operands."
   },
+  "619ab91600b5130cfb8710cab60e0ef7e68b992b": {
+    "facing": "model",
+    "id": "tool-result-bash-worktree-guard-operand-unlocated-program",
+    "name": "Worktree Guard Operand: Cannot Tell Which Operand Is The Program",
+    "desc": "Wc() worktree-isolation refusal when a computed or flag-shaped argument appears before the program can be identified, next to other runtime operands."
+  },
   "31c5363f1042f36f97278d675f0891565ea7ee1c": {
     "facing": "model",
     "id": "tool-result-bash-worktree-guard-operand-computed-arg-after-script",
@@ -69554,7 +69590,19 @@
     "name": "Worktree Guard Operand: Script Computed At Runtime",
     "desc": "Wc() refusal when the script operand itself is non-literal (computed at runtime)."
   },
+  "82faf7714baf88861699c08ab6f2cc74ff2d1381": {
+    "facing": "model",
+    "id": "tool-result-bash-worktree-guard-operand-runtime-script",
+    "name": "Worktree Guard Operand: Script Computed At Runtime",
+    "desc": "Wc() refusal when the script operand itself is non-literal (computed at runtime)."
+  },
   "f582b5b7562d678ea314965ee5e9c1cf892e3ed7": {
+    "facing": "model",
+    "id": "tool-result-bash-worktree-isolation-descriptor-holds-program",
+    "name": "Worktree Isolation Descriptor Holds Program",
+    "desc": "Worktree-isolation refusal when the program is a descriptor-held path, so it cannot be shown not to be git."
+  },
+  "e378d2818df9bf8521276a5a1941cad638013792": {
     "facing": "model",
     "id": "tool-result-bash-worktree-isolation-descriptor-holds-program",
     "name": "Worktree Isolation Descriptor Holds Program",
@@ -73097,6 +73145,12 @@
     "name": "Tool Description: Artifact Quickstart (Design Systems Off)",
     "desc": "quickstart action description when design systems are left out: types will be read into the conversation, with optional scratchpad files."
   },
+  "60e2e29b01835427f4804e5f7e4a5aed51cdbc8f": {
+    "facing": "model",
+    "id": "tool-description-artifact-quickstart-design-systems-off",
+    "name": "Tool Description: Artifact Quickstart (Design Systems Off)",
+    "desc": "quickstart action description when design systems are left out: types will be read into the conversation, with optional scratchpad files."
+  },
   "ee4b86eff112b9d8094a1a8c4d0b8282e4f0bff3": {
     "facing": "model",
     "id": "tool-description-artifact-quickstart-scratchpad-files-clause",
@@ -73104,6 +73158,12 @@
     "desc": "Optional sentence on the design-systems-off quickstart description that the type's published files are saved to the scratchpad and listed."
   },
   "3e84eb0f2b35e097d1f6bcd4e56076b928bc8cc9": {
+    "facing": "model",
+    "id": "tool-description-artifact-quickstart",
+    "name": "Tool Description: Artifact Quickstart",
+    "desc": "quickstart action description: look up published Artifact types and design systems (and the default README) before making a new artifact."
+  },
+  "6971d6e98454c42ace83d1ec48c79d6ab367cb27": {
     "facing": "model",
     "id": "tool-description-artifact-quickstart",
     "name": "Tool Description: Artifact Quickstart",
@@ -73976,6 +74036,12 @@
   "45f23afc9cc1a000780aec97f8c35ab2e9ee9f1c": { "facing": "internal" },
   "19eef39a616a3499c7597126ffaf3b5bcd5207a0": { "facing": "internal" },
   "381ad14b6f7a4a15c8215e1a79f4456a28d699f3": {
+    "facing": "model",
+    "id": "tool-result-bash-double-bracket-non-numeric-operand-too-complex",
+    "name": "Tool Result: Bash Double-Bracket Non-Numeric Operand Too Complex",
+    "desc": "Ask-path tool_result when a [[ ]] operand is non-numeric and would arith-eval identifiers or subscripts."
+  },
+  "4e72f07ef3a22c7defef37ba30193f1411b6d5aa": {
     "facing": "model",
     "id": "tool-result-bash-double-bracket-non-numeric-operand-too-complex",
     "name": "Tool Result: Bash Double-Bracket Non-Numeric Operand Too Complex",
@@ -75964,6 +76030,12 @@
   },
   "91249e29358e6de86e817bfd3f6d047bdd5f4875": { "facing": "ui" },
   "8ff810c3970c04088430c611b88f7800d1476e6e": {
+    "facing": "model",
+    "id": "system-reminder-served-project-command-check-note",
+    "name": "Served Project Command Check Note",
+    "desc": "Note added to a served call's PreToolUse hook result when the project's sandboxed command check asked, added context, or failed with stderr; joined into the hook's additionalContext for the cloud session's model."
+  },
+  "f63cf67ba4f8f7d020efaf9b0f67c167750e0a13": {
     "facing": "model",
     "id": "system-reminder-served-project-command-check-note",
     "name": "Served Project Command Check Note",
@@ -86203,7 +86275,19 @@
     "name": "Settings Fail-Closed Fallback Note",
     "desc": "Explains that a managed-settings source holding only values that could not be applied falls back to the next source, with the fail-closed restrictive reading still binding beside it."
   },
+  "51495bf13b48929602d847bdc6fe422bbe090a50": {
+    "facing": "model",
+    "id": "data-settings-validation-fail-closed-fallback-source-note",
+    "name": "Settings Fail-Closed Fallback Note",
+    "desc": "Explains that a managed-settings source holding only values that could not be applied falls back to the next source, with the fail-closed restrictive reading still binding beside it."
+  },
   "307747a030b0e0e582dfd6a852abf9172e83aac5": {
+    "facing": "model",
+    "id": "data-settings-validation-policy-helper-single-source-note",
+    "name": "Policy Helper Single-Source Note",
+    "desc": "Explains that policy-helper configuration keys are honored only from the single highest-priority managed settings source, even with managedSourcesBehavior \"merge\", and to configure the helper there instead."
+  },
+  "e1251e0b1359b5c8e6b89efd61d54efd6645af16": {
     "facing": "model",
     "id": "data-settings-validation-policy-helper-single-source-note",
     "name": "Policy Helper Single-Source Note",
@@ -86566,6 +86650,12 @@
     "desc": "Remedy suffix for a symbolic_head refusal telling the user to check out a branch by its own name and retry."
   },
   "bb337a345a7fd2764796312032d5981358c3e3f9": {
+    "facing": "model",
+    "id": "data-cloud-session-notice-working-tree-uploaded-previous-way",
+    "name": "Data: Cloud Session Notice Working Tree Uploaded Previous Way",
+    "desc": "Notice that the working tree is uploaded the previous way for this session because the new upload path does not support this checkout layout."
+  },
+  "63cd5fe4d851ed977ef0fcbfba20d52180718a09": {
     "facing": "model",
     "id": "data-cloud-session-notice-working-tree-uploaded-previous-way",
     "name": "Data: Cloud Session Notice Working Tree Uploaded Previous Way",
@@ -87270,6 +87360,12 @@
   "3395db62e59f6e2d2e22e11ccd1b5e63ef1d7e94": { "facing": "internal" },
   "f0a8dac3bb158b76afc4ae88881d16dd460c74d2": { "facing": "internal" },
   "c012fe6f17aa251d39c6489f13d56ec2ccb1e6e5": {
+    "facing": "model",
+    "id": "slash-command-autocompact-window-status",
+    "name": "Slash Command: Autocompact Window Status",
+    "desc": "Text /autocompact prints (and which enters the transcript as local-command-stdout) describing the current auto-compact window and where its value came from."
+  },
+  "213c54137c010d849ab0ea84afd6e338b9c476d1": {
     "facing": "model",
     "id": "slash-command-autocompact-window-status",
     "name": "Slash Command: Autocompact Window Status",

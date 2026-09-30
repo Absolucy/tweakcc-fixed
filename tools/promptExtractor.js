@@ -275,8 +275,9 @@ const CURATED_IDENTIFIER_MAPS = {
       // skill-routing bullet after the QA note). Names match upstream's
       // system-prompt-coordinator-mode-orchestration at the same slots.
       identifiers: [
-        0, 1, 2, 3, 4, 5, 6, 7, 2, 8, 3, 0, 9, 2, 10, 3, 2, 11, 3, 4, 2, 3, 2, 4,
-        3, 2, 2, 2, 12, 3, 2, 3, 3, 12, 3, 12, 13, 12, 12, 14, 2, 2, 10, 3, 12,
+        0, 1, 2, 3, 4, 5, 6, 7, 2, 8, 3, 0, 9, 2, 10, 3, 2, 11, 3, 4, 2, 3, 2,
+        4, 3, 2, 2, 2, 12, 3, 2, 3, 3, 12, 3, 12, 13, 12, 12, 14, 2, 2, 10, 3,
+        12,
       ],
       identifierMap: {
         ...COORDINATOR_MODE_2_1_257_MAP,
@@ -287,7 +288,10 @@ const CURATED_IDENTIFIER_MAPS = {
     },
     {
       // 2.1.257 shape — see COORDINATOR_MODE_2_1_257_MAP.
-      identifiers: [0, 1, 2, 3, 4, 5, 6, 7, 2, 8, 3, 0, 9, 2, 10, 3, 2, 11, 3, 4, 2, 3, 2, 4, 3, 2, 2, 2, 3, 2, 3, 3, 3, 2, 2, 10, 3],
+      identifiers: [
+        0, 1, 2, 3, 4, 5, 6, 7, 2, 8, 3, 0, 9, 2, 10, 3, 2, 11, 3, 4, 2, 3, 2,
+        4, 3, 2, 2, 2, 3, 2, 3, 3, 3, 2, 2, 10, 3,
+      ],
       identifierMap: COORDINATOR_MODE_2_1_257_MAP,
     },
     {
@@ -3064,7 +3068,9 @@ const NEW_PROMPT_ASSIGNMENTS = [
   },
   {
     matcher: t =>
-      t.startsWith('The permission handler narrowed the input to a shape SendMessage'),
+      t.startsWith(
+        'The permission handler narrowed the input to a shape SendMessage'
+      ),
     name: 'Tool Result: SendMessage permission handler narrowed the input',
     id: 'tool-result-send-message-permission-handler-narrowed-input',
     description:
@@ -3376,9 +3382,11 @@ const CLASSIFICATION_CACHE_PATH = path.join(
   'prompt-classification.json'
 );
 let _classificationCache = null;
+let _classificationCacheInjected = false;
 // Test seam: inject a cache object (pass null to restore file-backed loading).
 function _setClassificationCacheForTests(obj) {
   _classificationCache = obj;
+  _classificationCacheInjected = !!obj;
 }
 function loadClassificationCache() {
   if (_classificationCache) return _classificationCache;
@@ -3524,9 +3532,59 @@ const normalizeBuildTime = s =>
     }
   );
 
-function classifyByCache(body) {
-  const cache = loadClassificationCache();
-  const sha = s => crypto.createHash('sha1').update(s).digest('hex');
+// Inside each `${…}` slot, a bare-identifier bracket index (`[Ye]`) becomes
+// `[]`. The cacheBody keeps member/index access, so a minifier rename of an
+// index variable between builds (Ye→Xe) changes the sha1 of an otherwise
+// byte-identical prompt and silently strands its verdict. Numeric, quoted and
+// operator indexes (`[0]`, `["x"]`, `[P-1]`) are a different class and stay.
+function normalizeBracketIndexes(body) {
+  const BARE = /\[[A-Za-z_$][\w$]*\]/g;
+  let out = '';
+  let i = 0;
+  while (i < body.length) {
+    if (body[i] === '$' && body[i + 1] === '{' && body[i - 1] !== '\\') {
+      let depth = 1;
+      let j = i + 2;
+      let seg = '';
+      let segStart = j;
+      const flush = end => {
+        seg += body.slice(segStart, end).replace(BARE, '[]');
+      };
+      while (j < body.length && depth > 0) {
+        const c = body[j];
+        if (c === "'" || c === '"' || c === '`') {
+          flush(j);
+          let k = j + 1;
+          while (k < body.length && body[k] !== c)
+            k += body[k] === '\\' ? 2 : 1;
+          const lit = body.slice(j, k + 1);
+          seg +=
+            c === '`'
+              ? '`' + normalizeBracketIndexes(lit.slice(1, -1)) + lit.slice(-1)
+              : lit;
+          j = k + 1;
+          segStart = j;
+          continue;
+        }
+        if (c === '{') depth += 1;
+        else if (c === '}') depth -= 1;
+        j += 1;
+      }
+      flush(j);
+      out += '${' + seg;
+      i = j;
+      continue;
+    }
+    out += body[i];
+    i += 1;
+  }
+  return out;
+}
+
+const sha1Hex = s => crypto.createHash('sha1').update(s).digest('hex');
+
+// Every raw (un-normalized) form a body is looked up under.
+function rawCacheForms(body) {
   const forms = [body];
   if (_ccVersionForCache) {
     if (body.includes(_ccVersionForCache))
@@ -3540,11 +3598,90 @@ function classifyByCache(body) {
     if (_buildTimeForCache && form.includes('<<BUILD_TIME>>'))
       forms.push(form.split('<<BUILD_TIME>>').join(_buildTimeForCache));
   }
-  for (const form of forms) {
-    const hit = cache[sha(form)];
+  return forms;
+}
+
+function classifyByCache(body) {
+  const cache = loadClassificationCache();
+  const raw = rawCacheForms(body);
+  for (const form of raw) {
+    const hit = cache[sha1Hex(form)];
+    if (hit) return hit;
+  }
+  for (const form of raw) {
+    const nf = normalizeBracketIndexes(form);
+    if (nf === form) continue;
+    const hit = cache[sha1Hex(nf)];
     if (hit) return hit;
   }
   return null;
+}
+
+// Serialize the cache in the repo's canonical one-entry-per-line format (the
+// showtime driver's classify-merge writes the same bytes).
+function serializeClassificationCache(cache) {
+  const parts = [];
+  for (const [k, v] of Object.entries(cache)) {
+    const keys = Object.keys(v);
+    let val;
+    if (keys.length === 1) {
+      val = `{ "facing": ${JSON.stringify(v.facing)} }`;
+    } else {
+      const lines = ['facing', 'id', 'name', 'desc']
+        .filter(f => f in v)
+        .map(f => `    ${JSON.stringify(f)}: ${JSON.stringify(v[f])}`);
+      val = `{\n${lines.join(',\n')}\n  }`;
+    }
+    parts.push(`  ${JSON.stringify(k)}: ${val}`);
+  }
+  return `{\n${parts.join(',\n')}\n}\n`;
+}
+
+// For each prompt whose body has a bare-identifier bracket index and whose
+// verdict was recorded under a raw key, return the cache with an alias
+// `sha1(normalized) -> same verdict` inserted directly after its source entry,
+// so the file diff is insertions only. Returns {cache, added}.
+function withBracketAliases(prompts, cache) {
+  const aliases = new Map();
+  for (const p of prompts) {
+    const body = (p.pieces || []).filter(x => typeof x === 'string').join('');
+    for (const form of rawCacheForms(body)) {
+      const nf = normalizeBracketIndexes(form);
+      if (nf === form) continue;
+      const srcKey = sha1Hex(form);
+      const aliasKey = sha1Hex(nf);
+      if (!cache[srcKey] || cache[aliasKey] || aliases.has(aliasKey)) continue;
+      aliases.set(aliasKey, { srcKey, verdict: { ...cache[srcKey] } });
+    }
+  }
+  if (!aliases.size) return { cache, added: 0 };
+  const bySrc = new Map();
+  for (const [aliasKey, { srcKey, verdict }] of aliases)
+    bySrc.set(srcKey, [...(bySrc.get(srcKey) || []), [aliasKey, verdict]]);
+  const next = {};
+  for (const [k, v] of Object.entries(cache)) {
+    next[k] = v;
+    for (const [ak, av] of bySrc.get(k) || []) next[ak] = av;
+  }
+  return { cache: next, added: aliases.size };
+}
+
+// Writes to `cachePath` (default: the real file). A cache injected through the
+// test seam is never persisted to the default path.
+function backfillCacheAliases(prompts, cachePath) {
+  if (!cachePath && _classificationCacheInjected) return 0;
+  const file = cachePath || CLASSIFICATION_CACHE_PATH;
+  const cache = cachePath
+    ? JSON.parse(fs.readFileSync(file, 'utf-8'))
+    : loadClassificationCache();
+  const { cache: next, added } = withBracketAliases(prompts, cache);
+  if (!added) return 0;
+  fs.writeFileSync(file, serializeClassificationCache(next));
+  if (!cachePath) _classificationCache = next;
+  console.log(
+    `Added ${added} classification-cache alias key(s) for bracket-indexed slots`
+  );
+  return added;
 }
 
 // Structural excludes that win even over a classification-cache 'model'
@@ -3565,14 +3702,16 @@ function proseOutsideSlots(text) {
         const c = text[j];
         if (c === "'" || c === '"') {
           let k = j + 1;
-          while (k < text.length && text[k] !== c) k += text[k] === '\\' ? 2 : 1;
+          while (k < text.length && text[k] !== c)
+            k += text[k] === '\\' ? 2 : 1;
           out += ' ' + text.slice(j + 1, k) + ' ';
           j = k + 1;
           continue;
         }
         if (c === '`') {
           let k = j + 1;
-          while (k < text.length && text[k] !== '`') k += text[k] === '\\' ? 2 : 1;
+          while (k < text.length && text[k] !== '`')
+            k += text[k] === '\\' ? 2 : 1;
           out += ' ' + proseOutsideSlots(text.slice(j + 1, k)) + ' ';
           j = k + 1;
           continue;
@@ -3604,9 +3743,7 @@ function isHardExcluded(text) {
   // not (`ain`, `content`, `command` are not prose).
   // A lone glyph prefix (`⚠ ${e.content}`, stored as `\u26a0` in the Bun
   // bundle) is still authored text; keep it.
-  if (
-    !/[A-Za-z]{3,}|[^ -~\s]|\\u[0-9a-fA-F]{4}/.test(proseOutsideSlots(text))
-  )
+  if (!/[A-Za-z]{3,}|[^ -~\s]|\\u[0-9a-fA-F]{4}/.test(proseOutsideSlots(text)))
     return true;
   // The release-notes changelog (`Inn()` -> computeUpdateSummary -> the startup
   // "what's new" notice). It is a DOCUMENT, not a prompt: no system prompt, tool
@@ -3787,7 +3924,8 @@ function shouldCapture(text, cacheBody, lead, minLength, opts = {}) {
     // tool description: the model reads it on every session that exposes the
     // tool. Naming a prompt in NEW_PROMPT_ASSIGNMENTS is a human decision about
     // one specific string, so it wins; everything else still defers to the cache.
-    if (cls.facing !== 'model' && !lookupNewPromptAssignment(text)) return false;
+    if (cls.facing !== 'model' && !lookupNewPromptAssignment(text))
+      return false;
     if (cls.facing === 'model') return true;
   }
   const signalled = leadShowsModelFacingContext(lead, text);
@@ -4506,7 +4644,12 @@ function extractStrings(filepath, minLength = 500) {
       const lead = code.slice(Math.max(0, node.start - 600), node.start);
       const slotLiteral = Boolean(slotLiteralVerdict(node.value));
       const settings = settingsAt(node);
-      dumpCandidate({ start: node.start, end: node.end, kind: 'string', cacheBody: node.value });
+      dumpCandidate({
+        start: node.start,
+        end: node.end,
+        kind: 'string',
+        cacheBody: node.value,
+      });
       if (
         shouldCapture(node.value, node.value, lead, minLength, {
           slotLiteral,
@@ -4687,7 +4830,12 @@ function extractStrings(filepath, minLength = 500) {
         Boolean(slotLiteralVerdict(q.value.cooked ?? q.value.raw))
       );
       const settings = settingsAt(node);
-      dumpCandidate({ start: node.start, end: node.end, kind: 'template', cacheBody: tbody });
+      dumpCandidate({
+        start: node.start,
+        end: node.end,
+        kind: 'template',
+        cacheBody: tbody,
+      });
       if (
         shouldCapture(fullContent, tbody, lead, minLength, {
           slotLiteral,
@@ -4884,7 +5032,9 @@ function applySlotLiteralNames(prompts) {
     }
   }
   if (named.length) {
-    console.log(`Named ${named.length} slot-literal capture(s) from the allowlist`);
+    console.log(
+      `Named ${named.length} slot-literal capture(s) from the allowlist`
+    );
   }
   return prompts;
 }
@@ -5426,6 +5576,7 @@ if (require.main === module) {
     version
   );
   mergedResult.prompts = applyCacheNames(mergedResult.prompts);
+  backfillCacheAliases(mergedResult.prompts);
   mergedResult.prompts = applySlotLiteralNames(mergedResult.prompts);
   mergedResult.prompts = applySettingsDescriptionNames(
     mergedResult.prompts,
@@ -5574,11 +5725,16 @@ if (require.main === module) {
   // override and has already shipped a ReferenceError once (2.1.257). Refuse to
   // write a catalogue that carries one.
   const dupReport = mergedResult.prompts
-    .map(p => [p.id, duplicateSlotNames(p.identifierMap, (p.identifiers || []).map(String))])
+    .map(p => [
+      p.id,
+      duplicateSlotNames(p.identifierMap, (p.identifiers || []).map(String)),
+    ])
     .filter(([, d]) => d.length > 0);
   if (dupReport.length > 0) {
     for (const [id, d] of dupReport) {
-      console.error(`FATAL: "${id}" names ${d.join(', ')} on more than one slot`);
+      console.error(
+        `FATAL: "${id}" names ${d.join(', ')} on more than one slot`
+      );
     }
     process.exit(1);
   }
@@ -5653,6 +5809,11 @@ module.exports._setClassificationCacheForTests =
 // Test seam: fuzzy-carryover collision policy (same-id multi-site vs
 // genuinely-ambiguous cross-id) is behavior worth locking down.
 module.exports.mergeWithExisting = mergeWithExisting;
+module.exports.classifyByCache = classifyByCache;
+module.exports.normalizeBracketIndexes = normalizeBracketIndexes;
+module.exports.withBracketAliases = withBracketAliases;
+module.exports.backfillCacheAliases = backfillCacheAliases;
+module.exports.serializeClassificationCache = serializeClassificationCache;
 module.exports.templateKey = templateKey;
 module.exports.sameVarPattern = sameVarPattern;
 module.exports.IDENTICAL_SITE_FLOOR = IDENTICAL_SITE_FLOOR;
