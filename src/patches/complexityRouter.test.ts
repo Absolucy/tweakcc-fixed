@@ -242,7 +242,31 @@ const extractWrappedResolver = (
   ) as (e: string, t: unknown) => unknown;
 };
 
+// CC 2.1.285: gB became a thin wrapper that resolves the small-fast model
+// itself and forwards (options, model, fallback) to the inner side-call.
+const GB_285_SHAPE =
+  'async function eI(e){let n=o_e(B_()),r=e.options.fallbackModel===void 0&&!M$e()?Ine(n,void 0):[],s=1;' +
+  'while(s<r.length&&lUr(r[s-1],r[s],_4e).accessFallbackModel!==void 0)s++;' +
+  'let g=r.length>0?r.slice(0,s):[n];for(let h=0;;h++)try{return await KOo(e,g[h],g[h+1])}catch(b){if(!(b instanceof J0)||h+1>=g.length)throw b}}' +
+  'async function KOo({systemPrompt:e=ri([]),userPrompt:n,outputFormat:r,signal:s,options:g},h,b){return 1}';
+
 describe('writeComplexityRouter', () => {
+  it('pins the route_complexity model in the 2.1.285 wrapper-style gB', () => {
+    const file = FILE.replace(GB_SHAPE, GB_285_SHAPE).replace(
+      KM_SHAPE,
+      'function ml(){return{agentType:"main",agentId:z()}}'
+    );
+    const out = writeComplexityRouter(file, cfg()) as string;
+    expect(out).not.toBeNull();
+    expect(out).not.toBe(file);
+    expect(out).toContain(
+      'async function eI(e){let n=e.options.querySource==="route_complexity"?"claude-haiku-4-5":o_e(B_()),r='
+    );
+    expect(out).toContain('await eI({systemPrompt:[__sys]');
+    expect(out).toContain('agentContext:ml()');
+    expect(out).toContain('return await KOo(e,g[h],g[h+1])');
+  });
+
   it.each([
     ['claude-opus-5-5', 'medium'],
     ['claude-fable-5-1', 'high'],

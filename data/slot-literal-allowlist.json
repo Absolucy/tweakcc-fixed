@@ -29,16 +29,6 @@
     "reason": "states why the hook gate refused rather than skipped",
     "text": "gave no verdict in time"
   },
-  "04eaad71dfd462a9": {
-    "verdict": "catalogue",
-    "desc": "Reason directory sync did not apply this turn: the snapshot builds on history this checkout lacks.",
-    "id": "system-reminder-dir-sync-not-applied-reason-prerequisites-missing",
-    "label": "SYSTEM_REMINDER_DIRECTORY_SYNC_NOT_APPLIED_VAR_0",
-    "name": "System Reminder: Dir Sync Not-Applied Reason Prerequisites Missing",
-    "promptId": "system-reminder-directory-sync-not-applied",
-    "reason": "tells the model why the user's edits are not in this checkout",
-    "text": "it builds on history this checkout lacks"
-  },
   "06edc5ca537fb78c": {
     "desc": "Shared clause in the artifact auto-reply notification builder B2e() @11724974 naming the exact `resume_replies` action and the condition for it. Reaches the model through both the name-chord receipt and the typed-resume clause.",
     "id": "data-artifact-auto-reply-resume-replies-clause",
@@ -208,16 +198,6 @@
     "reason": "names tools inside a surrounding sentence",
     "text": "`find` or `grep` via the ",
     "verdict": "glue"
-  },
-  "330490325eef4d1c": {
-    "verdict": "catalogue",
-    "desc": "Remedy interpolated into the cloud-session local-changes bundle-failed tool result: start from GitHub with --ref and file sync off, then claude --cloud again.",
-    "id": "tool-result-cloud-session-pass-ref-github-file-sync-off",
-    "label": "TOOL_RESULT_CLOUD_SESSION_LOCAL_CHANGES_BUNDLE_FAILED_VAR_2",
-    "name": "Tool Result: Cloud session — pass --ref to start from GitHub with file sync off",
-    "promptId": "tool-result-cloud-session-local-changes-bundle-failed",
-    "reason": "names the exact flags the model must use to start from GitHub instead",
-    "text": ", or pass --ref <branch> to start from GitHub as it is there, with file sync off; then run claude --cloud again."
   },
   "33ce28e37edcbd39": {
     "desc": "Tells the model the command opens an interactive panel that this environment cannot show, and that it must be run from the Claude Code terminal.",
@@ -600,16 +580,6 @@
     "text": "None captured",
     "verdict": "glue"
   },
-  "8553d8f2a4733a87": {
-    "verdict": "catalogue",
-    "desc": "Reason directory sync did not apply this turn: the checkout is detached and is not in a state sync can update.",
-    "id": "system-reminder-dir-sync-not-applied-reason-detached-head",
-    "label": "SYSTEM_REMINDER_DIRECTORY_SYNC_NOT_APPLIED_VAR_0",
-    "name": "System Reminder: Dir Sync Not-Applied Reason Detached Head",
-    "promptId": "system-reminder-directory-sync-not-applied",
-    "reason": "tells the model why the user's edits are not in this checkout",
-    "text": "this checkout is not in a state sync can update"
-  },
   "88ad843c8b4b235d": {
     "label": "DATA_ARTIFACT_WRITE_DB_AUTO_CLASSIFIER_INPUT_VAR_0",
     "promptId": "data-artifact-write-db-auto-classifier-input",
@@ -824,16 +794,6 @@
     "reason": "names the in-app file-dialog state the keystroke restrictions apply to",
     "text": "a file dialog is open in this app"
   },
-  "b4a5e8354f99f452": {
-    "verdict": "catalogue",
-    "desc": "Reason directory sync did not apply this turn: this checkout has unresolved merge conflicts.",
-    "id": "system-reminder-dir-sync-not-applied-reason-unmerged-index",
-    "label": "SYSTEM_REMINDER_DIRECTORY_SYNC_NOT_APPLIED_VAR_0",
-    "name": "System Reminder: Dir Sync Not-Applied Reason Unmerged Index",
-    "promptId": "system-reminder-directory-sync-not-applied",
-    "reason": "tells the model why the user's edits are not in this checkout",
-    "text": "this checkout has unresolved merge conflicts"
-  },
   "b4c2ab68c83bdabf": {
     "label": "TOOL_DESCRIPTION_CHROME_MULTIPLE_BROWSERS_NONE_SELECTED_VAR_1",
     "promptId": "tool-description-chrome-multiple-browsers-none-selected",
@@ -898,16 +858,6 @@
     "reason": "states that the attachment is the private global instructions",
     "text": " (user's private global instructions for all projects)",
     "verdict": "catalogue"
-  },
-  "c049ad3302061f6c": {
-    "verdict": "catalogue",
-    "desc": "Fallback reason directory sync did not apply this turn: an unexpected condition not in the named map.",
-    "id": "system-reminder-dir-sync-not-applied-reason-unexpected",
-    "label": "SYSTEM_REMINDER_DIRECTORY_SYNC_NOT_APPLIED_VAR_0",
-    "name": "System Reminder: Dir Sync Not-Applied Reason Unexpected Condition",
-    "promptId": "system-reminder-directory-sync-not-applied",
-    "reason": "tells the model why the user's edits are not in this checkout",
-    "text": "of an unexpected condition"
   },
   "c0dabec62341035c": {
     "desc": "The task-list path listed among the team resources, shown only when task tools are available. Its sibling branch is system-reminder-team-coordination-task-list-upkeep.",
@@ -1047,16 +997,6 @@
     "verdict": "catalogue",
     "why": "carries an instruction or consequence the model acts on, so it needs an id an override can reach"
   },
-  "f3d559e276f99557": {
-    "verdict": "catalogue",
-    "desc": "Reason directory sync did not apply this turn: what arrived did not verify (bad_bundle).",
-    "id": "system-reminder-dir-sync-not-applied-reason-bad-bundle",
-    "label": "SYSTEM_REMINDER_DIRECTORY_SYNC_NOT_APPLIED_VAR_0",
-    "name": "System Reminder: Dir Sync Not-Applied Reason Bad Bundle",
-    "promptId": "system-reminder-directory-sync-not-applied",
-    "reason": "tells the model why the user's edits are not in this checkout",
-    "text": "what arrived did not verify"
-  },
   "fb156f422db7d575": {
     "label": "DATA_ARTIFACT_WRITE_DB_AUTO_CLASSIFIER_INPUT_VAR_5",
     "promptId": "data-artifact-write-db-auto-classifier-input",
@@ -1070,16 +1010,6 @@
     "reason": "field label before interpolated directories",
     "text": "Additional working directories: ",
     "verdict": "glue"
-  },
-  "fd0c125286677453": {
-    "verdict": "catalogue",
-    "desc": "Reason directory sync did not apply this turn: this checkout has no commit yet (unborn).",
-    "id": "system-reminder-dir-sync-not-applied-reason-unborn",
-    "label": "SYSTEM_REMINDER_DIRECTORY_SYNC_NOT_APPLIED_VAR_0",
-    "name": "System Reminder: Dir Sync Not-Applied Reason Unborn",
-    "promptId": "system-reminder-directory-sync-not-applied",
-    "reason": "tells the model why the user's edits are not in this checkout",
-    "text": "this checkout has no commit yet"
   },
   "fd0d24baab5cbdfa": {
     "desc": "Provenance arm of the artifact read summary @11306119 marking the page as third-party content authored outside the org. A trust constraint the model must act on, not a role label like its sibling arms.",
@@ -1147,51 +1077,6 @@
     "id": "agent-prompt-eval-authoring-canned-tool-result-placeholder",
     "name": "Eval Authoring: Canned Tool-Result Placeholder",
     "desc": "Placeholder line instructing the model to replace it with the canned result the mocked tool should return."
-  },
-  "5ce5fc8c191581cd": {
-    "promptId": "system-reminder-directory-sync-checkout-cannot-snapshot",
-    "label": "SYSTEM_REMINDER_DIRECTORY_SYNC_CHECKOUT_CANNOT_SNAPSHOT_VAR_0",
-    "text": "it holds unresolved merge conflicts",
-    "verdict": "catalogue",
-    "id": "system-reminder-dir-sync-checkout-unready-unmerged",
-    "name": "Dir Sync Checkout Unready: Unresolved Merge Conflicts",
-    "desc": "Reason clause telling the model the checkout could not be snapshotted because it holds unresolved merge conflicts."
-  },
-  "811cbbc42b219a1a": {
-    "promptId": "system-reminder-directory-sync-checkout-cannot-snapshot",
-    "label": "SYSTEM_REMINDER_DIRECTORY_SYNC_CHECKOUT_CANNOT_SNAPSHOT_VAR_0",
-    "text": "its branch has no commit yet",
-    "verdict": "catalogue",
-    "id": "system-reminder-directory-sync-checkout-unready-unborn-branch",
-    "name": "Directory Sync: Checkout Unready — Unborn Branch",
-    "desc": "Reason clause telling the model the checkout could not be snapshotted because its branch has no commit yet."
-  },
-  "18b6b57f5aaf3dde": {
-    "promptId": "system-reminder-directory-sync-checkout-cannot-snapshot",
-    "label": "SYSTEM_REMINDER_DIRECTORY_SYNC_CHECKOUT_CANNOT_SNAPSHOT_VAR_0",
-    "text": "git could not read it just now",
-    "verdict": "catalogue",
-    "id": "system-reminder-directory-sync-checkout-unready-git-unreadable",
-    "name": "Directory Sync: Checkout Unready — Git Unreadable",
-    "desc": "Reason clause telling the model the checkout could not be snapshotted because git could not read it."
-  },
-  "cc49357f96d7d006": {
-    "promptId": "system-reminder-directory-sync-disabled-after-initial-checkout-failure",
-    "label": "SYNC_DISABLE_REASON",
-    "text": "the user's first upload was sent in a form this build cannot read",
-    "verdict": "catalogue",
-    "id": "system-reminder-directory-sync-disabled-first-object-unreadable",
-    "name": "Directory Sync Disabled: First Upload Unreadable",
-    "desc": "Reason clause telling the model sync was disabled because the user's first upload arrived in a form this build cannot read."
-  },
-  "77113e974dd6b586": {
-    "promptId": "system-reminder-directory-sync-disabled-after-initial-checkout-failure",
-    "label": "SYNC_DISABLE_REASON",
-    "text": "this environment was recreated empty and the user's machine only sends changes on top of what the earlier one had",
-    "verdict": "catalogue",
-    "id": "system-reminder-directory-sync-disabled-container-recreated",
-    "name": "Directory Sync Disabled: Container Recreated",
-    "desc": "Reason clause telling the model sync was disabled because the environment was recreated empty while the user only sends incremental changes."
   },
   "40509d3912c31a94": {
     "promptId": "tool-result-bash-worktree-isolation-runtime-command-name",
@@ -1760,15 +1645,6 @@
     "verdict": "not-a-slot",
     "desc": "Search needle of w.includes inside the condition that chooses A; A evaluates to Hf or the empty string."
   },
-  "44d899aa9a89b0b8": {
-    "promptId": "tool-result-cloud-session-github-clone-would-lack",
-    "label": "TOOL_RESULT_CLOUD_SESSION_GITHUB_CLONE_WOULD_LACK_VAR_2",
-    "text": "or run claude --cloud --ref <branch> to start from GitHub as it is there, with file sync off.",
-    "verdict": "catalogue",
-    "desc": "Remedy appended to the GitHub-clone-would-lack result telling the model to run claude --cloud --ref <branch> so the session starts from GitHub with file sync off.",
-    "id": "tool-result-cloud-session-run-cloud-ref-file-sync-off",
-    "name": "Tool Result: Cloud session — start from GitHub with file sync off"
-  },
   "0b8477232b0475a0": {
     "promptId": "system-reminder-tool-hosts-correction-lead",
     "label": "SYSTEM_REMINDER_TOOL_HOSTS_CORRECTION_LEAD_VAR_1",
@@ -1805,30 +1681,12 @@
     "id": "system-reminder-tool-hosts-header-without-machine-arg-run-here",
     "name": "System Reminder: Tool hosts header — calls without a machine run here"
   },
-  "13b7cd68ef415683": {
-    "promptId": "system-reminder-dir-sync-agent-staging-dropped",
-    "label": "SYSTEM_REMINDER_DIR_SYNC_AGENT_STAGING_DROPPED_VAR_1",
-    "text": " (the file contents are unchanged)",
-    "verdict": "catalogue",
-    "desc": "Suffix on the staging-dropped reminder when the update unstaged the agent's files but their contents are unchanged.",
-    "id": "system-reminder-dir-sync-agent-staging-contents-unchanged",
-    "name": "System Reminder: Dir sync agent staging dropped — contents unchanged"
-  },
   "5014e788ca3aa445": {
     "promptId": "system-reminder-directory-sync-latest-changes-unusable",
     "label": "SYSTEM_REMINDER_DIRECTORY_SYNC_LATEST_CHANGES_UNUSABLE_VAR_0",
     "text": "their machine's latest upload (number ",
     "verdict": "glue",
     "desc": "Labels the upload number inside `their machine's latest upload (number ${n}) cannot be used here`, the parenthetical of the latest-changes-unusable reminder."
-  },
-  "763a56102ee1a7c3": {
-    "promptId": "system-reminder-directory-sync-latest-changes-unusable",
-    "label": "SYSTEM_REMINDER_DIRECTORY_SYNC_LATEST_CHANGES_UNUSABLE_VAR_0",
-    "text": ") cannot be used here",
-    "verdict": "catalogue",
-    "desc": "Cause clause inside the directory-sync notice when the user's machine's latest upload cannot be used in this checkout.",
-    "id": "system-reminder-dir-sync-latest-upload-unusable",
-    "name": "System Reminder: Dir sync — latest upload unusable here"
   },
   "3194f4ebde4fcb86": {
     "promptId": "system-prompt-worker-tools-context-skills",
@@ -2046,5 +1904,39 @@
     "text": "Claude Code accepts it, but the",
     "reason": "connective fragment of the kebab-case warning",
     "verdict": "glue"
+  },
+  "7bd1053acb9fbb39": {
+    "promptId": "tool-result-cloud-session-tools-not-echoed",
+    "label": "TOOL_RESULT_CLOUD_SESSION_TOOLS_NOT_ECHOED_VAR_1",
+    "text": "the service did not confirm the list",
+    "reason": "reason fragment naming why the tool list is unconfirmed; nothing to act on beyond the parent message",
+    "verdict": "glue"
+  },
+  "fb254ad5bfd7d1a9": {
+    "promptId": "tool-result-cloud-session-tools-not-echoed",
+    "label": "TOOL_RESULT_CLOUD_SESSION_TOOLS_NOT_ECHOED_VAR_2",
+    "text": " was archived.",
+    "reason": "status tail of the archive outcome",
+    "verdict": "glue"
+  },
+  "0b1cfd534993afeb": {
+    "promptId": "tool-result-artifact-updated-from-type",
+    "label": "TOOL_RESULT_ARTIFACT_UPDATED_FROM_TYPE_VAR_1",
+    "text": "action \"read\" with its `path`",
+    "id": "tool-result-artifact-read-action-with-path-hint",
+    "name": "Tool Result: Artifact read action with path hint",
+    "desc": "How to fetch a published file back: the Artifact tool's action \"read\" with its path. Shared by the updated-from-type and published-at results.",
+    "reason": "names the action and parameter the model must use to read a file back",
+    "verdict": "catalogue"
+  },
+  "23764acc2fea0bd7": {
+    "promptId": "tool-result-project-content-truncated-saved-to-local-file",
+    "label": "TOOL_RESULT_PROJECT_CONTENT_TRUNCATED_SAVED_TO_LOCAL_FILE_VAR_2",
+    "text": " project_search still covers the whole doc.",
+    "id": "tool-result-project-content-truncated-search-still-covers-doc",
+    "name": "Tool Result: Project content truncated search still covers doc",
+    "desc": "Tail of the project_read truncation notice telling the model project_search still covers the whole document.",
+    "reason": "tells the model a capability it still has after truncation",
+    "verdict": "catalogue"
   }
 }

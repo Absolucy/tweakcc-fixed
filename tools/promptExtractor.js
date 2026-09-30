@@ -505,17 +505,16 @@ const CURATED_IDENTIFIER_MAPS = {
       // Autonomous-tick module chunk-s3c3fm9y.js `d()`: Tl ("Monitor"),
       // Dw ("TaskList"), n (local "Immediately before/After re-arming, …"
       // sentence), Nln (status-update visibility fn), Cl ("ScheduleWakeup"),
-      // ug ("TaskStop"). Slot 4 keeps the upstream label TASK_STOP_TOOL_NAME
-      // for ScheduleWakeup (the `call … with stop: true` tool) and slot 5 keeps
-      // STOP_MONITOR_TOOL_NAME for TaskStop, so existing overrides still bind.
+      // ug ("TaskStop"). Names match upstream's 2.1.285 map, which labels
+      // slot 4 as the ScheduleWakeup tool (the `call … with stop: true` one).
       identifiers: [0, 1, 0, 2, 3, 4, 5, 1],
       identifierMap: {
         0: 'MONITOR_TOOL_NAME',
         1: 'TASK_LIST_TOOL_NAME',
-        2: 'REARM_STATUS_UPDATE_TIMING',
-        3: 'STATUS_UPDATE_VISIBILITY_GUIDANCE_FN',
-        4: 'TASK_STOP_TOOL_NAME',
-        5: 'STOP_MONITOR_TOOL_NAME',
+        2: 'REARM_STATUS_UPDATE_INSTRUCTION',
+        3: 'LOOP_STATUS_UPDATE_VISIBILITY_GUIDANCE_FN',
+        4: 'SCHEDULE_WAKEUP_TOOL_NAME',
+        5: 'TASK_STOP_TOOL_NAME',
       },
     },
   ],
