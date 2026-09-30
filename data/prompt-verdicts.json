@@ -48171,5 +48171,765 @@
     "verdict": "pristine-keep",
     "version": "2.1.284",
     "why": "Family members are parallel, mutually distinct per-resource messages (not alternate arms of one message, not overlapping content) — each is its own load-bearing denial for a different resource type, so no coverage claim holds for any of them."
+  },
+  "data-cloud-session-hook-not-run-reason-start-directory": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Conditional, costs zero when off, one clause. It is the only carrier of the start-directory reason and is spliced mid-sentence into the reminder, so a wipe would break that sentence. The unique mechanic is the specific condition. There is no bloat to trim, and any rewrite touches text frozen by a quantifier or path/enum rule."
+  },
+  "data-github-app-not-installed-sso-required": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Conditional GitHub resync error text. It is the only copy of the SSO remedy, and the fix steps cannot be inferred. Nothing is slop, duplicated or default in either served model's card, so no cut is justified."
+  },
+  "data-settings-allowed-providers-description-part-5": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a mid-sentence slice of a single conditional schema description that the model reads only through /update-config or a settings error. Feature disuse alone is not a wipe reason, and no claim here is duplicated. Cutting one slice of the nine would break the running sentence, and every clause in this slice is frozen mechanics."
+  },
+  "data-settings-sandbox-network-socks-proxy-port-description-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only description of the socksProxyPort key, and the protocol name and the use-instead-of-built-in-proxy behavior are the unique mechanics. Structural similarity to the http key is parallel-schema shape, not duplicated content. The prompt is conditional and one sentence, so there is nothing to trim or wipe."
+  },
+  "data-settings-sandbox-proxy-port-lock-condition-part-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a spliced middle fragment of the hc constant ('...network.deniedDomains ' + this + 'or when managed ... strictAllowlist: true'). Blanking it would corrupt the surrounding condition sentence. Its whole content is a validation-gate condition and must stay verbatim."
+  },
+  "data-settings-sandbox-proxy-port-lock-condition-part-3": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the closing literal of the shared hc lock condition that decides when project values for the proxy ports are ignored. It is conditional schema text with zero off-cost, and blanking it would leave a dangling 'or' clause. Every token is a frozen source-list or setting name."
+  },
+  "slash-command-plugin-install-folder-held-needs-lead": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a lead spliced in front of the shared tail ('would share its folder ... with ...') and is the only wording for the case where the refused plugin is needed by the asked-for plugin. Blanking it would delete the start of the sentence. It is conditional and one clause, so there is nothing to trim."
+  },
+  "slash-command-plugin-install-tarball-ipv6-host": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditional plugin-install refusal returned as a tool result. It is the only source of the IPv6-spelling cause and its remedy, and the remedy cannot be inferred. Nothing in it is slop, so it stays verbatim."
+  },
+  "system-reminder-background-command-stopped-at-deadline": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It holds the only statement of the run_in_background/timeout restart decision after a deadline stop, including the longest-timeout cap. That is unique runtime-limit mechanics and conditional, so it costs zero when off. Nothing in it is duplicated, and the tripwire freezes every sentence."
+  },
+  "tool-result-chrome-denied-on-host-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only text on its emission site that tells the model why the call was refused, and it is already minimal. A wipe would produce an empty deny message, and there is nothing to trim in seven words."
+  },
+  "tool-result-cloud-session-device-binding-tools-prompt-conflict": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditional error returned only for this flag combination. It is the only copy of the conflict and its remedy, and the flag names and the two alternatives are frozen mechanics. Nothing is slop, so it is kept verbatim."
+  },
+  "tool-result-mcp-task-backgrounded-stop-hint": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only carrier of which tool stops the task and with which task_id. Trimming the notification clause would save eight words and leave the server-note branch without any statement that the result arrives as a notification. It is conditional and one line, so the whole prompt stays as is."
+  },
+  "tool-result-mcp-task-stopped-before-handle": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditional tool result that tells the model the task will never deliver a result. Without it the model would wait for a notification that never comes. The unique mechanics are the cancel and the no-result contract, and nothing is duplicated or slop."
+  },
+  "data-cloud-session-notice-working-tree-uploaded-previous-way": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Conditional session notice that is the only copy of the reason-to-cause table. It tells the model why the working tree is being uploaded the old way. It costs zero when the branch is off and the text is frozen mechanics. The deployed body is byte-identical to pristine and already binds the one slot (over VAR_0 include files)."
+  },
+  "data-settings-sandbox-enabled-description-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the schema description for sandbox.enabled that the model reads via /update-config. It is the only statement of the setting's meaning and default, and it is already minimal. Wiping the fragment would leave part 2 dangling."
+  },
+  "data-settings-sandbox-false-from-project-settings-ignored-when-true-locked-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "The body opens with a slot (externalRefs.opensWithSlot is true), and the fragment is spliced into the sandbox.enabled describe string. It carries the one-way precedence rule (a false from project settings is ignored, a true still applies), which is a frozen settings-precedence contract. Wiping would drop the words from the middle of a sentence. It is conditional, so it costs nothing when off."
+  },
+  "data-settings-sandbox-proxy-port-lock-condition-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the first literal of a lock condition that is joined with parts 2 and 3 into a sentence. Wiping it would leave the remaining parts as an orphaned clause fragment. It is conditional schema text, so keeping it costs nothing, and its content is settings names and values."
+  },
+  "slash-command-remote-workflow-code-review-disabled-managed-settings": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the policy-gate refusal for review-origin launches. It is the model's only signal that code review did not run and why, and it names the config keys (disableWorkflows, CLAUDE_CODE_DISABLE_WORKFLOWS, env block). It is conditional and costs zero when off."
+  },
+  "tool-result-artifact-publish-files-still-on-disk-edit-there": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the tail of a successful publish result, and it states the edit-in-place loop (Edit the files there, publish again in the same message, no read needed). That is a unique workflow contract, and it costs nothing until a publish succeeds. The deployed body is identical to pristine."
+  },
+  "tool-result-bash-background-deadline-stop-notice": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Only this result tells the model the actual deadline that applies to the command it just backgrounded, and that it will be stopped and notified. The description-level siblings give defaults and maximums, so this is per-call information. Both the slot binding and the pristine text are intact."
+  },
+  "tool-result-git-bundle-index-copy-cached-tree-unexamined": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is a distinct failure-detail clause that the git-bundle error composer splices into a larger sentence, so the body is not a free-standing prompt. Blanking it would delete words from the middle of the composed error. It is the only text saying the copy could not be examined before its cached tree was rebuilt, and it carries the unexamined detail slot."
+  },
+  "tool-result-mcp-task-input-unservable-no-way-to-show": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Only this arm tells the model a task was cancelled because its session has no way to show the requested input. The wording overlaps with the siblings, but each sibling is a different runtime outcome. Keeping it costs nothing when off."
+  },
+  "tool-result-memory-paused-for-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the memory tool's refusal, and it is the model's only signal that memory is paused and cannot be re-enabled by the model. It is conditional, so it costs nothing when off. The pause state restricts authorization, so it stays verbatim."
+  },
+  "tool-result-project-content-truncated-no-files-kept": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is a fragment that completes another sentence (': this session does not keep larger results as files.'). Wiping it would leave a dangling truncation notice with no reason. It is the only place that says larger results are not saved as files, and it is conditional."
+  },
+  "tool-result-project-read-binary-upload-not-downloaded-no-files-kept": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the unique notice for the branch where the session keeps no files. It tells the model why the file was not downloaded and to report to the user that it cannot be opened. That is a single-sentence, conditional contract. Both slot bindings (function, path, file_kind) are intact."
+  },
+  "tool-result-proposeskills-card-renders-at-this-point": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This sentence is added only for claude.ai chat sessions. It is the only statement of the card's placement and how to refer to it, so the model does not say 'the card below'. It is conditional and costs zero elsewhere."
+  },
+  "tool-result-webfetch-domain-check-rate-limited": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the only message telling the model the WebFetch domain safety check is throttled and how long to wait. That is an error contract with a number (about a minute), and it is conditional. The deployed body matches pristine."
+  },
+  "data-artifact-publish-merged-over-newer-version-file-changes-notice": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the only place the model learns that a publish was merged over a newer live version and which files it must re-read before editing. It is a conditional tool result, so it costs nothing when off. opensWithSlot is true (the MERGED_OVER_NEWER_VERSION_NOTICE lead), so a wipe would also strip the lead of a rendered sentence. Nothing here is padding, so keep it whole."
+  },
+  "data-settings-sandbox-allow-write-lock-condition-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Wiping or trimming one half of a concatenated sentence leaves part 2 and the rest of the description dangling with no subject. The fragment is only 15 words and states which settings sources lock the allowWrite condition, so keep it verbatim. Keep the trailing space too, because the bundle concatenates directly."
+  },
+  "data-settings-validation-allowed-providers-entry-not-string": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the exact settings-validation error the model reads after a failed edit and needs to fix the entry type. It is a conditional error string with nothing to trim, and it names the received value, which is unique."
+  },
+  "slash-command-pause-memory-cannot-resume-this-session": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only statement, on the pause result, of why memory cannot be turned back on and what to do. It is conditional and short, so a wipe saves almost nothing and removes the remedy. The deployed body is byte-identical to pristine."
+  },
+  "slash-command-remote-workflow-disabled-env-var-at-startup": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It tells the model why the workflow was refused and that the fix is a restart without the env var. Set-at-startup and set-after-startup differ in exactly that way, so the cause line has to stay per branch. It is a conditional error string and costs nothing when off."
+  },
+  "tool-result-artifact-workshop-verifier-refused-select-element": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditional refusal hint that the model needs to fix the page and republish. It is the only carrier of the select-specific remedy, and the generic arm would drop it."
+  },
+  "tool-result-exit-plan-mode-fork-cannot-exit": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Without it a fork that is refused has no path forward and may loop or stop early. It is conditional, one sentence and unique, so keep it."
+  },
+  "tool-result-git-bundle-admin-dir-symbolic-head": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "The frame of the refusal (what was not done, why, what state remains) is unique to this branch and short. It is a conditional error and costs nothing when off, so keep it."
+  },
+  "tool-result-git-bundle-index-listing-cancelled": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It distinguishes a cancelled or timed-out upload from a real git failure, which changes whether a retry is right. It is a conditional error and only 14 words, so keep it verbatim."
+  },
+  "tool-result-git-bundle-legacy-upload-retired-other-forge": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This arm's second sentence is the one place the model learns the upload is the only option for a non-GitHub forge, and the forge name comes from the slot. A cut would leave it suggesting a push and GitHub route that does not exist for this repo. It is conditional and has no padding."
+  },
+  "tool-result-git-bundle-symbolic-head-checkout-remedy": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "A symbolic HEAD is only fixed by checking out a branch by its own name, and the 'Already on' note stops the model from treating the no-op as a failure or fearing data loss. It is a conditional remedy with no restated content."
+  },
+  "tool-result-senduserfile-chat-copy-file-unchanged": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only statement of the name under which the chat received a converted copy, and of the fact that the original file was not modified. It is a conditional per-file tool result and costs nothing when no such file is sent."
+  },
+  "data-settings-sandbox-ignore-violations-description-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only copy of what sandbox.ignoreViolations is and what shape it takes. It renders lazily through /update-config, so cutting it saves no tokens and makes the setting unexplained. The maintained file is already identical to pristine."
+  },
+  "data-settings-sandbox-network-allowed-domains-description-part-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only statement that WebFetch domain allow rules merge into allowedDomains. It is a conditional settings-description fragment and already identical to pristine."
+  },
+  "data-working-tree-upload-refusal-for-misplaced-git-entry": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only refusal for a .git that is a pointer, link or hard-linked file at the working-tree root, and it holds the ordering and trust contracts. It is a lazy error string, so a wipe would leave an empty refusal."
+  },
+  "system-reminder-hook-json-payload-incomplete": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the reason string for a distinct blocking-hook branch, and it says why a partial capture is not honored. Wiping it would blank the reason inside the hook error. It is already identical to pristine."
+  },
+  "tool-parameter-bash-run_in_background-timeout-limit": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the sole place the model learns that timeout bounds a backgrounded command, with the default and maximum values. It is a tool-parameter contract, and the leading sentence is required because the whole prompt is the parameter description."
+  },
+  "tool-result-artifact-list-type-ask-rule-unaskable-by-link": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only feedback that says listing by link cannot prompt the user, and it gives the remedy. It is a lazy error string and already identical to pristine."
+  },
+  "tool-result-cloud-session-empty-tools-list-unsupported": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only explanation for a cloud-session creation failure, and it says what to change. It is a lazy error string and identical to pristine."
+  },
+  "tool-result-cloud-session-first-prompt-not-sent-archive-failed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only place the sessionUrl for manual archiving reaches the model when the first prompt was not sent. Wiping it would drop the location that the failure clause depends on."
+  },
+  "tool-result-git-bundle-cloud-writable-dirs-unexaminable-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only statement of the all-directories-excluded rule and of where to look for the culprit. Its `${VAR_2()}` slot sits in the sibling, which is why it co-renders with it. It is already identical to pristine."
+  },
+  "tool-result-git-bundle-head-symbolic-ref": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only copy of the symbolic_head refusal detail, and the sibling's wrapper renders it. Wiping would leave the refusal with no reason. It is already identical to pristine."
+  },
+  "tool-result-mcp-task-input-unservable-left-running": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only message that tells the model the task was not cancelled and still runs on the server. It is a lazy error string and identical to pristine."
+  },
+  "tool-result-project-content-truncated-could-not-save-file": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only statement that the truncated remainder could not be saved for the model to open. Blanking it would leave a notice that ends in mid-sentence."
+  },
+  "tool-result-senduserfile-placed-file-chat-copy-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only place the model learns that the project folder has the original and the chat shows only a copy, so it should not describe what the user sees from the file's bytes. It is a lazy tool result and identical to pristine."
+  },
+  "data-github-app-not-installed-ip-allowlist-blocking": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Conditional user-facing reason text that is the sole source of the allowlist remedy when it fires. Zero cost when off, so nothing to save. The deployed file is byte-identical to pristine."
+  },
+  "data-settings-allowed-providers-description-part-3": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "The fragment is spliced into the middle of one composite description string. Blanking it would delete words from the sentence and corrupt the schema text. The conditional description is read only through /update-config and validation. Deployed body equals pristine."
+  },
+  "data-settings-sandbox-enable-weaker-nested-sandbox-description-part-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the second half of a two-part composite description, so a wipe would leave part-1 dangling. It carries the unique security consequence and the default value. It is conditional and costs nothing when unread. Deployed body equals pristine."
+  },
+  "slash-command-plugin-discover-install-bundled-mcp-needs-configuration": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only carrier of the remedy in the multi-plugin summary and has the plural 'A bundled MCP server' phrasing. It is a conditional one-liner with nothing to trim. Deployed body equals pristine."
+  },
+  "slash-command-plugin-install-folder-held-delete-saved-data": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "The body opens with slot 0 and a ternary equality test against the literal \"ui\". The slot is a mode selector in a condition, not a detector matched against rendered text. It is preserved verbatim so the ternary still resolves. The prompt is conditional and the only carrier of the instruction to let /plugin delete the data. Deployed body equals pristine."
+  },
+  "slash-command-plugin-marketplace-add-file-url-drive-letter-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a leading-space note appended to a refused file: URL error. It is the only explanation for why the URL was rejected and costs nothing when off. Deployed body equals pristine."
+  },
+  "tool-result-artifact-root-without-files-file-path-outside-root": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It holds the parameter names (root, files, file_path) and the error-versus-published state, both frozen. It is a conditional error that is the sole guidance on the recovery. The deployed file keeps all six identifier slots and the escaped backticks byte-identical to pristine."
+  },
+  "tool-result-artifact-workshop-verifier-svg-non-svg-element": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditional verifier hint that carries a unique security rationale about uninspected markup. Slot 0 is the offending tag name. Deployed body equals pristine."
+  },
+  "tool-result-device-hook-stdio-cut-before-end-of-stream": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditional deny or block reason and the only signal that partial output must not be trusted. The bracketed [hook] prefix is the same shape used by the sibling reasons. Deployed body equals pristine."
+  },
+  "tool-result-mcp-task-started-in-background": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the tool result that hands the model the task id and server, and it is unique to the long-running-task start path. It has the boundServerName method call as an identifier contract. Deployed body equals pristine."
+  },
+  "tool-result-projects-memory-unavailable-remote-bridge": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditional error, the only message telling the model what still works when project memory is unreachable, and it costs zero when off. Deployed body equals pristine."
+  },
+  "tool-result-read-view-range-exceeds-byte-limit": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It carries the parameter name view_range, the byte-limit contract and the recovery instruction, which are frozen. It is a conditional tool error. Deployed body equals pristine, including all five identifier slots and the \"f\" call shape."
+  },
+  "tool-result-senduserfile-chat-copy-plain-file-suffix": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a mid-sentence splice, so blanking it would delete words from the 'chat got a copy' line. It is conditional and holds the one unique fact that the chat copy is a plain file. Deployed body equals pristine."
+  },
+  "tool-result-skill-disabled-for-model-policy-reason": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only carrier of the organization policy's reason and the skillOverrides note when a bundled skill is policy-disabled. It carries the skillOverrides setting name, which is frozen. It is a conditional error. Deployed body equals pristine, including the three slots."
+  },
+  "data-settings-allowed-providers-description-part-7": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is one link in a 9-part chained string (part 6 ends 'not ', part 8 begins 'an API key'). Wiping or trimming it deletes words from the middle of a sentence. The description is conditionally read through /update-config and settings validation, so it costs nothing when off and is the only copy of what it says. The unique mechanics are the exact env var names and login modes. Nothing here is a default of either served model, so there is no MODEL_DEFAULT coverage."
+  },
+  "data-settings-allowed-providers-description-part-8": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the tail of the sentence started in part 6/7, so it cannot be cut alone. It adds the unique facts that a first launch before the fetch, and an API key session, are not covered by an admin-console list. The description is conditionally read via /update-config and costs zero when unread. It stays verbatim."
+  },
+  "data-settings-sandbox-enable-weaker-nested-sandbox-description-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the only copy of what the setting does and of its Linux-only scope. It renders only when settings schema descriptions are read, so a wipe would make the setting undescribed. Part 2 renders after it in the same string and cannot stand alone. The sentence has a platform gate and a /proc name, so it stays verbatim."
+  },
+  "data-settings-sandbox-network-allow-local-binding-description-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the sole description of sandbox.network.allowLocalBinding, with the macOS-only gate and the boolean semantics, both frozen. The text is conditionally read through settings help, so a wipe removes the setting's meaning and saves no tokens in any turn."
+  },
+  "data-settings-validation-allowed-providers-not-array": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the failure text the model reads after a bad allowedProviders edit. It names the field's type and echoes the received value, which is an error contract, and nothing else conveys it. The two variable slots are positional and are kept as-is. It costs zero unless the validation fails."
+  },
+  "slash-command-plugin-install-folder-held-fix-one-marketplace": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the only place that says who can resolve the single-marketplace clash. The alternative arm has a different subject, so neither can cover the other. The line is a 12-word conditional error tail, and a wipe would leave the refusal without a remedy. Frozen quantifier: 'Only'."
+  },
+  "slash-command-plugin-install-folder-held-installed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "The prompt opens with a slot (opensWithSlot true) and holds a JS conditional expression inside the template, so any edit risks the identifier splice. It is the only wording for the installed-plugin folder clash. The 'Only one of the two can be installed' clause is a frozen quantifier and number. It is conditional on a rare plugin refusal and costs zero when off."
+  },
+  "system-reminder-hook-stdio-closed-before-end-of-stream": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a reason string interpolated into a blocking hook error. It is the only text for the stdio-closed cause and it tells the model why the hook result was refused. The sibling reasons have different causes and different remedies, so none covers it. It is an error contract and costs zero unless that hook failure occurs."
+  },
+  "tool-result-chrome-unjudgeable-input-deny": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the deny message for a permission-check refusal, and it is the only statement of that cause. Without it the model gets a bare refusal with no reason. It is conditional and renders only on that deny path."
+  },
+  "tool-result-cloud-session-tools-not-echoed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only message that tells the user the --tools restriction was not applied, and it gives the --disallowed-tools remedy, which has to stay exact. The slot layout is positional. It costs zero unless a cloud session fails this way."
+  },
+  "tool-result-cloud-session-tools-not-echoed-archive-failed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It tells the user where to archive the cloud session, and the URL slot is the only carrier of that path in the tools-not-echoed failure. The prompt opens with a slot (opensWithSlot true), so any edit risks the splice. It is a short conditional error clause that costs nothing when off."
+  },
+  "tool-result-mcp-task-backgrounded-with-server-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only tool result that fences the MCP server's own note as content. The tag name is a harness-level fence. The Fable digest (Prompt-injection caution) says to keep provenance caution on the deployed path, and the Opus digest row 18 says to keep one factual line, so MODEL_DEFAULT coverage does not hold for a cut. The line is already the minimal one-liner. Task ids, the tag and the ordering ('follows') are frozen."
+  },
+  "tool-result-mcp-task-input-request-client-cannot-serve": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the sole message for the case where resolveInputRequest returned undefined. It names the task and the requested method, and the model needs that to tell the user what the server asked for. It is a one-line error with a frozen method name, and it costs zero unless this path fires."
+  },
+  "tool-result-project-memory-bridge-no-memory-route": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is one of two independent error messages for the same condition, and each is the only text for its own throw site. The ${hint} slot is unique to this one. The message is conditional, and it costs zero unless a remote-bridge session requests project memory. Keeping both costs about 40 tokens only on that failure."
+  },
+  "data-cloud-session-hook-not-run-reason-windows-unparsed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Each clause is an alternative arm interpolated into the skipped-hook reminder, so it never co-renders with a sibling and none can cover it. It is conditional and costs zero when off. It carries the unique Windows-specific cause of the skip. The text is already minimal."
+  },
+  "data-settings-allowed-providers-description-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Part 1 is the start of one 9-part setting description that is read only through /update-config and validation errors, so it costs nothing when off. It cannot be trimmed on its own because it ends mid-clause, and the provider enum and login parameters must stay verbatim. Feature disuse is not a wipe reason for conditional content."
+  },
+  "data-settings-allowed-providers-description-part-6": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Wiping or trimming this fragment would break the sentence spliced across parts 5, 6 and 7 and drop the caveat that a server-managed list does not reach every session. It is conditional (settings schema only) and costs zero when off."
+  },
+  "data-settings-sandbox-network-strict-allowlist-description-part-4": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "The body opens with a slot, but the slot is a bare interpolation and no detector matches it. The fragment carries a unique behavior of the strictAllowlist setting (what is ignored and left out of the allowlist). It is conditional and costs zero when off. The slot name is bound through the identifierMap and must not be altered."
+  },
+  "skill-claude-code-help-plugin-configure-description": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditionally loaded skill line and the only place the model learns what `claude plugin configure` does and that it takes --values-stdin. It cannot be inferred and costs zero when the skill is not loaded."
+  },
+  "slash-command-remote-workflow-disabled-env-var-set-after-startup": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Alternative arms are not coverage. This arm is the only carrier of the set-after-startup diagnosis, which tells the user how to fix the setting. It is conditional and costs zero when the gate is not hit."
+  },
+  "tool-result-artifact-org-policy-stale-tunnel-credential": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "The body opens with a slot (the error prefix, VAR_0), so it is a fragment of a composed error. Its unique diagnosis is that the claude ssh machine changed credentials while policy was loading. It is a conditional tool-result error and costs zero when off."
+  },
+  "tool-result-artifact-publish-call-entries-over-per-publish-limit": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditional error result that costs zero when unused, and it carries limits, parameter names and the ordering contract (nothing published, send a part now, add the rest to the same url). Everything is frozen mechanics and the slots are bound through the identifierMap."
+  },
+  "tool-result-cloud-session-first-prompt-not-sent-debug-hint": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditional error suffix with a leading space that keeps it spliced onto the HTTP-status reason. It costs zero when the failure does not occur, and it is the only place the --debug remedy is stated."
+  },
+  "tool-result-cloud-session-tools-not-echoed-different-list": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a fragment of a composed failure message, and its join expression is bound through the identifierMap. It is conditional and costs zero when off. The '(list)' detail is unique diagnostic data."
+  },
+  "tool-result-git-bundle-legacy-upload-retired-push-or-pr-number": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditional refusal message that costs zero when not hit. The remedy (push, connect GitHub at claude.ai/code, or give /ultrareview a PR number) is unique and cannot be inferred. The shared opener is not coverage because the arms are exclusive."
+  },
+  "tool-result-git-bundle-linked-worktree-placement-refusal": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a conditional refusal and costs zero when not hit. Each remedy names a command or an action the model can relay to the user. Sibling arms never co-render, so none covers it. The slot binds .placement through the identifierMap."
+  },
+  "tool-result-project-read-binary-upload-over-session-file-limit": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "The body opens with a slot (VAR_0 prefix), so it is a spliced notice. It carries the runtime cap (maxBytes) and the outcome instruction, and it is a conditional tool-result field that costs zero when the case does not occur. It stays verbatim."
+  },
+  "data-settings-sandbox-network-http-proxy-port-description-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Schema description read via /update-config and validation errors. It is conditional, so it costs nothing when off, and it is the only copy. It is a one-line contract with nothing to cut. The trailing space must stay verbatim."
+  },
+  "slash-command-pause-memory-paused-account-memory-not-loaded": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "No sibling in the same render covers it, and the alternative arm is not coverage. It is a one-line status that is dead in this build. Wiping it would gain nothing, so leave it at pristine."
+  },
+  "slash-command-pause-memory-stays-paused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the sole statement of why memory cannot be resumed here, with the concrete recovery. It is conditional and tiny. A sibling that says only the recovery is not full coverage and does not co-render."
+  },
+  "slash-command-plugin-install-folder-held-also-managed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a load-bearing fragment of a runtime refusal message, and blanking it would delete words mid-sentence. It is unique, and both the wording and the slot are already minimal."
+  },
+  "slash-command-plugin-install-folder-held-twin": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "opensWithSlot is true: the first slot is a prefix clause built at runtime, and this prompt completes it into a full sentence. The prompt is the refusal's body, so wiping it leaves an unexplained fragment, and the text is already terse."
+  },
+  "slash-command-plugin-install-folder-held-uninstall-first": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It carries the ordering ('first', 'do each of these'; the list joined with '; '), which is frozen mechanics. It opens with a slot and is spliced inside a larger runtime message. It is unique and minimal."
+  },
+  "system-reminder-cowork-memory-account-tool-results-removed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "A cowork-only reminder, unique in telling the model the earlier tool results and snapshot were purged. It is conditional and costs zero when off. It is the only place the model learns stale account memory is gone."
+  },
+  "tool-description-write-read-existing-file-first": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "A tool description is a contract. 'Overwriting an existing file you haven't Read will fail' is a validation-gate failure mode, and the tool names are slots. This is the only copy for this arm, and nothing is left to cut."
+  },
+  "tool-result-artifact-list-type-ask-rule-needs-exact-type-name": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It states the exact-match gate on `type` and the re-list instruction, both frozen mechanics ('only', 'exactly', parameter name). It is conditional, unique, and already one sentence pair."
+  },
+  "tool-result-artifact-publish-merged-over-newer-version": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the sole statement of the merge outcome and of why it was safe ('no file you sent had changed there'). The version slots are runtime values. It is unique and terse, so nothing is trimmable."
+  },
+  "tool-result-artifact-quickstart-design-systems-catalog-unavailable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Stage 1 proposed a wipe; overruled in the main loop: the note is spliced into '[Design systems not listed: …]', so blanking it renders a broken bracket. Rare conditional, zero cost when off."
+  },
+  "tool-result-project-read-binary-upload-could-not-be-saved": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "opensWithSlot is true: the prefix j is the shared 'is a kind upload ...; its original bytes (N) ' clause, and this completes it. It is the only copy of the save-failure notice and the tell-the-user directive. It is a unique conditional failure text, minimal as it stands."
+  },
+  "data-settings-sandbox-network-allow-all-unix-sockets-description-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the only place the setting's semantics (all sockets, blocking off on both platforms) are stated. It is loaded only through /update-config and settings validation, so it costs nothing until read. Nothing to cut."
+  },
+  "data-settings-sandbox-network-allowed-domains-description-part-4": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the tail clause of the allowedDomains key description. The lead note attaches to different settings, so the phrase repeated there is not coverage. Keep verbatim."
+  },
+  "data-settings-sandbox-network-managed-lock-project-values-ignored-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "externalRefs.opensWithSlot is true, so the rendered text opens with a computed lock-reason. The prompt cannot be blanked or reordered. Its content is unique for the own-proxy port settings."
+  },
+  "slash-command-plugin-install-folder-held-because-ids": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only carrier of why two plugin ids collide. Its 10 slots feed a nested ternary, so editing the text risks the runtime expression. Zero cost when no install collision occurs."
+  },
+  "slash-command-plugin-install-folder-held-fix-two-marketplaces": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the sole fix-advice sentence for the two-marketplace case and is conditional, so it costs nothing when off. Cutting it would drop the actionable fix and leave the refusal without an outcome."
+  },
+  "slash-command-plugin-installed-plugin-mcp-needs-configuration": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only place that tells the model how to finish MCP setup after a /plugin install (which tab, which button). It is appended only in that case, so it costs nothing otherwise."
+  },
+  "slash-command-remote-workflow-code-review-managed-settings-unreadable": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a policy-gate error the model needs to relay accurately. It fires only when the gate does, so it costs nothing until then. Wiping it would turn a refusal into empty output."
+  },
+  "tool-result-artifact-publish-merged-changed-files-not-listed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "externalRefs.opensWithSlot is true, so the text opens with a slot and is not wipeable. It carries the unique instruction to re-read held copies before editing. It renders only on a merged publish, so it costs nothing otherwise."
+  },
+  "tool-result-cloud-session-hook-held-windows-unparsed": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the sole message for the Windows-unparsed hold and states the exact reason. Conditional, zero cost when off, and it ends with the approval question the user must answer. Nothing safe to cut."
+  },
+  "tool-result-enter-plan-mode-main-session-only": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only statement that a subagent's EnterPlanMode call is rejected, and why. It is an error result that renders only when the rejection fires. Blanking it would leave the subagent with an empty error."
+  },
+  "tool-result-git-bundle-legacy-upload-retired-forced-bundle": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only remedy text for the forced-bundle case and names the env var to unset. Conditional refusal, zero cost when off. All remedy content is frozen."
+  },
+  "tool-result-git-bundle-work-tree-folder-unexamined": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the sole message for this upload refusal and carries the retry and `git status` remedy. The ordering clause ('Retry; if it goes on...') is frozen. Conditional, zero cost when off."
+  },
+  "tool-result-mcp-task-malformed-handle": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It tells the model a task-mode call failed on a bad handle and that the call never ran as a task, so it should not wait for a notification. It is an error result that costs nothing until it fires."
+  },
+  "tool-result-mcp-task-moved-to-background": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only text that says a server-side task keeps running and that a completion notification will arrive. The body opens with the tool-name slot and its sentences carry the task ids the model needs for later calls. Conditional, zero cost when off."
+  },
+  "data-cloud-session-unverified-remote-branch-push-notice": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "Unique, conditional, zero cost when off, and it carries an error/recovery contract with the ${CURRENT_BRANCH_NAME}/${REMOTE_HOST_NAME}/${SANITIZE_BRANCH_NAME_FN} slots. Nothing is left to trim. Wiping would leave the user with no message and no push instruction."
+  },
+  "data-settings-allowed-providers-description-part-4": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is one splice of a schema description string that the model reads through /update-config. Wiping or trimming it would delete words from the middle of the customEndpoint sentence and break grammar and meaning across parts 3 and 5. The whole body is frozen text (env var name, enumeration)."
+  },
+  "data-settings-sandbox-allow-read-lock-condition-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the first fragment of the allowRead lock-condition sentence, and part 2 continues it. The tail 'filesystem.denyRead' is unique to this literal. Wiping or trimming would leave the sentence starting mid-clause."
+  },
+  "data-settings-sandbox-allow-write-lock-condition-part-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a mid-sentence splice of the allowWrite lock condition, following part 1 ('When managed settings or a --settings file set filesystem.denyRead, a Read(…) deny rule '). Blanking it would break the sentence and drop the credentials.files trigger from that setting."
+  },
+  "data-settings-sandbox-filesystem-allow-write-description-part-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a runtime validation contract for sandbox.filesystem.allowWrite that the model reads through /update-config. It is conditional and costs nothing when off. It is unique and load-bearing, and nothing is trimmable without touching frozen text."
+  },
+  "data-settings-sandbox-network-allow-unix-sockets-description-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is unique platform behaviour for one setting and is conditionally loaded. Every clause is frozen (platform names, 'Merged across settings sources'), so nothing can be trimmed. It is also a fragment that continues in part 2."
+  },
+  "data-settings-sandbox-network-allowed-domains-description-part-1": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the head sentence of the allowedDomains setting description. Without it the description has no subject, and it is the only source of the wildcard syntax for the settings key. It is conditional, unique and terse, so keep it as it is."
+  },
+  "data-settings-sandbox-true-from-project-settings-ignored-note": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "This is the tail of a sentence built from two slots (the lock condition and the project-settings source). Wiping it would delete the tail of that sentence. It is the only place the asymmetry (true ignored, false still applies) is stated."
+  },
+  "data-settings-validation-allowed-providers-consequence": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the consequence half of a settings-validation error message. It tells the model and user why the failure is severe (Claude Code will not start). It is an error contract, so leave it verbatim."
+  },
+  "system-reminder-hook-stdio-quiet-suspect-capture-refused": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a unique security/error reason with a refusal decision, and it costs zero when unused. Blanking it would leave a blocking hook error with an empty reason. No slop, nothing to trim."
+  },
+  "tool-result-cloud-session-hook-held-start-directory": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a unique, conditional permission gate for one Windows condition. Wiping would let the command run unasked or ask with no reason. Nothing is worth trimming without touching frozen text."
+  },
+  "tool-result-project-content-truncated-saved-to-local-file": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only carrier of the byte counts and the local_file limit, so the model knows how much of the content it got. It is a tool-result contract with a trailing slot. The slot-heavy body cannot be trimmed safely."
+  },
+  "tool-result-read-line-alone-exceeds-byte-limit": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is an error tag with three computed values and a reason that stops a futile retry loop. It is a runtime cap message and is unique to this tool path. It is conditional, costs zero when off, and has nothing to trim."
+  },
+  "tool-result-senduserfile-card-position-refer-by-name": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only carrier of a fact the model cannot infer (claude.ai chat renders the card position differently per app). It is added only to claude.ai chat sessions, so it is conditional and costs nothing elsewhere. It is unique and small, and it is not a default of either served model, so keep it."
+  },
+  "data-github-app-not-installed-idp-conditional-access": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "One distinct resync reason. The deployed body is byte-identical to pristine. It is a conditional data string, so it costs zero when off. It is the only copy of this cause and its fix."
+  },
+  "data-settings-allowed-providers-description-part-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "The fragment is concatenated with its neighbours into one sentence. Wiping or trimming it would corrupt the sentence and drop an env var name. The description is conditional: it is read only through /update-config and settings validation errors."
+  },
+  "data-settings-allowed-providers-description-part-9": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It holds the only statement of the version-compat caveat and the exact apiProvider mapping, both facts the model cannot infer. It is a conditional settings-schema string with no cost when off."
+  },
+  "data-settings-sandbox-allow-read-lock-condition-part-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It completes the allowRead lock-condition sentence begun in part 1. Cutting it would leave that sentence broken or incomplete. The shared phrase with the allowWrite condition is different-field text, not same-field coverage."
+  },
+  "data-settings-sandbox-filesystem-allow-read-description-part-2": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It opens with ${VAR_0}, a slot filling the start of the allowRead description, so the slot must stay. It is conditional schema text. The one shared sentence would save about 40 tokens only when the description is read. Cutting it would leave the allowRead field without its re-check caveat, and another field's text is not same-field coverage."
+  },
+  "data-settings-sandbox-network-strict-allowlist-description-part-5": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It completes the strictAllowlist description sentence begun in part 4. It holds the only statement that WebFetch allow rules are excluded. Wiping it would truncate that sentence mid-clause."
+  },
+  "slash-command-plugin-install-folder-held-dependency-lead": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It opens the dependency-branch sentence, and the continuation fragments attach to it. A wipe would start the refusal mid-sentence and drop the plugin names. It is a runtime error string with two slot expressions, so it is mechanics."
+  },
+  "slash-command-plugin-marketplace-add-supported-git-url-forms": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is interpolated after 'Supported:' in the invalid-git-URL errors and is the only place the accepted forms and the git:// refusal appear. Removing it would leave the error without the fix. The error text is conditional, so it costs nothing when off."
+  },
+  "tool-result-artifact-type-reference-page-design-system-only": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only statement of why the artifact-type reference page was withheld. A tool-result fragment costs nothing until it fires, and blanking it would leave the withholding message without its reason."
+  },
+  "tool-result-cloud-session-earlier-session-returned": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It carries the only account of the case where the service returns a session it had already created, with an ordering instruction and the session URL slot. It is a conditional error result, so keeping it costs nothing when unused. The prompt-not-sent branch and the ordering sentence are frozen."
+  },
+  "tool-result-cloud-session-first-prompt-not-sent": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the only place that distinguishes busy, refused and unsent first-prompt failures. The object keys must match e.kind exactly, and the ${VAR_1} and ${VAR_2} continuations are wired to it. A wipe would break them. It is a conditional error path."
+  },
+  "tool-result-mcp-task-server-rejected-submitted-answer": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It tells the model that the answer was rejected, which keys were rejected, and that input is still required. Nothing else says so, and the expression is runtime mechanics. It is a conditional error string with zero cost when off."
+  },
+  "tool-result-permission-approval-changed-files-to-attach": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is a checkPermissions deny message for one specific denial cause, with the only recovery instruction for it. Blanking it would return an empty deny with no reason or next step. It is conditional, so it costs nothing when unused."
+  },
+  "tool-description-bash-run-in-background-deadline-suffix": {
+    "verdict": "wipe-merge",
+    "version": "2.1.285",
+    "why": "Co-rendered under the same nln() gate: tool-parameter-bash-run_in_background-timeout-limit states the background timeout, default, max and stop; the host sentence in tool-parameter-bash-run_in_background-guidance/-note keeps \"you'll be notified when it finishes\". Minutes/hours are conversions of the same values. Stage 3 (opus) passed.",
+    "coveredBy": [
+      {
+        "carrierId": "tool-parameter-bash-run_in_background-timeout-limit",
+        "quote": "limits how long the command may run in the background before it is stopped"
+      },
+      {
+        "carrierId": "tool-parameter-bash-run_in_background-guidance",
+        "quote": "you'll be notified when it finishes"
+      }
+    ]
+  },
+  "tool-result-project-read-binary-upload-saved-tail": {
+    "verdict": "trim",
+    "version": "2.1.285",
+    "why": "Kept the frozen 'were saved to local_file.' sentence; cut 'Open it with file-appropriate tooling.', which the always-rendered Projects tool description states for the same download path. Stage 3 (opus) passed."
+  },
+  "tool-result-artifact-read-action-with-path-hint": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It is the tool's action enum value (\"read\") plus its parameter name (`path`), so it is frozen under the tripwire. It is also a mid-sentence splice. Wiping it would render \"read it again ()\" and \"Read each one first ()\". Those are the only pointers to the read action in the stale-copy and merge recovery results. The core variant renames the older action \"read_file\", and the model cannot infer that. It renders only in a publish or merge result, so it costs nothing until then. No coveredBy, since nothing is cut."
+  },
+  "tool-result-project-content-truncated-search-still-covers-doc": {
+    "verdict": "pristine-keep",
+    "version": "2.1.285",
+    "why": "It names a tool method (project_search), so it is frozen. It is the only text that tells the model a truncated doc still has a recovery path. Without it the model may treat the cut-off tail as lost or re-read the file in chunks. It renders only on a truncated project-doc read and costs zero otherwise. It is not narration-suppressing or anti-laziness text. Both served models under-read and stop early, so an explicit recovery path is a keep. No coveredBy, since nothing is cut."
   }
 }
